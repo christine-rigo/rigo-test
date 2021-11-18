@@ -13,12 +13,14 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.21",
 		"@sveltejs/kit": "^1.0.0-next.196",
+		"autoprefixer": "^10.4.0",
 		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0",
+		"prettier-plugin-svelte": "^2.5.0",
+		"sass": "^1.43.4",
 		"svelte": "^3.44.1",
-		"svelte-check": "^2.2.8",
+		"svelte-check": "^2.2.10",
 		"svelte-preprocess": "^4.9.8",
-		"typescript": "^4.4.4"
+		"typescript": "^4.5.2"
 	},
 	"type": "module"
 }
