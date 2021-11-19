@@ -14,10 +14,13 @@
 	.nav-container {
 		display: flex;
 		flex-direction: column;
+		gap: 2rem;
+
+		width: max-content;
 	}
 
 	.logo {
-		width: 10rem;
+		width: 6rem;
 		height: auto;
 	}
 
@@ -25,5 +28,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		gap: 1rem;
+	}
+
+	a {
+		color: var(--app-color-navy-contrast);
+
+		width: max-content;
 	}
 </style>
