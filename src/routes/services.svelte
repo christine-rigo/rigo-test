@@ -1,6 +1,5 @@
 <script>
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
-	import { goto } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -28,7 +27,7 @@
 
 				<br />
 
-				<ScrollerIndicator on:click={() => goto('#technical-services-section')} />
+				<ScrollerIndicator href="#technical-services-section" />
 			</div>
 		</div>
 
@@ -78,7 +77,7 @@
 	}
 
 	.service {
-		height: 98vh;
+		height: 99vh;
 		width: 100%;
 
 		padding: 2rem 0 2rem 20vw;

@@ -1,12 +1,17 @@
 <script lang="ts">
+	export let href: string;
 </script>
 
-<button on:click>
+<a {href}>
 	<div class="dot" />
-</button>
+</a>
 
 <style lang="scss">
-	button {
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		height: 37px;
 		width: 21px;
 
