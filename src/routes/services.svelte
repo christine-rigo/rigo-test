@@ -36,24 +36,28 @@
 		</div>
 	</section>
 
-	<section class="service technical" id="technical-services-section">
-		<!--  -->
+	<section class="service service-informational technical" id="technical-services-section">
+		Hello 1
 	</section>
 
-	<section class="service data">
+	<section class="service service-informational data">
 		<!--  -->
+		Hello 1
 	</section>
 
-	<section class="service creative">
+	<section class="service service-informational creative">
 		<!--  -->
+		Hello 1
 	</section>
 
-	<section class="service digital-advertising">
+	<section class="service service-informational digital-advertising">
 		<!--  -->
+		Hello 1
 	</section>
 
 	<section class="service summary">
 		<!--  -->
+		Hello 1
 	</section>
 </div>
 
@@ -80,7 +84,16 @@
 		height: 99vh;
 		width: 100%;
 
+		position: sticky;
+		top: 0;
+
 		padding: 2rem 0 2rem 20vw;
+
+		&.service-informational {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
 		&.services-home {
 			display: grid;
@@ -118,6 +131,10 @@
 
 		&.digital-advertising {
 			background-color: var(--app-color-blue);
+		}
+
+		&.summary {
+			background-color: var(--app-color-navy);
 		}
 	}
 </style>

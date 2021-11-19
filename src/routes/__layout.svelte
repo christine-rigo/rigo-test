@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Nav from '$/components/Nav.svelte';
-	import '../css/global.scss';
+	import '$/css/global.scss';
 </script>
 
 <main>
@@ -15,7 +15,6 @@
 
 <style lang="scss">
 	main {
-		height: 100%;
 		min-height: 100%;
 		width: 100%;
 	}
@@ -36,7 +35,6 @@
 	}
 
 	section {
-		height: 100%;
 		min-height: 100%;
 		width: 100%;
 	}
