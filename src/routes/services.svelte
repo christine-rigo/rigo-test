@@ -37,27 +37,30 @@
 	</section>
 
 	<section class="service service-informational technical" id="technical-services-section">
-		Hello 1
+		<div>
+			<h2>technical</h2>
+		</div>
 	</section>
 
 	<section class="service service-informational data">
-		<!--  -->
-		Hello 1
+		<div>
+			<h2>Data</h2>
+		</div>
 	</section>
 
 	<section class="service service-informational creative">
 		<!--  -->
-		Hello 1
+		<h2>Creative</h2>
 	</section>
 
 	<section class="service service-informational digital-advertising">
 		<!--  -->
-		Hello 1
+		<h2>Digital Advertising</h2>
 	</section>
 
 	<section class="service summary">
-		<!--  -->
-		Hello 1
+		<h2>Summary</h2>
+		Hello 5
 	</section>
 </div>
 
@@ -93,6 +96,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			& > div {
+				width: 100%;
+
+				padding: 1rem 0;
+			}
 		}
 
 		&.services-home {
@@ -122,7 +131,7 @@
 		}
 
 		&.data {
-			background-color: var(--app-color-green);
+			background-color: var(--app-color-green) !important;
 		}
 
 		&.creative {
