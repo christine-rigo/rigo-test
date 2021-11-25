@@ -1,5 +1,7 @@
 <script>
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
+	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
+	import SiBox from '$/components/services/SIBox.svelte';
 </script>
 
 <svelte:head>
@@ -8,59 +10,183 @@
 
 <div class="services-page-container">
 	<section class="service services-home">
-		<div class="text-content">
-			<h1>Services</h1>
+		<div class="inner">
+			<div class="content">
+				<div class="backdrop" />
 
-			<div class="description">
-				<hr style="width: 57px; margin: 0;" />
+				<div class="text-content">
+					<h1>Services</h1>
 
-				<p>
-					<br />
-					Services developed from years of problem solving for brands just like yours.
+					<div class="description">
+						<hr style="width: 57px; margin: 0;" />
 
-					<br /><br />
+						<p>
+							<br />
+							Services developed from years of problem solving for brands just like yours.
 
-					Elevate credibility with diligently crafted thought leadership content; create a website
-					from scratch with persuasive copy, eye-catching design and seamless UX, or increase your
-					lead flow with email marketing.
-				</p>
+							<br /><br />
 
-				<br />
+							Elevate credibility with diligently crafted thought leadership content; create a
+							website from scratch with persuasive copy, eye-catching design and seamless UX, or
+							increase your lead flow with email marketing.
+						</p>
 
-				<ScrollerIndicator href="#technical-services-section" />
+						<br />
+
+						<ScrollerIndicator href="#technical-services-section" />
+					</div>
+				</div>
+
+				<div class="image">
+					<img src="https://placekitten.com/g/482/521" alt="Hero banner" />
+				</div>
 			</div>
-		</div>
-
-		<div class="image">
-			<img src="https://placekitten.com/g/482/521" alt="Hero banner" />
 		</div>
 	</section>
 
 	<section class="service service-informational technical" id="technical-services-section">
-		<div>
-			<h2>technical</h2>
-		</div>
+		<ServiceInformationalSection>
+			<svelte:fragment slot="title">technical</svelte:fragment>
+
+			<svelte:fragment slot="info-boxes">
+				<SiBox>
+					<span slot="title">brochure websites</span>
+					<span slot="description">
+						design, UX, seo, copy and development. everything you need with rigo.
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">crypto / nft</span>
+					<span slot="description"> coming soon </span>
+				</SiBox>
+			</svelte:fragment>
+		</ServiceInformationalSection>
 	</section>
 
 	<section class="service service-informational data">
-		<div>
-			<h2>Data</h2>
-		</div>
+		<ServiceInformationalSection>
+			<svelte:fragment slot="title">data</svelte:fragment>
+
+			<svelte:fragment slot="info-boxes">
+				<SiBox>
+					<span slot="title">seo</span>
+					<span slot="description">
+						start by finding your target search terms, them watch your traffic and leads grow as you
+						climb through the ranks.
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">data dashboard</span>
+					<span slot="description">
+						start by finding your target search terms, them watch your traffic and leads grow as you
+						climb through the ranks.
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">marketing intelligence</span>
+					<span slot="description">
+						Audits and analyse your content and that of your competitors’ to identify gaps and
+						opportunities.
+					</span>
+				</SiBox>
+			</svelte:fragment>
+		</ServiceInformationalSection>
 	</section>
 
 	<section class="service service-informational creative">
-		<!--  -->
-		<h2>Creative</h2>
+		<ServiceInformationalSection>
+			<svelte:fragment slot="title">creative</svelte:fragment>
+
+			<svelte:fragment slot="info-boxes">
+				<SiBox>
+					<span slot="title">original articles</span>
+					<span slot="description">
+						from idea to publication, thought leadership pieces to showcase your expertise and build
+						trust with your customers
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">tone of voice</span>
+					<span slot="description">
+						succinct messaging documents, or full brand consultations to overhaul your tone of
+						voice. Do what’s needed.
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">social</span>
+					<span slot="description"> coming soon </span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title"> branding </span>
+					<span slot="description">
+						make your new business real with the essential brand assets for launch
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title"> google News </span>
+					<span slot="description">
+						the content and experience needed to get your publication or website accepted to google
+						news
+					</span>
+				</SiBox>
+			</svelte:fragment>
+		</ServiceInformationalSection>
 	</section>
 
 	<section class="service service-informational digital-advertising">
-		<!--  -->
-		<h2>Digital Advertising</h2>
+		<ServiceInformationalSection>
+			<svelte:fragment slot="title">digital advertising</svelte:fragment>
+
+			<svelte:fragment slot="info-boxes">
+				<SiBox>
+					<span slot="title"> linkedin campaigns </span>
+					<span slot="description">
+						in-depth audience targeting and standout creative will get your business n front of the
+						right audience
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title">paid search</span>
+					<span slot="description">
+						highly targeted cost-effective campaigns that drive quality interactions and attract
+						leads
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title"> digital pr </span>
+					<span slot="description">
+						build relationships and share something that gets people talking
+					</span>
+				</SiBox>
+
+				<SiBox>
+					<span slot="title"> email marketing </span>
+					<span slot="description">
+						powerful automated email welcome series, nurture your contacts and leads into customers.
+					</span>
+				</SiBox>
+			</svelte:fragment>
+		</ServiceInformationalSection>
 	</section>
 
 	<section class="service summary">
-		<h2>Summary</h2>
-		Hello 5
+		<div class="inner">
+			<div class="backdrop" />
+			<div class="content">
+				<div>
+					<h2>technical</h2>
+				</div>
+			</div>
+		</div>
 	</section>
 </div>
 
@@ -71,6 +197,10 @@
 		min-height: 100%;
 	}
 
+	* {
+		color: var(--app-color-navy);
+	}
+
 	h1 {
 		font-size: 6.25rem;
 	}
@@ -79,34 +209,74 @@
 		font-size: 3.125rem;
 	}
 
-	h3 {
-		font-size: 1.5625rem;
-	}
-
 	.service {
-		height: 99vh;
+		--bgcolor: var(--app-color-navy);
+
+		height: 100vh;
 		width: 100%;
 
-		position: sticky;
+		position: relative;
 		top: 0;
 
-		padding: 2rem 0 2rem 20vw;
+		:global(.inner) {
+			position: absolute;
+
+			display: grid;
+			grid-template-columns: 1fr;
+
+			overflow: hidden;
+
+			padding: 2rem 0 2rem 20vw;
+
+			width: 100%;
+			height: 100%;
+
+			clip: rect(0, auto, auto, 0);
+
+			@supports (-webkit-overflow-scrolling: touch) {
+				clip: unset;
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			}
+		}
+
+		:global(.inner .content) {
+			position: fixed;
+			top: 2rem;
+			left: 20vw;
+
+			height: calc(100% - 4rem);
+			width: calc(100% - 20vw);
+		}
+
+		.backdrop {
+			display: flex;
+
+			position: fixed;
+			z-index: -1;
+			top: 0;
+			left: 0;
+
+			background-color: var(--bgcolor);
+
+			width: 100%;
+			height: 100%;
+		}
 
 		&.service-informational {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			& > div {
-				width: 100%;
-
-				padding: 1rem 0;
-			}
 		}
 
-		&.services-home {
+		&.services-home .inner .content {
+			--bgcolor: var(--app-color-navy);
+
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+
+			* {
+				color: var(--app-color-navy-contrast);
+			}
 
 			.text-content {
 				display: flex;
@@ -127,23 +297,23 @@
 		}
 
 		&.technical {
-			background-color: var(--app-color-yellow);
+			--bgcolor: var(--app-color-yellow);
 		}
 
 		&.data {
-			background-color: var(--app-color-green) !important;
+			--bgcolor: var(--app-color-green);
 		}
 
 		&.creative {
-			background-color: var(--app-color-red);
+			--bgcolor: var(--app-color-red);
 		}
 
 		&.digital-advertising {
-			background-color: var(--app-color-blue);
+			--bgcolor: var(--app-color-blue);
 		}
 
 		&.summary {
-			background-color: var(--app-color-navy);
+			--bgcolor: var(--app-color-navy);
 		}
 	}
 </style>

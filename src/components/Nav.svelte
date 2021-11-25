@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <div class="nav-container">
 	<img class="logo" src="/logo.png" width="74" height="31" alt="Rigo Agency logo" />
 

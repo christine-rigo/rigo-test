@@ -1,26 +1,26 @@
 body {
 	--app-color-navy-hsl: 227, 43%, 12%;
-	--app-color-navy: #11172c;
+	--app-color-navy: rgb(17, 23, 44);
 	--app-color-navy-contrast: hsl(35, 55%, 96%);
 	--app-color-navy-contrast-hsl: 35, 55%, 96%;
 
 	--app-color-yellow-hsl: 38, 100%, 61%;
 	--app-color-yellow: hsl(38, 100%, 61%);
-	--app-color-yellow-contrast: hsl(35, 55%, 96%);
-	--app-color-yellow-contrast-hsl: 35, 55%, 96%;
+	--app-color-yellow-contrast: var(--app-color-navy);
+	--app-color-yellow-contrast-hsl: var(--app-color-navy-hsl);
 
 	--app-color-green-hsl: 167, 65%, 52%;
 	--app-color-green: hsl(167, 65%, 52%);
-	--app-color-green-contrast: hsl(35, 55%, 96%);
-	--app-color-green-contrast-hsl: 35, 55%, 96%;
+	--app-color-green-contrast: var(--app-color-navy);
+	--app-color-green-contrast-hsl: var(--app-color-navy-hsl);
 
 	--app-color-red-hsl: 14, 84%, 58%;
 	--app-color-red: hsl(14, 84%, 58%);
-	--app-color-red-contrast: hsl(35, 55%, 96%);
-	--app-color-red-contrast-hsl: 35, 55%, 96%;
+	--app-color-red-contrast: var(--app-color-navy);
+	--app-color-red-contrast-hsl: var(--app-color-navy-hsl);
 
-	--app-color-blue-hsl: 241, 75%, 60%;
-	--app-color-blue: hsl(241, 75%, 60%);
-	--app-color-blue-contrast: hsl(35, 55%, 96%);
-	--app-color-blue-contrast-hsl: 35, 55%, 96%;
+	--app-color-blue-hsl: 241, 100%, 72%;
+	--app-color-blue: hsl(241, 100%, 72%);
+	--app-color-blue-contrast: var(--app-color-navy);
+	--app-color-blue-contrast-hsl: var(--app-color-navy-hsl);
 }
