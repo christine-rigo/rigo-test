@@ -1,13 +1,15 @@
 <script lang="ts">
+	import { navColor } from '$/stores/nav.store';
+	import Logo from './svg/Logo.svelte';
 </script>
 
-<div class="nav-container">
-	<img class="logo" src="/logo.png" width="74" height="31" alt="Rigo Agency logo" />
+<div class="nav-container" style="--color: {$navColor}">
+	<Logo scale={1.8} />
 
 	<nav>
 		<!-- TODO -->
 		<a href="#todo">Work</a>
-		<a href="#todo">Services</a>
+		<a href="/services">Services</a>
 		<a href="#todo">Team</a>
 		<a href="#todo">Contact</a>
 	</nav>
@@ -20,11 +22,10 @@
 		gap: 2rem;
 
 		width: max-content;
-	}
 
-	.logo {
-		width: 6rem;
-		height: auto;
+		:global(svg path) {
+			transition: fill 0.2s ease-in;
+		}
 	}
 
 	nav {
@@ -35,7 +36,9 @@
 	}
 
 	a {
-		color: var(--app-color-navy-contrast);
+		color: var(--color);
+
+		transition: color 0.2s ease-in;
 
 		width: max-content;
 	}

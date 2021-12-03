@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
 	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
+	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
+	import { navColor } from '$/stores/nav.store';
+	import { inview } from 'svelte-inview';
 </script>
 
 <svelte:head>
@@ -9,7 +12,11 @@
 </svelte:head>
 
 <div class="services-page-container">
-	<section class="service services-home">
+	<section
+		class="service services-home"
+		use:inview={{ threshold: 0.1 }}
+		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
+	>
 		<div class="inner">
 			<div class="content">
 				<div class="backdrop" />
@@ -44,7 +51,12 @@
 		</div>
 	</section>
 
-	<section class="service service-informational technical" id="technical-services-section">
+	<section
+		class="service service-informational technical"
+		id="technical-services-section"
+		use:inview={{ threshold: 0.9 }}
+		on:enter={() => ($navColor = 'var(--app-color-navy)')}
+	>
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">technical</svelte:fragment>
 
@@ -178,15 +190,13 @@
 		</ServiceInformationalSection>
 	</section>
 
-	<section class="service summary">
-		<div class="inner">
-			<div class="backdrop" />
-			<div class="content">
-				<div>
-					<h2>technical</h2>
-				</div>
-			</div>
-		</div>
+	<section
+		class="service summary"
+		use:inview={{ threshold: 0.9 }}
+		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
+		on:leave={() => ($navColor = 'var(--app-color-navy)')}
+	>
+		<ServicesSummary />
 	</section>
 </div>
 
@@ -203,10 +213,6 @@
 
 	h1 {
 		font-size: 6.25rem;
-	}
-
-	h2 {
-		font-size: 3.125rem;
 	}
 
 	.service {
@@ -248,7 +254,7 @@
 			width: calc(100% - 20vw);
 		}
 
-		.backdrop {
+		:global(.backdrop) {
 			display: flex;
 
 			position: fixed;

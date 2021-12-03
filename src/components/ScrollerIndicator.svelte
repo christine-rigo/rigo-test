@@ -21,12 +21,26 @@
 	}
 
 	.dot {
-		height: 3px;
-		width: 3px;
+		height: 4px;
+		width: 4px;
 
 		border-radius: 50%;
 		background-color: var(--app-color-navy-contrast);
 
 		transform: translateY(-7px);
+
+		animation: dot 2s infinite;
+	}
+
+	@keyframes dot {
+		0% {
+			transform: translateY(-7px);
+		}
+		80% {
+			transform: translateY(7px);
+		}
+		100% {
+			transform: translateY(-7px);
+		}
 	}
 </style>
