@@ -4,7 +4,9 @@
 </script>
 
 <div class="nav-container" style="--color: {$navColor}">
-	<Logo scale={1.8} />
+	<a href="/">
+		<Logo scale={1.8} />
+	</a>
 
 	<nav>
 		<!-- TODO -->

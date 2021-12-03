@@ -4,6 +4,7 @@
 	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
 	import { navColor } from '$/stores/nav.store';
+	import { fadeIn, fadeOut } from '$/transitions/fade';
 	import { inview } from 'svelte-inview';
 </script>
 
@@ -11,7 +12,7 @@
 	<title>Services / Rigo Agency</title>
 </svelte:head>
 
-<div class="services-page-container">
+<div class="services-page-container" in:fadeIn out:fadeOut>
 	<section
 		class="service services-home"
 		use:inview={{ threshold: 0.1 }}
