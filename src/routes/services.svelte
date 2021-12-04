@@ -193,7 +193,7 @@
 
 	<section
 		class="service summary"
-		use:inview={{ threshold: 0.9 }}
+		use:inview={{ threshold: 0.6 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 		on:leave={() => ($navColor = 'var(--app-color-navy)')}
 	>
