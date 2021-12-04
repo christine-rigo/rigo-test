@@ -15,7 +15,7 @@
 <div class="services-page-container" in:fadeIn out:fadeOut>
 	<section
 		class="service services-home"
-		use:inview={{ threshold: 0.1 }}
+		use:inview={{ threshold: 0.3 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 	>
 		<div class="inner">
@@ -55,7 +55,7 @@
 	<section
 		class="service service-informational technical"
 		id="technical-services-section"
-		use:inview={{ threshold: 0.9 }}
+		use:inview={{ threshold: 0.7 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy)')}
 	>
 		<ServiceInformationalSection>
