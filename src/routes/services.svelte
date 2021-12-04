@@ -56,7 +56,10 @@
 		class="service service-informational technical"
 		id="technical-services-section"
 		use:inview={{ threshold: 0.7 }}
-		on:enter={() => ($navColor = 'var(--app-color-navy)')}
+		on:enter={() => {
+			$navColor = 'var(--app-color-navy)';
+			console.log(1);
+		}}
 	>
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">technical</svelte:fragment>
@@ -153,7 +156,11 @@
 		</ServiceInformationalSection>
 	</section>
 
-	<section class="service service-informational digital-advertising">
+	<section
+		class="service service-informational digital-advertising"
+		use:inview={{ threshold: 0.4 }}
+		on:enter={() => ($navColor = 'var(--app-color-navy)')}
+	>
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">digital advertising</svelte:fragment>
 
@@ -195,7 +202,6 @@
 		class="service summary"
 		use:inview={{ threshold: 0.6 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
-		on:leave={() => ($navColor = 'var(--app-color-navy)')}
 	>
 		<ServicesSummary />
 	</section>

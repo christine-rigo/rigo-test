@@ -6,12 +6,14 @@ specifiers:
   autoprefixer: ^10.4.0
   sass: ^1.44.0
   svelte: ^3.44.2
+  svelte-body: ^1.1.3
   svelte-check: ^2.2.10
   svelte-inview: ^2.1.1
   svelte-preprocess: ^4.9.8
   typescript: ^4.5.2
 
 dependencies:
+  svelte-body: 1.1.3
   svelte-inview: 2.1.1_svelte@3.44.2
 
 devDependencies:
@@ -796,6 +798,10 @@ packages:
     dependencies:
       has-flag: 4.0.0
     dev: true
+
+  /svelte-body/1.1.3:
+    resolution: {integrity: sha512-VUF5uCgCuLTE9zIImnuWIaWuAfJV7HyypiLiQU78vCz4xv82Ii0dyiqGjFKHUJS3E/x5FWQNYaIV6OW1iDBffQ==}
+    dev: false
 
   /svelte-check/2.2.10_sass@1.44.0+svelte@3.44.2:
     resolution: {integrity: sha512-UVLd/N7hUIG2v6dytofsw8MxYn2iS2hpNSglsGz9Z9b8ZfbJ5jayl4Mm1SXhNwiFs5aklG90zSBJtd7NTK8dTg==}
