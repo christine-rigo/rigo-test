@@ -15,6 +15,7 @@
 <div class="services-page-container" in:fadeIn out:fadeOut>
 	<section
 		class="service services-home"
+		style="--elevation: 0"
 		use:inview={{ threshold: 0.3 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 	>
@@ -55,6 +56,7 @@
 	<section
 		class="service service-informational technical"
 		id="technical-services-section"
+		style="--elevation: 1"
 		use:inview={{ threshold: 0.7 }}
 		on:enter={() => {
 			$navColor = 'var(--app-color-navy)';
@@ -80,7 +82,7 @@
 		</ServiceInformationalSection>
 	</section>
 
-	<section class="service service-informational data">
+	<section class="service service-informational data" style="--elevation: 2">
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">data</svelte:fragment>
 
@@ -112,7 +114,7 @@
 		</ServiceInformationalSection>
 	</section>
 
-	<section class="service service-informational creative">
+	<section class="service service-informational creative" style="--elevation: 3">
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">creative</svelte:fragment>
 
@@ -158,6 +160,7 @@
 
 	<section
 		class="service service-informational digital-advertising"
+		style="--elevation: 4"
 		use:inview={{ threshold: 0.4 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy)')}
 	>
@@ -200,6 +203,7 @@
 
 	<section
 		class="service summary"
+		style="--elevation: 5"
 		use:inview={{ threshold: 0.6 }}
 		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 	>
@@ -225,7 +229,7 @@
 	.service {
 		--bgcolor: var(--app-color-navy);
 
-		height: 100vh;
+		height: 98vh;
 		width: 100%;
 
 		position: relative;
@@ -233,6 +237,7 @@
 
 		:global(.inner) {
 			position: absolute;
+			z-index: var(--elevation);
 
 			display: grid;
 			grid-template-columns: 1fr;
@@ -257,12 +262,18 @@
 			top: 2rem;
 			left: 20vw;
 
+			transform: scale3d(1, 1, 1);
+
+			background-attachment: fixed;
+
 			height: calc(100% - 4rem);
 			width: calc(100% - 20vw);
 		}
 
 		:global(.backdrop) {
 			display: flex;
+
+			transform: scale3d(1, 1, 1);
 
 			position: fixed;
 			z-index: -1;

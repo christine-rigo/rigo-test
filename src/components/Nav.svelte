@@ -11,8 +11,8 @@
 	<nav>
 		<!-- TODO -->
 		<a href="#todo">Work</a>
-		<a href="/services">Services</a>
-		<a href="/about">About</a>
+		<a href="/services" sveltekit:prefetch>Services</a>
+		<a href="/about" sveltekit:prefetch>About</a>
 		<a href="#todo">Team</a>
 		<a href="#todo">Contact</a>
 	</nav>

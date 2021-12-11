@@ -20,7 +20,12 @@ body {
 	--app-color-red-contrast-hsl: var(--app-color-navy-hsl);
 
 	--app-color-blue-hsl: 241, 100%, 72%;
-	--app-color-blue: hsl(241, 100%, 72%);
+	--app-color-blue: #7370ff;
 	--app-color-blue-contrast: var(--app-color-navy);
 	--app-color-blue-contrast-hsl: var(--app-color-navy-hsl);
+
+	--app-color-lunarblue: #504de6;
+	--app-color-lunarblue-hsl: 241, 75%, 60%;
+	--app-color-lunarblue-contrast: hsl(35, 55%, 96%);
+	--app-color-lunarblue-contrast-hsl: 35, 55%, 96%;
 }
