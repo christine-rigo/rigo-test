@@ -5,14 +5,24 @@
 	import SiBox from '$/components/services/SIBox.svelte';
 	import { navColor } from '$/stores/nav.store';
 	import { fadeIn, fadeOut } from '$/transitions/fade';
+	import { browser } from '$app/env';
 	import { inview } from 'svelte-inview';
+
+	// @ts-expect-error
+	$: isChrome = browser && !!window.chrome;
+	$: isEdgeChromium = browser && isChrome && navigator.userAgent.indexOf('Edg') != -1;
 </script>
 
 <svelte:head>
 	<title>Services / Rigo Agency</title>
 </svelte:head>
 
-<div class="services-page-container" in:fadeIn out:fadeOut>
+<div
+	class="services-page-container"
+	class:is-chrome={isChrome && !isEdgeChromium}
+	in:fadeIn
+	out:fadeOut
+>
 	<section
 		class="service services-home"
 		style="--elevation: 0"
@@ -216,6 +226,10 @@
 		width: 100%;
 		height: 100%;
 		min-height: 100%;
+
+		&.is-chrome :global(.inner) {
+			transform: translate3d(0, 0, 0);
+		}
 	}
 
 	* {
@@ -249,12 +263,13 @@
 			width: 100%;
 			height: 100%;
 
-			clip: rect(0, auto, auto, 0);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			// clip: rect(0, auto, auto, 0);
 
-			@supports (-webkit-overflow-scrolling: touch) {
-				clip: unset;
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-			}
+			// @supports (-webkit-overflow-scrolling: touch) {
+			// 	clip: unset;
+			// 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			// }
 		}
 
 		:global(.inner .content) {
