@@ -12,6 +12,9 @@ const config = {
 		adapter: adapter(),
 
 		vite: {
+			optimizeDeps: {
+				include: ['clsx']
+			},
 			resolve: {
 				alias: {
 					$: new URL('./src/', import.meta.url).pathname

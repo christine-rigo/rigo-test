@@ -3,8 +3,8 @@
 	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
 	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
+	import Hr from '$/components/utils/Hr.svelte';
 	import { navColor } from '$/stores/nav.store';
-	import { fadeIn, fadeOut } from '$/transitions/fade';
 	import { browser } from '$app/env';
 	import { inview } from 'svelte-inview';
 
@@ -17,12 +17,7 @@
 	<title>Services / Rigo Agency</title>
 </svelte:head>
 
-<div
-	class="services-page-container"
-	class:is-chrome={isChrome && !isEdgeChromium}
-	in:fadeIn
-	out:fadeOut
->
+<div class="services-page-container" class:is-chrome={isChrome && !isEdgeChromium}>
 	<section
 		class="service services-home"
 		style="--elevation: 0"
@@ -37,7 +32,7 @@
 					<h1>Services</h1>
 
 					<div class="description">
-						<hr style="width: 57px; margin: 0;" />
+						<Hr />
 
 						<p>
 							<br />
@@ -68,10 +63,7 @@
 		id="technical-services-section"
 		style="--elevation: 1"
 		use:inview={{ threshold: 0.7 }}
-		on:enter={() => {
-			$navColor = 'var(--app-color-navy)';
-			console.log(1);
-		}}
+		on:enter={() => ($navColor = 'var(--app-color-navy)')}
 	>
 		<ServiceInformationalSection>
 			<svelte:fragment slot="title">technical</svelte:fragment>
