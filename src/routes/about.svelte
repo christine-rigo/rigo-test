@@ -191,8 +191,7 @@
 		display: flex;
 		justify-content: center;
 
-		position: absolute;
-		left: 0;
+		padding-right: 10vw;
 
 		width: 100%;
 	}
