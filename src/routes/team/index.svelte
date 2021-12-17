@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
+	import Footer from '$/components/Footer.svelte';
 	import Hr from '$/components/utils/Hr.svelte';
 	import type { Load } from '@sveltejs/kit';
-	import type { Team } from '../api/team.json';
 
 	export const load: Load = async ({ fetch }) => {
 		const req = await fetch('/api/team.json');
@@ -17,9 +17,7 @@
 </script>
 
 <script lang="ts">
-	export let team: Team;
-
-	$: console.log(team);
+	export let team: { name: string; title: string }[];
 </script>
 
 <svelte:head>
@@ -40,6 +38,27 @@
 	<strong>We climb together.</strong>
 </section>
 
+<br /><br />
+
+<section class="team">
+	{#each team as { name, title }}
+		<a href="/team/{name.replace(' ', '-')}">
+			<div class="member-card">
+				<!-- <img src="https://placekitten.com/g/231/286" alt={name} /> -->
+
+				<div class="member-info">
+					<strong>{name}</strong> <br />
+					<strong>{title}</strong>
+				</div>
+			</div>
+		</a>
+	{/each}
+</section>
+
+<br /><br /><br /> <br /><br />
+
+<Footer href="/services">Services</Footer>
+
 <style lang="scss">
 	h1 {
 		font-size: 6.25rem;
@@ -55,7 +74,42 @@
 		}
 	}
 
+	strong {
+		color: var(--color);
+	}
+
 	.we-climb-together {
 		padding: 2rem 10vw 15rem 8vw;
+	}
+
+	.team {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 231px);
+		gap: 1.5rem;
+	}
+
+	.member-card {
+		height: 286px;
+		width: 231px;
+
+		background-color: #c4c4c4;
+
+		position: relative;
+
+		strong {
+			text-transform: capitalize;
+			font-family: 'Bebas Neue', sans-serif;
+			font-weight: 400;
+			font-size: 1.5625rem;
+			line-height: 1;
+		}
+
+		.member-info {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+			padding: 1rem;
+		}
 	}
 </style>

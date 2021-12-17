@@ -8,16 +8,20 @@
 	import { browser } from '$app/env';
 	import { inview } from 'svelte-inview';
 
-	// @ts-expect-error
-	$: isChrome = browser && !!window.chrome;
-	$: isEdgeChromium = browser && isChrome && navigator.userAgent.indexOf('Edg') != -1;
+	$: isChrome =
+		browser &&
+		'chrome' in window &&
+		navigator.userAgent.includes('Edg') &&
+		!('brave' in window.navigator);
+
+	$: console.log({ isChrome, browser });
 </script>
 
 <svelte:head>
 	<title>Services / Rigo Agency</title>
 </svelte:head>
 
-<div class="services-page-container" class:is-chrome={isChrome && !isEdgeChromium}>
+<div class="services-page-container" class:is-chrome={isChrome}>
 	<section
 		class="service services-home"
 		style="--elevation: 0"

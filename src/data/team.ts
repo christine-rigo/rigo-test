@@ -1,21 +1,19 @@
-import type { RequestHandler } from '@sveltejs/kit';
+export type Member = {
+	name?: string;
+	title: string;
+	description: string;
+	hobbies: string;
+	achievements?: string;
+};
 
-export type Team = Record<
-	string,
-	{
-		title: string;
-		description: string;
-		hobbies: string;
-		achievements?: string;
-	}
->;
+const getPeople = <T extends string>(et: Record<T, Member>) => et;
 
-const people: Team = {
+export const PEOPLE = getPeople({
 	'eleanor ward': {
 		title: 'creative director & agency co-founder',
 		description: `
 			We co-founded rigo with a goal to create campaigns that put credible and creative content at the heart of multichannel campaigns, from conception to execution. 
-			<br>
+			<br><br/>
 			Whether an audience is global or hyper-local, we stay true to this, creating original, interesting, valuable assets that deliver genuine value to the target audience as part of carefuly structured digital campaigns.
 		`,
 		hobbies: `Outside of work you'll find me swimming in a lake or up a mountain with my 2 rescue dogs.`
@@ -50,20 +48,4 @@ const people: Team = {
 		hobbies: `I spend my spare time drawing, painting, baking - anything creative goes.`,
 		achievements: `I'm proud to have helped in the creation of a new website - giving it a completely new look, sound and feel. I'm also excited to be a part of helping the brand's goals become a reality.`
 	}
-};
-
-export const get: RequestHandler = () => {
-	return {
-		status: 200,
-		body: people
-	};
-};
-
-`
-My role has grown significantly since I joined as the company has expanded. I write engaging, catchy digital campaign copy for my main client – a world-leading tobacco company. But I have also worked with other great businesses while at rigo.
- 
-Achievements: I’m proud to have helped in the creation of a new website – giving it a completely new look, sound and feel. I’m also excited to be a part of helping the brand’s goals become a reality. 
- 
-Hobbies: I spend my spare time drawing, painting, baking – anything creative goes. 
-Indigo Shawaccount manager
-`;
+});
