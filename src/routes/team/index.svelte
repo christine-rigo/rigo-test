@@ -42,7 +42,7 @@
 
 <section class="team">
 	{#each team as { name, title }}
-		<a href="/team/{name.replace(' ', '-')}">
+		<a href="/team/{name.replace(' ', '-')}" sveltekit:prefetch>
 			<div class="member-card">
 				<!-- <img src="https://placekitten.com/g/231/286" alt={name} /> -->
 

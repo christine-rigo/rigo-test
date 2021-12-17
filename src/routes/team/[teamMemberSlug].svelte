@@ -42,7 +42,7 @@
 
 	export let teamMember: Member & { next: keyof typeof PEOPLE | 'our services' };
 
-	const { name, title, description, hobbies, achievements, next } = teamMember;
+	$: ({ name, title, description, hobbies, achievements, next } = teamMember);
 </script>
 
 <h1>
