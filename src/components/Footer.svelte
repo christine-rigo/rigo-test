@@ -35,6 +35,7 @@
 		<div class="s4">
 			<a href="#sitemap">Site Map</a>
 			<a href="#privacy">Privacy Policy</a>
+			<a href="/nigerian-glyphs">Nigerian Glyphs</a>
 		</div>
 	</section>
 
@@ -88,7 +89,7 @@
 
 	.middle {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 0.4fr;
+		grid-template-columns: 1fr 1fr 1fr 0.5fr;
 
 		font-size: 0.8rem;
 
@@ -125,6 +126,12 @@
 
 		.s4 {
 			flex-direction: column;
+			gap: 0.5rem;
+
+			a {
+				line-height: 1.1;
+				text-align: center;
+			}
 		}
 	}
 

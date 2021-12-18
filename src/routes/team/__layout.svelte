@@ -10,9 +10,9 @@
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
 
-<section class="container">
+<div style="display: contents;">
 	<slot />
-</section>
+</div>
 
 <style lang="scss">
 	* {
@@ -25,13 +25,5 @@
 	:global(::selection) {
 		background: var(--color);
 		color: var(--color-contrast);
-	}
-
-	.container {
-		width: 100%;
-		height: 100%;
-		min-height: 100%;
-
-		padding: 2rem 0 2rem 20vw;
 	}
 </style>

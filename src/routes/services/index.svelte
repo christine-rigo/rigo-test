@@ -13,8 +13,6 @@
 		'chrome' in window &&
 		navigator.userAgent.includes('Edg') &&
 		!('brave' in window.navigator);
-
-	$: console.log({ isChrome, browser });
 </script>
 
 <svelte:head>

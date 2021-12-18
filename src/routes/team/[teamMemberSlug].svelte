@@ -11,14 +11,14 @@
 		if (req.status === 404) {
 			return {
 				status: 404,
-				error: 'Not found'
+				error: 'Not found',
 			};
 		}
 
 		if (!req.ok) {
 			return {
 				status: 500,
-				error: 'Something went wrong'
+				error: 'Something went wrong',
 			};
 		}
 
@@ -27,8 +27,8 @@
 		return {
 			status: 200,
 			props: {
-				teamMember: data
-			}
+				teamMember: data,
+			},
 		};
 	};
 
@@ -44,6 +44,10 @@
 
 	$: ({ name, title, description, hobbies, achievements, next } = teamMember);
 </script>
+
+<svelte:head>
+	<title>{capitalize(name)} / Team / Rigo Agency</title>
+</svelte:head>
 
 <h1>
 	<span class="we-are"> We Are: </span>
@@ -61,21 +65,23 @@
 		<br />
 		<br />
 
-		<p>
-			<b class="quality">HOBBIES: </b>
-			{@html hobbies}
-		</p>
+		{#if hobbies}
+			<p>
+				<b class="quality">HOBBIES: </b>
+				{@html hobbies}
+			</p>
 
-		<br /><br />
+			<br /><br />
+		{/if}
 
 		{#if achievements}
 			<p>
 				<b class="quality"> ACHIEVEMENTS: </b>
 				{@html achievements}
 			</p>
-		{/if}
 
-		<br /><br />
+			<br /><br />
+		{/if}
 
 		<p class="contact-details">
 			<strong>{name}</strong> <br />

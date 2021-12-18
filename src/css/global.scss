@@ -116,10 +116,6 @@ button {
 	transition: all 200ms;
 }
 
-// ::-webkit-scrollbar-thumb:hover {
-// 	background-color: rgba(var(--app-color-dark-rgb), 1);
-// }
-
 *::selection {
 	background-color: var(--app-color-navy-contrast);
 	color: var(--app-color-navy);

@@ -17,97 +17,95 @@
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
 
-<section class="container">
-	<h1>
-		<span class="we-are"> We Are: </span>
-		copywriters, designers, developers, strategists
-	</h1>
+<h1>
+	<span class="we-are"> We Are: </span>
+	copywriters, designers, developers, strategists
+</h1>
 
-	<section class="main-content">
-		<div class="content">
-			<Hr />
-			<br />
-			<p>
-				Mission: <br />
-				<b>
-					To create marketing solutions that empower authentic brands to reach their potential.
-				</b>
-			</p>
-			<br />
-			<p>
-				rigo works hand in hand with ambitious marketing teams, as a single group, pushing towards a
-				successful ascent.
-			</p>
-			<br />
-			<p>The route map for that ascent is unique to every business.</p>
-			<br />
-			<p>
-				But whether it's to rise through the ranks of Google, climb from new brand to household
-				name, or take a new product from launch to industry leader...
-			</p>
-			<br />
-			<p><b>Your climb is ours and we're here to help your business reach its potential.</b></p>
-			<br /><br />
-			<p><b>rigo - to ascend</b></p>
-			<br />
-			<p>rigo means <i>to ascend</i> in Igbo; co-founder Stephen's family language</p>
-		</div>
-
-		<div class="images">
-			<img
-				src="https://placekitten.com/g/331/462"
-				alt="3 people working in a workspace"
-				style="transform: translateY(-100px);"
-			/>
-
-			<img
-				src="https://placekitten.com/g/394/233"
-				alt="stairs"
-				style="transform: translate(-100px, -10px);"
-			/>
-		</div>
-	</section>
-
-	<section class="qualities">
-		<section class="quality">
-			<img src="/services-svg/agile.svg" alt="Agile" />
-			<h2>AGILE</h2>
-			<p>The destination is set but the path there is not.</p>
-			<strong>We Stay focused.</strong>
-		</section>
-
-		<section class="quality">
-			<img src="/services-svg/people-first.svg" alt="People First" />
-			<h2>PEOPLE-FIRST</h2>
-			<p>Scaling new heights demands new approaches.</p>
-			<strong>Diversity is valued.</strong>
-		</section>
-
-		<section class="quality">
-			<img src="/services-svg/smart.svg" alt="Smart" />
-			<h2>SMART</h2>
-			<p>The shortest route isn't alwaysthe fastest.</p>
-			<strong>Data is our map.</strong>
-		</section>
-
-		<section class="quality">
-			<img src="/services-svg/agile.svg" alt="Agile" />
-			<h2>TOGETHER</h2>
-			<p>Reaching the summit relies on teamwork.</p>
-			<strong>We climb together.</strong>
-		</section>
-	</section>
-
-	<br /><br /><br />
-
-	<div class="start-ascent">
-		<StartYourAscent />
+<section class="main-content">
+	<div class="content">
+		<Hr />
+		<br />
+		<p>
+			Mission: <br />
+			<b> To create marketing solutions that empower authentic brands to reach their potential. </b>
+		</p>
+		<br />
+		<p>
+			rigo works hand in hand with ambitious marketing teams, as a single group, pushing towards a
+			successful ascent.
+		</p>
+		<br />
+		<p>The route map for that ascent is unique to every business.</p>
+		<br />
+		<p>
+			But whether it's to rise through the ranks of Google, climb from new brand to household name,
+			or take a new product from launch to industry leader...
+		</p>
+		<br />
+		<p><b>Your climb is ours and we're here to help your business reach its potential.</b></p>
+		<br /><br />
+		<p><b>rigo - to ascend</b></p>
+		<br />
+		<p>rigo means <i>to ascend</i> in Igbo; co-founder Stephen's family language</p>
 	</div>
 
-	<br /><br /><br /> <br /><br /><br />
+	<div class="images">
+		<img
+			src="https://placekitten.com/g/331/462"
+			alt="3 people working in a workspace"
+			style="transform: translateY(-100px);"
+		/>
 
-	<Footer href="#contact-us">Contact Us</Footer>
+		<img
+			src="https://placekitten.com/g/394/233"
+			alt="stairs"
+			style="transform: translate(-100px, -10px);"
+		/>
+	</div>
 </section>
+
+<section class="qualities">
+	<section class="quality">
+		<img src="/services-svg/agile.svg" alt="Agile" />
+		<h2>AGILE</h2>
+		<p>The destination is set but the path there is not.</p>
+		<strong>We Stay focused.</strong>
+	</section>
+
+	<section class="quality">
+		<img src="/services-svg/people-first.svg" alt="People First" />
+		<h2>PEOPLE-FIRST</h2>
+		<p>Scaling new heights demands new approaches.</p>
+		<strong>Diversity is valued.</strong>
+	</section>
+
+	<section class="quality">
+		<img src="/services-svg/smart.svg" alt="Smart" />
+		<h2>SMART</h2>
+		<p>The shortest route isn't alwaysthe fastest.</p>
+		<strong>Data is our map.</strong>
+	</section>
+
+	<section class="quality">
+		<img src="/services-svg/agile.svg" alt="Agile" />
+		<h2>TOGETHER</h2>
+		<p>Reaching the summit relies on teamwork.</p>
+		<strong>We climb together.</strong>
+	</section>
+</section>
+
+<br /><br /><br />
+
+<div class="start-ascent">
+	<StartYourAscent />
+</div>
+
+<br /><br /><br /> <br /><br /><br />
+
+<div style="display: contents;">
+	<Footer href="#contact-us">Contact Us</Footer>
+</div>
 
 <style lang="scss">
 	* {
@@ -135,14 +133,6 @@
 
 			-webkit-text-stroke: 1px var(--color);
 		}
-	}
-
-	.container {
-		width: 100%;
-		height: 100%;
-		min-height: 100%;
-
-		padding: 2rem 0 2rem 20vw;
 	}
 
 	.main-content {

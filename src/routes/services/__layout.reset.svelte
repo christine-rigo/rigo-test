@@ -9,9 +9,7 @@
 	</aside>
 
 	<section>
-		<section class="container">
-			<slot />
-		</section>
+		<slot />
 	</section>
 </main>
 
@@ -36,16 +34,8 @@
 		width: 20vw;
 	}
 
-	main > section {
+	section {
 		min-height: 100%;
 		width: 100%;
-	}
-
-	.container {
-		width: 100%;
-		height: 100%;
-		min-height: 100%;
-
-		padding: 2rem 0 2rem 20vw;
 	}
 </style>
