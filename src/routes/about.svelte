@@ -122,11 +122,6 @@
 
 	h1 {
 		color: var(--color);
-		line-height: 1.2;
-	}
-
-	h1 {
-		font-size: 6.25rem;
 
 		.we-are {
 			color: var(--color-contrast);

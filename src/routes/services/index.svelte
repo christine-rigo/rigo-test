@@ -230,10 +230,6 @@
 		color: var(--app-color-navy);
 	}
 
-	h1 {
-		font-size: 6.25rem;
-	}
-
 	.service {
 		--bgcolor: var(--app-color-navy);
 

@@ -10,8 +10,8 @@
 		return {
 			status: 200,
 			props: {
-				team: data
-			}
+				team: data,
+			},
 		};
 	};
 </script>
@@ -61,9 +61,7 @@
 
 <style lang="scss">
 	h1 {
-		font-size: 6.25rem;
 		color: var(--color);
-		line-height: 1.2;
 
 		padding-right: 7rem;
 
