@@ -9,6 +9,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Nigerian Glyphs / Rigo Agency</title>
+</svelte:head>
+
 <h1>Nigerian Glyphs</h1>
 
 <br /><br />

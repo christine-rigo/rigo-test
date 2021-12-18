@@ -34,8 +34,8 @@
 
 		<div class="s4">
 			<a href="#sitemap">Site Map</a>
-			<a href="#privacy">Privacy Policy</a>
-			<a href="/nigerian-glyphs">Nigerian Glyphs</a>
+			<a href="/privacy">Privacy Policy</a>
+			<a href="/nigerian-glyphs" sveltekit:prefetch>Nigerian Glyphs</a>
 		</div>
 	</section>
 
