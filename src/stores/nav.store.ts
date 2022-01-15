@@ -1,3 +1,7 @@
 import { writable } from 'svelte/store';
 
-export const navColor = writable('var(--app-color-navy-contrast)');
+type Color = 'navy' | 'yellow' | 'red' | 'green' | 'blue' | 'lunarblue';
+type Variant = '' | '-hsl' | '-contrast' | '-contrast-hsl';
+type ThemeVars = `var(--app-color-${Color}${Variant})`;
+
+export const navColor = writable<ThemeVars>('var(--app-color-navy-contrast)');

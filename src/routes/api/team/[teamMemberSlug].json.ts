@@ -1,17 +1,15 @@
 import { PEOPLE } from '$/data/team';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler = ({ params }) => {
-	const { teamMemberSlug } = params;
-
+export const get: RequestHandler = ({ params: { teamMemberSlug } }) => {
 	const memberSlugToName = teamMemberSlug.replace('-', ' ');
 
 	if (!(memberSlugToName in PEOPLE)) {
 		return {
 			status: 404,
 			body: {
-				message: `No member found with the slug "${teamMemberSlug}"`
-			}
+				message: `No member found with the slug "${teamMemberSlug}"`,
+			},
 		};
 	}
 
@@ -22,6 +20,6 @@ export const get: RequestHandler = ({ params }) => {
 
 	return {
 		status: 200,
-		body: { name: memberSlugToName, ...PEOPLE[memberSlugToName], next }
+		body: { name: memberSlugToName, ...PEOPLE[memberSlugToName], next },
 	};
 };

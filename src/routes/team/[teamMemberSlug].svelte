@@ -1,11 +1,10 @@
 <script context="module" lang="ts">
+	import Footer from '$/components/Footer.svelte';
 	import Hr from '$/components/utils/Hr.svelte';
 	import type { Member, PEOPLE } from '$/data/team';
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ fetch, page: { params } }) => {
-		const { teamMemberSlug } = params;
-
+	export const load: Load = async ({ fetch, params: { teamMemberSlug } }) => {
 		const req = await fetch(`/api/team/${teamMemberSlug}.json`);
 
 		if (req.status === 404) {
@@ -38,8 +37,6 @@
 </script>
 
 <script lang="ts">
-	import Footer from '$/components/Footer.svelte';
-
 	export let teamMember: Member & { next: keyof typeof PEOPLE | 'our services' };
 
 	$: ({ name, title, description, hobbies, achievements, next } = teamMember);
