@@ -14,7 +14,7 @@
 		<a href="/services" sveltekit:prefetch>Services</a>
 		<a href="/about" sveltekit:prefetch>About</a>
 		<a href="/team" sveltekit:prefetch>Team</a>
-		<a href="#todo">Contact</a>
+		<a href="/contact">Contact</a>
 	</nav>
 </div>
 
