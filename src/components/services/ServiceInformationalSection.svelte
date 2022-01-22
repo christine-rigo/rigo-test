@@ -56,6 +56,9 @@
 
 		width: 100%;
 
+		h2 {
+			color: white;
+		}
 		hr {
 			flex: 1 1 auto;
 			display: block;

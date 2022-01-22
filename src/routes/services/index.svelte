@@ -54,7 +54,7 @@
 				</div>
 
 				<div class="image">
-					<img src="https://placekitten.com/g/482/521" alt="Hero banner" />
+					<img src="/services-img/baloon-71-72 1.png" alt="Hero banner" />
 				</div>
 			</div>
 		</div>
@@ -315,7 +315,7 @@
 
 			.description {
 				align-self: flex-end;
-
+				padding: 5rem 0rem 5rem 0rem;
 				width: 75%;
 			}
 
