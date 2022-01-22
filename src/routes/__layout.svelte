@@ -22,7 +22,7 @@
 	}
 
 	aside {
-		position: fixed;
+		position: static;
 		top: 0;
 		left: 0;
 		z-index: 9999;
@@ -30,10 +30,10 @@
 		display: flex;
 		justify-content: center;
 
-		padding: 3rem 0;
+		padding: 2rem 0;
 
-		height: 100%;
-		width: 20vw;
+		height: unset;
+		width: unset;
 	}
 
 	main > section {
@@ -45,7 +45,18 @@
 		width: 100%;
 		height: 100%;
 		min-height: 100%;
+		padding: 0rem 2rem 2rem 2rem;
+	}
 
-		padding: 2rem 0 2rem 20vw;
+	@media(min-width: 1024px) {
+		aside {
+			position: absolute;
+			width: 20vw;
+			height: 100%;
+			padding: 3rem 0;
+		}
+		.container {
+			padding: 2rem 0 2rem 20vw;
+		}
 	}
 </style>

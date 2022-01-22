@@ -21,8 +21,8 @@
 <style lang="scss">
 	.nav-container {
 		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+		flex-direction: row;
+		gap: 0rem;
 
 		width: max-content;
 
@@ -33,16 +33,44 @@
 
 	nav {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
-		gap: 1rem;
+		align-items: center;
+		gap: 8px;
 	}
 
 	a {
 		color: var(--color);
 
 		transition: color 0.2s ease-in;
-
+		font-size: 13px;
 		width: max-content;
+	}
+
+	@media(min-width: 1024px) {
+		nav {
+			flex-direction: column;
+		}
+		.nav-container {
+			flex-direction: column;
+		}
+	}
+	@media(min-width: 768px) {
+		.nav-container {
+			gap: 2rem;
+		}
+
+		nav {
+			gap: 1rem;
+		}
+
+		nav a {
+			font-size: 16px;
+		}
+	}
+	@media(max-width: 768px) {
+		.nav-container > a {
+			transform: scale(0.7);
+		}
 	}
 </style>
