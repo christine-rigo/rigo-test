@@ -8,7 +8,9 @@
 	});
 </script>
 
-
+<svelte:head>
+	<title>Rigo Agency</title>
+</svelte:head>
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
 
