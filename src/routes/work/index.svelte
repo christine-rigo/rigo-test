@@ -26,13 +26,19 @@
 		<div class="showcase-card">
 			<div class="showcase-img" style="background-image: url('/work-img/volta-work.jpg'); background-size: cover;"></div>
 			<div class="showcase-title">VOLTA</div>
-			<div class="showcase-category">+ CREATIVE  + DIGITAL ADVERTISING  + SUSTAINABILITY</div>
+			<div class="showcase-category">
+				<div>+ CREATIVE</div>
+				<div>+ DIGITAL ADVERTISING</div>
+				<div>+ SUSTAINABILITY</div>
+			</div>
 		</div>
 		<div class="showcase-card">
 			<div class="showcase-img" style="background-image: url('/work-img/gallagher-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">GALLAGHER</div>
 			<div class="showcase-category">
-				+ DATA  + CREATIVE  + FINANCIAL SERVICES
+				<div>+ DATA</div>
+				<div>+ CREATIVE</div>
+				<div>+ FINANCIAL SERVICES</div>
 			</div>
 		</div>
 	</div>
@@ -40,12 +46,19 @@
 		<div class="showcase-card">
 			<div class="showcase-img" style="background-image: url('/work-img/broadscale-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">BROADSCALE</div>
-			<div class="showcase-category">+ DIGITAL ADVERTISING  + CREATIVE  + TECHNICAL</div>
+			<div class="showcase-category">
+				<div>+ DIGITAL ADVERTISING</div>
+				<div>+ CREATIVE</div>
+				<div>+ TECHNICAL</div>
+			</div>
 		</div>
 		<div class="showcase-card">
 			<div class="showcase-img" style="background-image: url('/work-img/district-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">DISTRICT</div>
-			<div class="showcase-category">+ DATA  + DIGITAL ADVERTISING</div>
+			<div class="showcase-category">
+				<div>+ DATA</div>
+				<div>+ DIGITAL ADVERTISING</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -88,11 +101,15 @@
 			font-style: normal;
 			font-size: 40px;
 			line-height: 48px;
+			margin-top: 0.22rem;
 		}
 		.showcase-category {
 			font-size: 12px;
 			line-height: 16.2px;
 			font-weight: 400;
+			display: flex;
+			justify-content: start;
+			gap: 1rem;
 		}
 	}
 	@media(max-width: 1023px) {
