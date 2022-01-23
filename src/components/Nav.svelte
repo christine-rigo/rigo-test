@@ -10,7 +10,7 @@
 
 	<nav>
 		<!-- TODO -->
-		<a href="#todo">Work</a>
+		<a href="/work">Work</a>
 		<a href="/services" sveltekit:prefetch>Services</a>
 		<a class="hidden-xs" href="/about" sveltekit:prefetch>About</a>
 		<a href="/team" sveltekit:prefetch>Team</a>
