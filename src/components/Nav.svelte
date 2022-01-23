@@ -12,7 +12,7 @@
 		<!-- TODO -->
 		<a href="#todo">Work</a>
 		<a href="/services" sveltekit:prefetch>Services</a>
-		<a href="/about" sveltekit:prefetch>About</a>
+		<a class="hidden-xs" href="/about" sveltekit:prefetch>About</a>
 		<a href="/team" sveltekit:prefetch>Team</a>
 		<a href="/contact">Contact</a>
 	</nav>
@@ -66,6 +66,11 @@
 
 		nav a {
 			font-size: 16px;
+		}
+	}
+	@media(max-width: 1024px) {
+		.hidden-xs {
+			display: none;
 		}
 	}
 	@media(max-width: 768px) {
