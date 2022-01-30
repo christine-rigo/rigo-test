@@ -19,8 +19,8 @@
     <div class="item">
         <div class="contact-form-info">
             <div>
-                <h1>Drop Us <br>a Line</h1>
-                <img src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
+                <h1>Drop Us a Line</h1>
+                <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
             </div>
             <div>
                 <img style="margin-left: 100px; transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
@@ -68,9 +68,17 @@
 	}
 
     h1 {
-        font-size: 100px;
-        line-height: 100px;
-        font-weight: 700;
+		padding-right: 7rem;
+	}
+
+	// Class for responsive h1
+	h1 {
+        font-size: calc(2.375rem + 1.5vw);
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5.5rem;
+        }
     }
 
 	:global(::selection) {
@@ -162,5 +170,20 @@
     }
     .contact-form-input {
         border-left: solid 1px #504de6;
+    }
+
+    // Responsive layout
+    @media(max-width: 1023px) {
+        h1 {
+		padding-right: 0rem;
+	    }
+
+        .container {
+            margin-right: 0rem;
+        }
+
+        .hidden-1024 {
+            display: none;
+        }
     }
 </style>
