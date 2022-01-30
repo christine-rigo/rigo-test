@@ -16,7 +16,7 @@
 
 <div class="">
     <div>
-        <h1>Your climb is ours <br>& we're here to help <br>your business reach <br>its potential</h1>
+        <h1>Your climb is ours & we're here to help your business reach its potential</h1>
     </div>
     <div class="homepage-grid">
         <div class="container">
