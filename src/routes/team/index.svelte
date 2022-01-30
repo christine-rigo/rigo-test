@@ -72,12 +72,22 @@
 		}
 	}
 
+	// Class for responsive h1
+	h1 {
+        font-size: calc(2.375rem + 1.5vw);
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
+
 	strong {
 		color: var(--color);
 	}
 
 	.we-climb-together {
-		padding: 2rem 10vw 15rem 8vw;
+		padding: 2rem 10vw 2rem 8vw;
 	}
 
 	.team {
@@ -110,4 +120,15 @@
 			padding: 1rem;
 		}
 	}
+
+	// Responsive layout
+	@media (max-width: 1023px) {
+        h1 {
+            padding-right: 0rem;
+        }
+
+		.we-climb-together {
+			padding: 2rem 0rem 0rem 0rem;
+		}
+    }
 </style>
