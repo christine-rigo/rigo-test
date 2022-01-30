@@ -230,6 +230,15 @@
 		color: var(--app-color-navy);
 	}
 
+	h1 {
+        font-size: calc(2.375rem + 1.5vw);
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
+
 	.service {
 		--bgcolor: var(--app-color-navy);
 
@@ -343,6 +352,12 @@
 
 		&.summary {
 			--bgcolor: var(--app-color-navy);
+		}
+	}
+
+	@media(max-width: 1023px) {
+		.service .inner .content {
+			position: static;
 		}
 	}
 </style>

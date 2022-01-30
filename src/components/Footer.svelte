@@ -18,11 +18,11 @@
 
 	<section class="middle">
 		<div class="s1">
-			<Logo /> hello@rigo.agency
+			<Logo /> <span class="hidden-m">hello@rigo.agency</span>
 		</div>
 
 		<div class="s2">
-			20-22 Wenlock Road, London, N1 7GU Ascent Marketing Group Ltd, trading as rigo is a company
+			20-22 Wenlock Road, London, N1 7GU<br>Ascent Marketing Group Ltd, trading as rigo is a company
 			registered in England and Wales with company number 13040428, VAT Registered: 766352117.
 		</div>
 
@@ -32,7 +32,7 @@
 			<InstagramSvg />
 		</div>
 
-		<div class="s4">
+		<div class="s4 hidden-m">
 			<a href="#sitemap">Site Map</a>
 			<a href="/privacy">Privacy Policy</a>
 			<a href="/nigerian-glyphs" sveltekit:prefetch>Nigerian Glyphs</a>
@@ -45,14 +45,10 @@
 <style lang="scss">
 	footer {
 		--internal-color: var(--color, white);
-
-		display: grid;
-		grid-template-rows: 1fr 1fr 0.5fr;
-
+		display: flex;
+		flex-direction: column;
 		margin-right: 9rem;
-
 		border: solid 1px var(--internal-color);
-
 		&,
 		* {
 			color: var(--internal-color);
@@ -61,9 +57,9 @@
 
 	.top {
 		padding: 1rem 2rem;
-
-		display: grid;
-		grid-template-columns: auto 1fr;
+		display: flex;
+		flex: 1;
+		flex-wrap: row;
 		gap: 1rem;
 
 		border-bottom: solid 1px var(--internal-color);
@@ -88,11 +84,9 @@
 	}
 
 	.middle {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 0.5fr;
-
+		display: flex;
 		font-size: 0.8rem;
-
+		flex-direction: row;
 		border-bottom: solid 1px var(--internal-color);
 
 		& > div {
@@ -104,27 +98,28 @@
 		}
 
 		.s1 {
-			border-right: solid 1px var(--internal-color);
-
+			flex: 2;
 			gap: 1rem;
+			border-right: solid 1px var(--internal-color);
 		}
 
 		.s2 {
+			flex: 2;
 			border-right: solid 1px var(--internal-color);
 		}
 
 		.s3 {
-			border-right: solid 1px var(--internal-color);
-
+			flex: 2;
 			gap: 1.5rem;
-
+			border-right: solid 1px var(--internal-color);
 			:global(svg) {
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 2.5rem;
+				height: 2.5rem;
 			}
 		}
 
 		.s4 {
+			flex: 1;
 			flex-direction: column;
 			gap: 0.5rem;
 
@@ -136,7 +131,40 @@
 	}
 
 	.bottom {
-		display: grid;
-		place-items: center;
+		display: flex;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	@media(max-width: 1023px) {
+		footer {
+			margin-right: 0rem;
+		}
+		.middle {
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			.s1, .s2, .s3 {
+				border-right: none;
+				border-bottom: solid 1px var(--internal-color);
+			}
+			.s2 {
+				text-align: center;
+			}
+
+			.s3 {
+				:global(svg) {
+					width: 1.75rem;
+					height: 1.75rem;
+				}
+			}
+			.s3 {
+				border-bottom: none;
+			}
+		}
+		.hidden-m {
+			display: none !important;
+		}
 	}
 </style>
