@@ -30,6 +30,14 @@
 			transition: fill 0.2s ease-in;
 		}
 	}
+	@media(max-width: 1023px) {
+		.nav-container {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
 
 	nav {
 		display: flex;
