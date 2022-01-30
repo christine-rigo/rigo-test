@@ -23,9 +23,9 @@
                 <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
             </div>
             <div>
-                <img style="margin-left: 100px; transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
-                <p style="margin-left: 100px;">We'd love to hear from you.</p>
-                <div class="contact-form-image"><img src="/contact-img/contact-us.png" alt="contact rigo"></div>
+                <img style="transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
+                <p>We'd love to hear from you.</p>
+                <div class="contact-form-image"><img class="" src="/contact-img/contact-us.png" alt="contact rigo"></div>
             </div>
             
         </div>
@@ -95,6 +95,7 @@
     .item {
         flex-grow: 1;
         width: 100%;
+        margin-bottom: 2rem;
     }
     @media(min-width: 1440px) {
         .item {
@@ -115,9 +116,14 @@
         }
     }
     .contact-form-info {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: stretch;
+
+        div {
+            flex: 1;
+        }
     }
     .contact-form-image {
         margin-top: 50px;
@@ -173,6 +179,10 @@
     }
 
     // Responsive layout
+    .reponsive-image {
+        width: 100%;
+        height: auto;
+    }
     @media(max-width: 1023px) {
         h1 {
 		padding-right: 0rem;
@@ -180,6 +190,10 @@
 
         .container {
             margin-right: 0rem;
+        }
+
+        .contact-form-image {
+            width: 100%;
         }
 
         .hidden-1024 {
