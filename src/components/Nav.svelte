@@ -10,19 +10,19 @@
 
 	<nav>
 		<!-- TODO -->
-		<a href="#todo">Work</a>
+		<a href="/work">Work</a>
 		<a href="/services" sveltekit:prefetch>Services</a>
-		<a href="/about" sveltekit:prefetch>About</a>
+		<a class="hidden-xs" href="/about" sveltekit:prefetch>About</a>
 		<a href="/team" sveltekit:prefetch>Team</a>
-		<a href="#todo">Contact</a>
+		<a href="/contact">Contact</a>
 	</nav>
 </div>
 
 <style lang="scss">
 	.nav-container {
 		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+		flex-direction: row;
+		gap: 0rem;
 
 		width: max-content;
 
@@ -30,19 +30,60 @@
 			transition: fill 0.2s ease-in;
 		}
 	}
+	@media(max-width: 1023px) {
+		.nav-container {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
 
 	nav {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
-		gap: 1rem;
+		align-items: center;
+		gap: 8px;
 	}
 
 	a {
 		color: var(--color);
 
 		transition: color 0.2s ease-in;
-
+		font-size: 13px;
 		width: max-content;
+	}
+
+	@media(min-width: 1024px) {
+		nav {
+			flex-direction: column;
+		}
+		.nav-container {
+			flex-direction: column;
+		}
+	}
+	@media(min-width: 768px) {
+		.nav-container {
+			gap: 2rem;
+		}
+
+		nav {
+			gap: 1rem;
+		}
+
+		nav a {
+			font-size: 16px;
+		}
+	}
+	@media(max-width: 1024px) {
+		.hidden-xs {
+			display: none;
+		}
+	}
+	@media(max-width: 768px) {
+		.nav-container > a {
+			transform: scale(0.7);
+		}
 	}
 </style>

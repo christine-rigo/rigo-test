@@ -130,6 +130,14 @@
 		}
 	}
 
+	h1 {
+        font-size: calc(2.375rem + 1.5vw);
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
 	.main-content {
 		width: 100%;
 

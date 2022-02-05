@@ -20,7 +20,7 @@
 	}
 
 	aside {
-		position: fixed;
+		position: static;
 		top: 0;
 		left: 0;
 		z-index: 9999;
@@ -28,14 +28,23 @@
 		display: flex;
 		justify-content: center;
 
-		padding: 3rem 0;
+		padding: 2rem 0;
 
-		height: 100%;
-		width: 20vw;
+		height: unset;
+		width: unset;
 	}
 
 	section {
 		min-height: 100%;
 		width: 100%;
+	}
+
+	@media(min-width: 1024px) {
+		aside {
+			position: absolute;
+			width: 20vw;
+			height: 100%;
+			padding: 3rem 0;
+		}
 	}
 </style>

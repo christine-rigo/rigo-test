@@ -126,6 +126,15 @@
 		}
 	}
 
+	h1 {
+        font-size: calc(2.375rem + 1.5vw);
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
+
 	.quality {
 		font-family: 'Bebas Neue', sans-serif;
 		font-weight: 400;
@@ -152,5 +161,11 @@
 		font-size: 2rem;
 		text-transform: uppercase;
 		line-height: 1;
+	}
+
+	@media(max-width: 1023px) {
+		h1 {
+			padding-right: 0;
+		}
 	}
 </style>
