@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
 	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
+import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
 	import Hr from '$/components/utils/Hr.svelte';
@@ -20,199 +21,205 @@
 </svelte:head>
 
 <div class="services-page-container" class:is-chrome={isChrome}>
-	<section
-		class="service services-home"
-		style="--elevation: 0"
-		use:inview={{ threshold: 0.3 }}
-		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
-	>
-		<div class="inner">
-			<div class="content">
-				<div class="backdrop" />
+	<div class="hidden-xs">
+		<section
+			class="service services-home"
+			style="--elevation: 0"
+			use:inview={{ threshold: 0.3 }}
+			on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
+		>
+			<div class="inner">
+				<div class="content">
+					<div class="backdrop" />
 
-				<div class="text-content">
-					<h1>Services</h1>
+					<div class="text-content">
+						<h1>Services</h1>
 
-					<div class="description">
-						<Hr />
+						<div class="description">
+							<Hr />
 
-						<p>
+							<p>
+								<br />
+								Services developed from years of problem solving for brands just like yours.
+
+								<br /><br />
+
+								Elevate credibility with diligently crafted thought leadership content; create a
+								website from scratch with persuasive copy, eye-catching design and seamless UX, or
+								increase your lead flow with email marketing.
+							</p>
+
 							<br />
-							Services developed from years of problem solving for brands just like yours.
 
-							<br /><br />
+							<ScrollerIndicator href="#technical-services-section" />
+						</div>
+					</div>
 
-							Elevate credibility with diligently crafted thought leadership content; create a
-							website from scratch with persuasive copy, eye-catching design and seamless UX, or
-							increase your lead flow with email marketing.
-						</p>
-
-						<br />
-
-						<ScrollerIndicator href="#technical-services-section" />
+					<div class="image">
+						<img src="/services-img/baloon-71-72 1.png" alt="Hero banner" />
 					</div>
 				</div>
-
-				<div class="image">
-					<img src="/services-img/baloon-71-72 1.png" alt="Hero banner" />
-				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section
-		class="service service-informational technical"
-		id="technical-services-section"
-		style="--elevation: 1"
-		use:inview={{ threshold: 0.7 }}
-		on:enter={() => ($navColor = 'var(--app-color-navy)')}
-	>
-		<ServiceInformationalSection>
-			<svelte:fragment slot="title">technical</svelte:fragment>
+		<section
+			class="service service-informational technical"
+			id="technical-services-section"
+			style="--elevation: 1"
+			use:inview={{ threshold: 0.7 }}
+			on:enter={() => ($navColor = 'var(--app-color-navy)')}
+		>
+			<ServiceInformationalSection>
+				<svelte:fragment slot="title">technical</svelte:fragment>
 
-			<svelte:fragment slot="info-boxes">
-				<SiBox>
-					<span slot="title">brochure websites</span>
-					<span slot="description">
-						design, UX, seo, copy and development. everything you need with rigo.
-					</span>
-				</SiBox>
+				<svelte:fragment slot="info-boxes">
+					<SiBox>
+						<span slot="title">brochure websites</span>
+						<span slot="description">
+							design, UX, seo, copy and development. everything you need with rigo.
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">crypto / nft</span>
-					<span slot="description"> coming soon </span>
-				</SiBox>
-			</svelte:fragment>
-		</ServiceInformationalSection>
-	</section>
+					<SiBox>
+						<span slot="title">crypto / nft</span>
+						<span slot="description"> coming soon </span>
+					</SiBox>
+				</svelte:fragment>
+			</ServiceInformationalSection>
+		</section>
 
-	<section class="service service-informational data" style="--elevation: 2">
-		<ServiceInformationalSection>
-			<svelte:fragment slot="title">data</svelte:fragment>
+		<section class="service service-informational data" style="--elevation: 2">
+			<ServiceInformationalSection>
+				<svelte:fragment slot="title">data</svelte:fragment>
 
-			<svelte:fragment slot="info-boxes">
-				<SiBox>
-					<span slot="title">seo</span>
-					<span slot="description">
-						start by finding your target search terms, them watch your traffic and leads grow as you
-						climb through the ranks.
-					</span>
-				</SiBox>
+				<svelte:fragment slot="info-boxes">
+					<SiBox>
+						<span slot="title">seo</span>
+						<span slot="description">
+							start by finding your target search terms, them watch your traffic and leads grow as you
+							climb through the ranks.
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">data dashboard</span>
-					<span slot="description">
-						start by finding your target search terms, them watch your traffic and leads grow as you
-						climb through the ranks.
-					</span>
-				</SiBox>
+					<SiBox>
+						<span slot="title">data dashboard</span>
+						<span slot="description">
+							start by finding your target search terms, them watch your traffic and leads grow as you
+							climb through the ranks.
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">marketing intelligence</span>
-					<span slot="description">
-						Audits and analyse your content and that of your competitors’ to identify gaps and
-						opportunities.
-					</span>
-				</SiBox>
-			</svelte:fragment>
-		</ServiceInformationalSection>
-	</section>
+					<SiBox>
+						<span slot="title">marketing intelligence</span>
+						<span slot="description">
+							Audits and analyse your content and that of your competitors’ to identify gaps and
+							opportunities.
+						</span>
+					</SiBox>
+				</svelte:fragment>
+			</ServiceInformationalSection>
+		</section>
 
-	<section class="service service-informational creative" style="--elevation: 3">
-		<ServiceInformationalSection>
-			<svelte:fragment slot="title">creative</svelte:fragment>
+		<section class="service service-informational creative" style="--elevation: 3">
+			<ServiceInformationalSection>
+				<svelte:fragment slot="title">creative</svelte:fragment>
 
-			<svelte:fragment slot="info-boxes">
-				<SiBox>
-					<span slot="title">original articles</span>
-					<span slot="description">
-						from idea to publication, thought leadership pieces to showcase your expertise and build
-						trust with your customers
-					</span>
-				</SiBox>
+				<svelte:fragment slot="info-boxes">
+					<SiBox>
+						<span slot="title">original articles</span>
+						<span slot="description">
+							from idea to publication, thought leadership pieces to showcase your expertise and build
+							trust with your customers
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">tone of voice</span>
-					<span slot="description">
-						succinct messaging documents, or full brand consultations to overhaul your tone of
-						voice. Do what’s needed.
-					</span>
-				</SiBox>
+					<SiBox>
+						<span slot="title">tone of voice</span>
+						<span slot="description">
+							succinct messaging documents, or full brand consultations to overhaul your tone of
+							voice. Do what’s needed.
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">social</span>
-					<span slot="description"> coming soon </span>
-				</SiBox>
+					<SiBox>
+						<span slot="title">social</span>
+						<span slot="description"> coming soon </span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title"> branding </span>
-					<span slot="description">
-						make your new business real with the essential brand assets for launch
-					</span>
-				</SiBox>
+					<SiBox>
+						<span slot="title"> branding </span>
+						<span slot="description">
+							make your new business real with the essential brand assets for launch
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title"> google News </span>
-					<span slot="description">
-						the content and experience needed to get your publication or website accepted to google
-						news
-					</span>
-				</SiBox>
-			</svelte:fragment>
-		</ServiceInformationalSection>
-	</section>
+					<SiBox>
+						<span slot="title"> google News </span>
+						<span slot="description">
+							the content and experience needed to get your publication or website accepted to google
+							news
+						</span>
+					</SiBox>
+				</svelte:fragment>
+			</ServiceInformationalSection>
+		</section>
 
-	<section
-		class="service service-informational digital-advertising"
-		style="--elevation: 4"
-		use:inview={{ threshold: 0.4 }}
-		on:enter={() => ($navColor = 'var(--app-color-navy)')}
-	>
-		<ServiceInformationalSection>
-			<svelte:fragment slot="title">digital advertising</svelte:fragment>
+		<section
+			class="service service-informational digital-advertising"
+			style="--elevation: 4"
+			use:inview={{ threshold: 0.4 }}
+			on:enter={() => ($navColor = 'var(--app-color-navy)')}
+		>
+			<ServiceInformationalSection>
+				<svelte:fragment slot="title">digital advertising</svelte:fragment>
 
-			<svelte:fragment slot="info-boxes">
-				<SiBox>
-					<span slot="title"> linkedin campaigns </span>
-					<span slot="description">
-						in-depth audience targeting and standout creative will get your business n front of the
-						right audience
-					</span>
-				</SiBox>
+				<svelte:fragment slot="info-boxes">
+					<SiBox>
+						<span slot="title"> linkedin campaigns </span>
+						<span slot="description">
+							in-depth audience targeting and standout creative will get your business n front of the
+							right audience
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title">paid search</span>
-					<span slot="description">
-						highly targeted cost-effective campaigns that drive quality interactions and attract
-						leads
-					</span>
-				</SiBox>
+					<SiBox>
+						<span slot="title">paid search</span>
+						<span slot="description">
+							highly targeted cost-effective campaigns that drive quality interactions and attract
+							leads
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title"> digital pr </span>
-					<span slot="description">
-						build relationships and share something that gets people talking
-					</span>
-				</SiBox>
+					<SiBox>
+						<span slot="title"> digital pr </span>
+						<span slot="description">
+							build relationships and share something that gets people talking
+						</span>
+					</SiBox>
 
-				<SiBox>
-					<span slot="title"> email marketing </span>
-					<span slot="description">
-						powerful automated email welcome series, nurture your contacts and leads into customers.
-					</span>
-				</SiBox>
-			</svelte:fragment>
-		</ServiceInformationalSection>
-	</section>
+					<SiBox>
+						<span slot="title"> email marketing </span>
+						<span slot="description">
+							powerful automated email welcome series, nurture your contacts and leads into customers.
+						</span>
+					</SiBox>
+				</svelte:fragment>
+			</ServiceInformationalSection>
+		</section>
 
-	<section
-		class="service summary"
-		style="--elevation: 5"
-		use:inview={{ threshold: 0.6 }}
-		on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
-	>
-		<ServicesSummary />
-	</section>
+		<section
+			class="service summary"
+			style="--elevation: 5"
+			use:inview={{ threshold: 0.6 }}
+			on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
+		>
+			<ServicesSummary />
+		</section>
+	</div>
+
+	<div class="servicespage-xs">
+		<ServicesPageXs></ServicesPageXs>	
+	</div>
 </div>
 
 <style lang="scss">
@@ -238,6 +245,19 @@
             font-size: 5.5rem;
         }
     }
+
+	.servicespage-xs {
+		display: none;
+	}
+	@media(max-width: 425px) {
+		.hidden-xs {
+			display: none;
+		}
+
+		.servicespage-xs {
+			display: flex;
+		}
+	}
 
 	.service {
 		--bgcolor: var(--app-color-navy);
