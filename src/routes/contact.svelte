@@ -21,7 +21,7 @@
             <div class="contact-form-info">
                 <div>
                     <h1>Drop Us a Line</h1>
-                    <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
+                    <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(270px, -35px);">
                 </div>
                 <div>
                     <img style="transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">

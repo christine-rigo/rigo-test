@@ -227,18 +227,19 @@
         height: 29px;
     }
     .item-card {
+        cursor: pointer;
         height: 190px;
         min-width: 190px;
     }
     @media (min-width: 1440px) {
         .item-row {
-            flex: 1 0 16%;
-            min-height: 190px;
-            min-width: 185px;
+            flex: 1 0 14%;
+            min-height: 170px;
+            min-width: 170px;
         }
         .item-card {
-            height: 190px;
-            min-width: 185px;
+            height: 185px;
+            min-width: 170px;
         }
     }
     .item-body {

@@ -1,18 +1,18 @@
+<script lang="ts">
+    export let heading = 'DEFAULT_HEADING';
+    export let imgUrl = 'DEFAULT_HEADING';
+</script>
+
 <div class="container">
     <div>
-        <div class="casecardtitle">Extreme E</div>
+        <div class="casecardtitle">{heading}</div>
         <div class="casecarddescription">
-            Volta was given the nod as a trusted outlet to report on Extreme E’s 2021 inaugural season,
-            focusing on the organisation’s legacy projects.
-            <br /><br />
-            rigo attended the Ocean X Prix in Lac Rose, Senegal over the course of a week, creating live event
-            coverage, conducting interviews with big names - including Nico Rosberg - and supporting the Volta
-            team as a key coverage provider for the championship.
+            <slot/>
         </div>
     </div>
     
-    <div>
-        <img alt="rigo" style="width: 100%; height: auto" src="/work-img/case-study-volta-img-1.png" />
+    <div style="">
+        <img alt="rigo" style="width: 100%; height: auto;" src={imgUrl} />
     </div>
 </div>
 
@@ -21,7 +21,8 @@
 		display: flex; 
 		flex-direction: row;
 		text-align: center;
-        padding: 0vw 7vw;
+        padding: 0vw 15vw;
+        width: 100vw;
 		justify-content: space-between;
 		gap: 3vw;
 
@@ -40,8 +41,9 @@
 		font-style: normal;
 		font-weight: normal;
         font-size: 40px;
-        line-height: 100px;
 		text-transform: uppercase;
+
+        transform: translateY(-15px);
 	}
 
 	.casecarddescription {
@@ -50,7 +52,16 @@
 		font-weight: normal;
         font-size: 12px;
         line-height: 16px;
+
+        transform: translateY(-15px);
 	}
+
+    @media(max-width: 768px) {
+        .container {
+            flex-direction: column;
+            gap: 12vw;
+        }
+    }
 
     @media(max-width: 425px) {
         .container {
@@ -61,10 +72,14 @@
             font-size: 20px;
 		    line-height: 24px;
             margin-bottom: 3vw;
+
+            text-align: center;
         }
         
         .casecarddescription {
 		    line-height: 140%;
+
+            text-align: center;
         }
     }
 </style>

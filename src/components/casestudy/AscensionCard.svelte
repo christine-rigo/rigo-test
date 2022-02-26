@@ -6,7 +6,7 @@
 <div>
     <div class="card-heading">
         <img alt="rigo" style="width: 100%; height: auto;" src={imgsource}>
-        <img class="ascension-caret" alt="rigo" src="/work-img/ascension-caret.png">
+        <img class="ascension-caret" alt="rigo" src="/casestudy/gallagher-ascension-arrow.svg">
     </div>
     <div class="title">{title}</div>
 </div>
@@ -18,7 +18,7 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 24px;
-        margin-top: 2vw;
+        margin-top: 1vw;
     }
 
     .card-heading {
@@ -27,7 +27,7 @@
 
     .ascension-caret {
         position: absolute;
-        bottom: -20%;
+        bottom: -25%;
         right: 5%;
     }
 </style>

@@ -12,6 +12,10 @@
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue-contrast)';
 	});
+
+	const handleShowcaseClick = function(title: string) {
+		location.href = `/casestudy/${title}`;
+	}
 </script>
 
 <svelte:head>
@@ -23,7 +27,7 @@
         <h1>Our Work</h1>
     </div>
 	<div class="showcase-container-1">
-		<div class="showcase-card">
+		<div class="showcase-card" >
 			<div class="showcase-img" style="background-image: url('/work-img/volta-work.jpg'); background-size: cover;"></div>
 			<div class="showcase-title">VOLTA</div>
 			<div class="showcase-category">
@@ -32,7 +36,7 @@
 				<div>+ SUSTAINABILITY</div>
 			</div>
 		</div>
-		<div class="showcase-card">
+		<div class="showcase-card" on:click={() => handleShowcaseClick('gallagher')}>
 			<div class="showcase-img" style="background-image: url('/work-img/gallagher-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">GALLAGHER</div>
 			<div class="showcase-category">
@@ -42,7 +46,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="showcase-container-2">
+	<div class="showcase-container-2" >
 		<div class="showcase-card">
 			<div class="showcase-img" style="background-image: url('/work-img/broadscale-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">BROADSCALE</div>
@@ -52,7 +56,7 @@
 				<div>+ TECHNICAL</div>
 			</div>
 		</div>
-		<div class="showcase-card">
+		<div class="showcase-card" >
 			<div class="showcase-img" style="background-image: url('/work-img/district-work.png'); background-size: cover;"></div>
 			<div class="showcase-title">DISTRICT</div>
 			<div class="showcase-category">
@@ -92,6 +96,7 @@
 	.showcase-card {
 		display: grid;
 		grid-template-rows: 8fr 1fr 1fr;
+		cursor: pointer;
 		.showcase-img {
 			height: 400px;
 		}
