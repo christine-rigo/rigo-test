@@ -15,48 +15,50 @@
 	<title>Contact Us / Rigo Agency</title>
 </svelte:head>
 
-<div class="container">
-    <div class="item">
-        <div class="contact-form-info">
-            <div>
-                <h1>Drop Us a Line</h1>
-                <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
-            </div>
-            <div>
-                <img style="transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
-                <p>We'd love to hear from you.</p>
-                <div class="contact-form-image"><img class="" src="/contact-img/contact-us.png" alt="contact rigo"></div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="item">
-        <div class="contact-form-grid">
-            <div class="contact-form-row">
-                <div class="contact-form-label">NAME</div>
-                <div class="contact-form-input"></div>
-            </div>
-            <div class="contact-form-row">
-                <div class="contact-form-label">QUERY</div>
-                <div class="contact-form-input"></div>
-            </div>
-            <div class="contact-form-row">
-                <div class="contact-form-label">EMAIL</div>
-                <div class="contact-form-input"></div>
-            </div>
-            <div class="contact-form-row">
-                <div class="contact-form-label">PHONE</div>
-                <div class="contact-form-input"></div>
-            </div>
-            <div class="contact-form-button">
-                <button>START YOUR ASCENT</button>
+<div style="padding: 0rem 2rem 2rem 2rem;">
+    <div class="container">
+        <div class="item">
+            <div class="contact-form-info">
+                <div>
+                    <h1>Drop Us a Line</h1>
+                    <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(300px, -35px);">
+                </div>
+                <div>
+                    <img style="transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
+                    <p>We'd love to hear from you.</p>
+                    <div class="contact-form-image"><img class="" src="/contact-img/contact-us.png" alt="contact rigo"></div>
+                </div>
+                
             </div>
         </div>
+        <div class="item">
+            <div class="contact-form-grid">
+                <div class="contact-form-row">
+                    <div class="contact-form-label">NAME</div>
+                    <div class="contact-form-input"></div>
+                </div>
+                <div class="contact-form-row">
+                    <div class="contact-form-label">QUERY</div>
+                    <div class="contact-form-input"></div>
+                </div>
+                <div class="contact-form-row">
+                    <div class="contact-form-label">EMAIL</div>
+                    <div class="contact-form-input"></div>
+                </div>
+                <div class="contact-form-row">
+                    <div class="contact-form-label">PHONE</div>
+                    <div class="contact-form-input"></div>
+                </div>
+                <div class="contact-form-button">
+                    <button>START YOUR ASCENT</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<br><br><br>
-<div style="display: contents;">
-	<Footer href="#volta">Volta</Footer>
+    <br><br><br>
+    <div style="display: contents;">
+        <Footer href="#volta">Volta</Footer>
+    </div>
 </div>
 
 <style lang="scss">

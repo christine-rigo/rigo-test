@@ -24,40 +24,42 @@
 	<title>Team / Rigo Agency</title>
 </svelte:head>
 
-<h1>
-	<span class="we-are"> We Are: </span>
-	musicians, dog mums, actors, adventurers...
-</h1>
-
-<section class="we-climb-together">
-	<Hr />
-
-	<br />
-
-	Reaching any summit requires teamwork; <br />
-	<strong>We climb together.</strong>
-</section>
-
-<br /><br />
-
-<section class="team">
-	{#each team as { name, title }}
-		<a href="/team/{name.replace(' ', '-')}" sveltekit:prefetch>
-			<div class="member-card">
-				<!-- <img src="https://placekitten.com/g/231/286" alt={name} /> -->
-
-				<div class="member-info">
-					<strong>{name}</strong> <br />
-					<strong>{title}</strong>
+<div style="padding: 0rem 2rem 2rem 2rem;">
+	<h1>
+		<span class="we-are"> We Are: </span>
+		musicians, dog mums, actors, adventurers...
+	</h1>
+	
+	<section class="we-climb-together">
+		<Hr />
+	
+		<br />
+	
+		Reaching any summit requires teamwork; <br />
+		<strong>We climb together.</strong>
+	</section>
+	
+	<br /><br />
+	
+	<section class="team">
+		{#each team as { name, title }}
+			<a href="/team/{name.replace(' ', '-')}" sveltekit:prefetch>
+				<div class="member-card">
+					<!-- <img src="https://placekitten.com/g/231/286" alt={name} /> -->
+	
+					<div class="member-info">
+						<strong>{name}</strong> <br />
+						<strong>{title}</strong>
+					</div>
 				</div>
-			</div>
-		</a>
-	{/each}
-</section>
-
-<br /><br /><br /> <br /><br />
-
-<Footer href="/services">Services</Footer>
+			</a>
+		{/each}
+	</section>
+	
+	<br /><br /><br /> <br /><br />
+	
+	<Footer href="/services">Services</Footer>
+</div>
 
 <style lang="scss">
 	h1 {

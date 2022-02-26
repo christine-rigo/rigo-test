@@ -14,7 +14,7 @@
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
 
-<div class="">
+<div style="padding: 0rem 2rem 2rem 2rem;">
     <div>
         <h1>Your climb is ours & we're here to help your business reach its potential</h1>
     </div>

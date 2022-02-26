@@ -4,10 +4,12 @@
 	import Logo from './svg/Logo.svelte';
 	import TheDotsSvg from './svg/TheDotsSVG.svelte';
 
+	export let marginright = '9rem';
+	export let marginleft = '0rem';
 	export let href: string;
 </script>
 
-<footer>
+<footer style="margin-left: {marginleft}; margin-right: {marginright};">
 	<section class="top">
 		<span class="up-next"> UP NEXT: </span>
 
@@ -47,7 +49,6 @@
 		--internal-color: var(--color, white);
 		display: flex;
 		flex-direction: column;
-		margin-right: 9rem;
 		border: solid 1px var(--internal-color);
 		&,
 		* {

@@ -45,7 +45,7 @@
 		width: 100%;
 		height: 100%;
 		min-height: 100%;
-		padding: 0rem 2rem 2rem 2rem;
+		// padding: 0rem 2rem 2rem 2rem;
 	}
 
 	@media(min-width: 1024px) {

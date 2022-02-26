@@ -18,7 +18,7 @@
 	<title>Work / Rigo Agency</title>
 </svelte:head>
 
-<div class="work-page-container">
+<div class="work-page-container" style="padding: 0rem 2rem 2rem 2rem;">
 	<div>
         <h1>Our Work</h1>
     </div>
