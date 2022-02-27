@@ -1,14 +1,18 @@
 <script lang="ts">
 	import { navColor } from '$/stores/nav.store';
 	import Logo from './svg/Logo.svelte';
+
+	export let logoScale = 1.8;
+	export let navigationBarColor = '';
+	export let navItemsStyle = 'align-items: center;'
 </script>
 
-<div class="nav-container" style="--color: {$navColor}">
+<div class="nav-container" style="--color: {navigationBarColor || $navColor}">
 	<a href="/">
-		<Logo scale={1.8} />
+		<Logo scale={logoScale} />
 	</a>
 
-	<nav>
+	<nav style={navItemsStyle}>
 		<!-- TODO -->
 		<a href="/work">Work</a>
 		<a href="/services" sveltekit:prefetch>Services</a>
@@ -43,7 +47,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		align-items: center;
 		gap: 8px;
 	}
 
