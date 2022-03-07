@@ -9,7 +9,7 @@
 			<div class="top-panel">
 				<h2>+ <slot name="title" /></h2>
 				<hr />
-				<button>Discover More</button>
+				<a href="/services/technical"><button>Discover More</button></a>
 			</div>
 
 			<div class="bottom-panel">
