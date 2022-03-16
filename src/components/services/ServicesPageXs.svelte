@@ -219,7 +219,7 @@ import Footer from "../Footer.svelte";
     </div>
 
     <div style="margin: 10vw 5vw;">
-        <Footer href="/work/Gallagher">Gallagher</Footer>
+        <Footer href="">Gallagher</Footer>
     </div>
 
 </div>
