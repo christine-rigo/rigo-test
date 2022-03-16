@@ -227,7 +227,6 @@
         height: 29px;
     }
     .item-card {
-        cursor: pointer;
         height: 190px;
         min-width: 190px;
     }
