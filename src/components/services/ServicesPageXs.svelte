@@ -124,7 +124,7 @@ import Footer from "../Footer.svelte";
             </div>
         </div>
         <div>
-            <button class="services-btn" style="background-color: var(--app-color-yellow); border: 1px solid var(--app-color-yellow;">Discover more</button>
+            <a href="/digital-adversiting/volta"><button class="services-btn" style="background-color: var(--app-color-yellow); border: 1px solid var(--app-color-yellow;">Discover more</button></a>
         </div>
     </div>
 
@@ -150,7 +150,7 @@ import Footer from "../Footer.svelte";
             </div>
         </div>
         <div>
-            <button class="services-btn" style="background-color: var(--app-color-green); border: 1px solid var(--app-color-green);">Discover more</button>
+            <a href="/data/gallagher"><button class="services-btn" style="background-color: var(--app-color-green); border: 1px solid var(--app-color-green);">Discover more</button></a>
         </div>
     </div>
 
@@ -184,7 +184,7 @@ import Footer from "../Footer.svelte";
             </div>
         </div>
         <div>
-            <button class="services-btn" style="background-color: var(--app-color-red); border: 1px solid var(--app-color-red);">Discover more</button>
+            <a href="/creative/volta"><button class="services-btn" style="background-color: var(--app-color-red); border: 1px solid var(--app-color-red);">Discover more</button></a>
         </div>
     </div>
 
@@ -214,7 +214,7 @@ import Footer from "../Footer.svelte";
             </div>
         </div>
         <div>
-            <button class="services-btn" style="background-color: var(--app-color-blue); border: 1px solid var(--app-color-blue);">Discover more</button>
+            <a href="/digital-advertising/volta-site-traffic"><button class="services-btn" style="background-color: var(--app-color-blue); border: 1px solid var(--app-color-blue);">Discover more</button></a>
         </div>
     </div>
 

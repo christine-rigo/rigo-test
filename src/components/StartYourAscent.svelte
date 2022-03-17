@@ -1,4 +1,4 @@
-<a href="#contact-us">Start your ascent</a>
+<a href="/contact">Start your ascent</a>
 
 <style lang="scss">
 	a {

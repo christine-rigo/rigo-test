@@ -10,25 +10,25 @@
 				<div class="category-name-section" style="--color: var(--app-color-yellow)">
 					<h2>+ technical</h2>
 					<hr />
-					<button>Discover More</button>
+					<a href="/digital-advertising/volta-site-traffic"><button>Discover More</button></a>
 				</div>
 
 				<div class="category-name-section" style="--color: var(--app-color-green)">
 					<h2>+ data</h2>
 					<hr />
-					<button>Discover More</button>
+					<a href="/data/gallagher"><button>Discover More</button></a>
 				</div>
 
 				<div class="category-name-section" style="--color: var(--app-color-red)">
 					<h2>+ creative</h2>
 					<hr />
-					<button>Discover More</button>
+					<a href="/creative/volta"><button>Discover More</button></a>
 				</div>
 
 				<div class="category-name-section" style="--color: var(--app-color-blue)">
 					<h2>+ digital advertising</h2>
 					<hr />
-					<button>Discover More </button>
+					<a href="/digital-advertising/volta-site-traffic"><button>Discover More</button></a>
 				</div>
 			</div>
 

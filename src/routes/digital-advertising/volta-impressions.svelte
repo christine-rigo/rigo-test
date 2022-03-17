@@ -7,18 +7,22 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Digital Advertising: Volta / Rigo Agency</title>
+</svelte:head>
+
 <div class="service-container">
     <div class="service-container-heading hidden-mobile">
-        + Creative: <span class="service-container-heading-casestudy">Volta</span>
+        + Digital Advertising: <span class="service-container-heading-casestudy">Volta</span>
     </div>
     <div class="service-container-body">
         <div class="service-container-body-left">
-            <img class="service-container-body-left-img" src="https://via.placeholder.com/816x386.png?text=Insert Rigo image placeholder here." alt="rigo">
+            <img class="service-container-body-left-img" src="/services-img/volta-impressions.png" alt="rigo">
         </div>
         <div class="service-container-body-right">
             <div class="service-container-body-right-btn-group">
-                <div class="service-container-body-right-btn">NEXT</div>
-                <div class="service-container-body-right-btn">SEE FULL CASE STUDY</div>
+                <a href="/digital-advertising/volta-ad-creative"><div class="service-container-body-right-btn">NEXT</div></a>
+                <a href="/casestudy/volta"><div class="service-container-body-right-btn">SEE FULL CASE STUDY</div></a>
             </div>
             <div class="service-container-body-right-btn hidden-mobile">START YOUR ASCENT</div>
         </div>
@@ -27,15 +31,15 @@
         <div class="service-container-heading hidden-desktop">
             + Creative: <span class="service-container-heading-casestudy">Volta</span>
         </div>
-        <div class="service-container-footer-title">Words for change</div>
-        <div class="service-container-footer-description">With a concerted focus on engaging, original and consistent content from rigo, Volta quickly saw their readership numbers grow with a 112% increase in page views in just the first 3 months of engagement.</div>
-        <div class="service-container-footer-btn hidden-desktop">Start your ascent</div>
+        <div class="service-container-footer-title">Impressions</div>
+        <div class="service-container-footer-description">Highly targeted LinkedIn campaigns to increase touch points with select advertising partners to secure high profile meetings.</div>
+        <a href="/contact"><div class="service-container-footer-btn hidden-desktop">Start your ascent</div></a>
     </div>
 </div>
 
 <style lang="scss">
     .service-container {
-        color: var(--app-color-red);
+        color: var(--app-color-lunarblue);
         
         position: absolute;
         z-index: var(--elevation);
@@ -110,7 +114,7 @@
                 
                 color: var(--app-color-lunarblue-contrast);
 
-                border: 1px solid #EE6338;
+                border: 1px solid var(--app-color-lunarblue);
                 padding: 0.75vw;
                 cursor: pointer;
             }
@@ -182,7 +186,7 @@
             max-width: 100vw;
             transform: translateY(-1vw);
 
-            border: 1px solid var(--app-color-red);
+            border: 1px solid var(--app-color-lunarblue);
             padding: 10vw 8vw;
 
             .service-container-footer-title {
@@ -220,7 +224,7 @@
                 text-align: center;
                 letter-spacing: 0.02em;
                 color: var(--app-color-lunarblue-contrast);
-                border: 1px solid var(--app-color-red);
+                border: 1px solid var(--app-color-lunarblue);
                 padding: 1.5vw 8vw;
                 max-width: 80%;
                 margin: 2vw auto;

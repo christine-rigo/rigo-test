@@ -69,7 +69,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 			use:inview={{ threshold: 0.7 }}
 			on:enter={() => ($navColor = 'var(--app-color-navy)')}
 		>
-			<ServiceInformationalSection>
+			<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
 				<svelte:fragment slot="title">technical</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">
@@ -89,7 +89,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 		</section>
 
 		<section class="service service-informational data" style="--elevation: 2">
-			<ServiceInformationalSection>
+			<ServiceInformationalSection discoverMoreHref="/data/gallagher">
 				<svelte:fragment slot="title">data</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">
@@ -121,7 +121,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 		</section>
 
 		<section class="service service-informational creative" style="--elevation: 3">
-			<ServiceInformationalSection>
+			<ServiceInformationalSection discoverMoreHref="/creative/volta">
 				<svelte:fragment slot="title">creative</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">
@@ -170,7 +170,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 			use:inview={{ threshold: 0.4 }}
 			on:enter={() => ($navColor = 'var(--app-color-navy)')}
 		>
-			<ServiceInformationalSection>
+		<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
 				<svelte:fragment slot="title">digital advertising</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">

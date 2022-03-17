@@ -1,5 +1,5 @@
 <script lang="ts">
-	// export let discoverMoreHref: string;
+	export let discoverMoreHref: string;
 </script>
 
 <div class="inner">
@@ -9,7 +9,7 @@
 			<div class="top-panel">
 				<h2>+ <slot name="title" /></h2>
 				<hr />
-				<a href="/services/technical"><button>Discover More</button></a>
+				<a href={discoverMoreHref}><button>Discover More</button></a>
 			</div>
 
 			<div class="bottom-panel">
