@@ -13,9 +13,6 @@
 		$navColor = 'var(--app-color-lunarblue-contrast)';
 	});
 
-	const handleShowcaseClick = function(title: string) {
-		location.href = `/casestudy/${title}`;
-	}
 </script>
 
 <svelte:head>
@@ -27,24 +24,28 @@
         <h1>Our Work</h1>
     </div>
 	<div class="showcase-container-1">
-		<div class="showcase-card" on:click={() => handleShowcaseClick('volta')}>
-			<div class="showcase-img" style="background-image: url('/work-img/volta-work.jpg'); background-size: cover;"></div>
-			<div class="showcase-title">VOLTA</div>
-			<div class="showcase-category">
-				<div>+ CREATIVE</div>
-				<div>+ DIGITAL ADVERTISING</div>
-				<div>+ SUSTAINABILITY</div>
+		<a href="/casestudy/volta">
+			<div class="showcase-card">
+				<div class="showcase-img" style="background-image: url('/work-img/volta-work.jpg'); background-size: cover;"></div>
+				<div class="showcase-title">VOLTA</div>
+				<div class="showcase-category">
+					<div>+ CREATIVE</div>
+					<div>+ DIGITAL ADVERTISING</div>
+					<div>+ SUSTAINABILITY</div>
+				</div>
 			</div>
-		</div>
-		<div class="showcase-card" on:click={() => handleShowcaseClick('gallagher')}>
-			<div class="showcase-img" style="background-image: url('/work-img/gallagher-work.png'); background-size: cover;"></div>
-			<div class="showcase-title">GALLAGHER</div>
-			<div class="showcase-category">
-				<div>+ DATA</div>
-				<div>+ CREATIVE</div>
-				<div>+ FINANCIAL SERVICES</div>
+		</a>
+		<a href="casestudy/gallagher">
+			<div class="showcase-card">
+				<div class="showcase-img" style="background-image: url('/work-img/gallagher-work.png'); background-size: cover;"></div>
+				<div class="showcase-title">GALLAGHER</div>
+				<div class="showcase-category">
+					<div>+ DATA</div>
+					<div>+ CREATIVE</div>
+					<div>+ FINANCIAL SERVICES</div>
+				</div>
 			</div>
-		</div>
+		</a>
 	</div>
 	<!-- <div class="showcase-container-2" >
 		<div class="showcase-card">
@@ -107,6 +108,7 @@
 			font-size: 40px;
 			line-height: 48px;
 			margin-top: 0.22rem;
+			color: var(--app-color-lunarblue-contrast);
 		}
 		.showcase-category {
 			font-size: 12px;
@@ -115,6 +117,7 @@
 			display: flex;
 			justify-content: start;
 			gap: 1rem;
+			color: var(--app-color-lunarblue-contrast);
 		}
 	}
 	@media(max-width: 1023px) {
