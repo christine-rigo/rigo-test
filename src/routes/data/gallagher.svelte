@@ -1,4 +1,6 @@
 <script lang="ts">
+import RectangularBtn from '$/components/services/RectangularBtn.svelte';
+
     import { navColor } from '$/stores/nav.store';
 	import { onMount } from 'svelte';
 
@@ -21,10 +23,10 @@
         </div>
         <div class="service-container-body-right">
             <div class="service-container-body-right-btn-group">
-                <a href="/digital-advertising/volta-site-traffic"><div class="service-container-body-right-btn">NEXT</div></a>
-                <a href="/casestudy/gallagher"><div class="service-container-body-right-btn">SEE FULL CASE STUDY</div></a>
+                <RectangularBtn cta="next" href="/digital-advertising/volta-site-traffic" btnColor="btn-green"></RectangularBtn>
+                <RectangularBtn cta="see full case study" href="/casestudy/gallagher" btnColor="btn-green"></RectangularBtn>
             </div>
-            <a href="/contact"><div class="service-container-body-right-btn hidden-mobile">START YOUR ASCENT</div></a>
+            <RectangularBtn cta="Start your ascent" href="/contact" btnColor="btn-green hidden-mobile"></RectangularBtn>
         </div>
     </div>
     <div class="service-container-footer">

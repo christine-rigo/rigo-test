@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { navColor } from '$/stores/nav.store';
+    import RectangularBtn from '$/components/services/RectangularBtn.svelte';
+import { navColor } from '$/stores/nav.store';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -21,10 +22,10 @@
         </div>
         <div class="service-container-body-right">
             <div class="service-container-body-right-btn-group">
-                <a href="/digital-advertising/volta-ad-creative"><div class="service-container-body-right-btn">NEXT</div></a>
-                <a href="/casestudy/volta"><div class="service-container-body-right-btn">SEE FULL CASE STUDY</div></a>
+                <RectangularBtn cta="next" href="/digital-advertising/volta-ad-creative" btnColor="btn-lunarblue"></RectangularBtn>
+                <RectangularBtn cta="see full case study" href="/casestudy/volta" btnColor="btn-lunarblue"></RectangularBtn>
             </div>
-            <div class="service-container-body-right-btn hidden-mobile">START YOUR ASCENT</div>
+            <RectangularBtn cta="Start your ascent" href="/contact" btnColor="btn-lunarblue hidden-mobile"></RectangularBtn>
         </div>
     </div>
     <div class="service-container-footer">
@@ -102,22 +103,6 @@
                 flex-direction: column;
                 gap: 1vw;
             }
-            
-            .service-container-body-right-btn {
-                font-family: "Bebas Neue";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 20px;
-                line-height: 24px;
-                text-align: center;
-                letter-spacing: 0.02em;
-                
-                color: var(--app-color-lunarblue-contrast);
-
-                border: 1px solid var(--app-color-lunarblue);
-                padding: 0.75vw;
-                cursor: pointer;
-            }
         }
     }
 
@@ -148,10 +133,6 @@
                     display: flex;
                     flex-direction: row-reverse;
                     justify-content: space-between;
-
-                    .service-container-body-right-btn {
-                        padding: 2vw 6vw;
-                    }
                 }
             }
         }
