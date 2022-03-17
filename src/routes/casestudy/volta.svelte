@@ -7,8 +7,9 @@
 	import Button from '$/components/casestudy/Button.svelte';
 	import TriadCard from '$/components/casestudy/TriadCard.svelte';
 	import AscensionCard from '$/components/casestudy/AscensionCard.svelte';
-import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
-import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
+	import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
+	import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
+	import ChallengeCard from '$/components/casestudy/ChallengeCard.svelte';
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -18,71 +19,68 @@ import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
 	<title>Case Study / Volta</title>
 </svelte:head>
 
-<svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
+<svelte:body use:style={{ background: 'var(--app-color-lunarblue)' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy />
+	<CaseStudy navigationBarColor="var(--app-color-lunarblue)" 
+		title="Volta" 
+		description="An online platform focusing on sustainable living. Volta's mission is to encourage as many people as possible to transition to a more sustainable lifestyle."
+		coverPhoto="/casestudy/volta-cover.png" />
 
 	<div class="section2">
-		<div class="casecardcontainer">
-			<div>
-				<div class="casecardtitle">Challenge</div>
-				<div class="casecarddescription">
-					Volta is a rapidly expanding source of inspirational news. rigo has helped them to make
-					the leap and attract an even larger audience, while maintaing the scale and quality of
-					their content.
-				</div>
-			</div>
-			<div>
-				<div class="casecardtitle">Solution</div>
-				<div class="casecarddescription">
-					Rigo creates regular news articles, interviews and campaigns to drive engagment. From
-					pitching to production, the team integrates with Volta to deliver a seamless service.
-				</div>
-			</div>
-			<div>
-				<div class="casecardtitle">Result</div>
-				<div class="casecarddescription">
-					With regular features, a successful Google News application and carefully targeted
-					campaigns, the site has seen substantial growth in traffic and an influx of big name
-					partners.
-				</div>
-			</div>
+		<div class="challenge-container">
+			<ChallengeCard 
+				challengeImg="/casestudy/volta-challenge.svg"
+				challenge="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaing the scale and quality of their content."
+				solutionImg="/casestudy/volta-solution.svg"
+				solution="rigo creates regular news articles, interviews and campaigns to drive engagment. From pitching to production, the team integrates with Volta to deliver a seamless service."
+				resultImg="/casestudy/volta-result.svg"
+				result="With regular features, a successful Google News application and carefully targeted campaigns, the site has seen substantial growth in traffic and an influx of big name partners."
+			/>
+			<Button borderColor="var(--app-color-lunarblue)" />
 		</div>
-		<Button />
 		<div class="ascension-container">
-			<AscensionCard title="Creative" imgsource="/work-img/ascension-img-1.png" />
-			<AscensionCard title="Digital Advertising" imgsource="/work-img/ascension-img-2.png" />
+			<AscensionCard title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
+			<AscensionCard title="Digital Advertising" imgsource="/casestudy/volta-ascension-2.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
 		</div>
-		<Carousel />
-		<ExtremeCard />
+		<Carousel carouselImage="/casestudy/volta-carousel-1.png">
+			‘Future-positive’ tone and content – inspiring followers with the innovation and progress
+		</Carousel>
+		<ExtremeCard heading="Extreme E" imgUrl="/casestudy/volta-extreme.png">
+			Volta was given the nod as a trusted outlet to report on Extreme E’s 2021 inaugural season, focusing on the organisation’s legacy projects.
+			<br><br>
+			rigo attended the Ocean X Prix in Lac Rose, Senegal over the course of a week, creating live event coverage, conducting interviews with big names - including Nico Rosberg - and supporting the Volta team as a key coverage provider for the championship.
+		</ExtremeCard>
 	</div>
 
 	<div class="section3">
-		<div>
-			<div style="display: flex; flex-direction: column; gap: 12vw;">
-				<TriadCard name="Clare Farah" title="Co-Founder, Volta">
-					“Rigo was generating and delivering excellent SEO-optimised content and engaging on our
-					socials whilst simultaneously generating new marketing plans to support our directives.
-					<br /><br />
-					To us, they’re not just a company we outsource to, they’re integral to our business now and
-					part of the team.”
-				</TriadCard>
-				<TriadCard name="Pete Adams" title="Copywriter, Rigo">
-					“Work on the account has evolved over time, from a more passive news-watching approach to
-					actively going out to generate original stories of our own.
-					<br /><br />
-					“Using best practice journalistic techniques, stories needed to be backed up with sources,
-					fitting in with the future-positive narrative of the client.”
+		<div style="display: flex;">
+			<div>
+				<TriadCard name="Clare Farah" title="Co-Founder, Volta" triadNameColor="var(--app-color-lunarblue)">
+					“Prior to working with rigo, we were outsourcing much of our articles to a whole plethora of journalists and content writers.
+					<br><br>
+					Rigo has changed this for us entirely now within no time, they were generating and delivering excellent SEO-optimised content and engaging on
+					our socials whilst simultaneously generating new marketing plans to support
+					our directives.
+					<br><br>
+					To us, they’re not just a company we outsource to, they’re integral to our business now and part of the team.”
 				</TriadCard>
 			</div>
-			<div />
+			<div>
+				<TriadCard name="Pete Adams" title="Copywriter, Rigo" triadNameColor="var(--app-color-lunarblue)">
+					“Work on the account has evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.
+					<br><br>
+					“Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.
+					<br><br>
+					Senegal [to cover Extreme E] was undoubtedly a highlight, as it let me firmly put my journalist hat on and become that roving reporter I’ve always dreamt of being.”
+				</TriadCard>
+			</div>
 		</div>
-		<Button />
+		<Button borderColor="var(--app-color-lunarblue)" />
 	</div>
 
-	<div style="display: flex; padding: 15vw 2rem 15vw 2rem; background-color: var(--app-color-navy-contrast)">
-		<Footer marginleft={'2vw'} marginright={'2vw'} href="/services">Gallagher</Footer>
+	<div style="display: flex; padding: 15vw 15vw 15vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
+		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/gallagher">Gallagher</Footer>
 	</div>
 </div>
 
@@ -108,41 +106,49 @@ import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 15vw;
+		gap: 8vw;
 		background-color: var(--app-color-navy-contrast);
 		padding: 4rem 2rem 4rem 2rem;
-	}
-
-	.casecardtitle {
-		font-family: 'Bebas Neue';
-		font-style: normal;
-		font-weight: normal;
-        font-size: 40px;
-        line-height: 100px;
-		text-transform: uppercase;
-	}
-
-	.casecarddescription {
-		font-family: 'Satoshi';
-		font-style: normal;
-		font-weight: normal;
-        font-size: 12px;
-        line-height: 16px;
-	}
-
-	.casecardcontainer {
-		display: flex;
-		flex-direction: column;
-		gap: 12vw;
 	}
 
 	.ascension-container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		gap: 2vw;
+		padding: 0vw 15vw;
+        width: 100vw;
+	}
+
+	.challenge-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4vw;
+	}
+
+	.section3 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 4rem 15vw 4rem 15vw;
+		background-color: var(--app-color-navy);
+		width: 100vw;
+	}
+
+	@media(max-width: 768px) {
+		.challenge-container {
+			gap: 8vw;
+		}
 	}
 
 	@media(max-width: 425px) {
+		.section2 {
+			gap: 20vw;
+		}
+		.challenge-container {
+			gap: 12vw;
+		}
 		.ascension-container {
 			flex-direction: column;
 			gap: 12vw;
@@ -155,14 +161,5 @@ import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
         .casecarddescription {
 		    line-height: 140%;
         }
-	}
-
-	.section3 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 15vw;
-		padding: 4rem 2rem 4rem 2rem;
-		background-color: var(--app-color-navy);
 	}
 </style>

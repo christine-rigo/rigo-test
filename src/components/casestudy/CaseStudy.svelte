@@ -1,12 +1,14 @@
 <script lang="ts">
-import Nav from "../Nav.svelte";
-
-import Logo from "../svg/Logo.svelte";
+	import Nav from "../Nav.svelte";
+	export let navigationBarColor = '';
+	export let title = '';
+	export let description = '';
+	export let coverPhoto = '';
 </script>
 
-<div class="container">
+<div class="container" style="background: linear-gradient(180deg, rgba(18, 24, 45, 0.75) 15%, rgba(18, 24, 45, 1) 86%), url({coverPhoto}) no-repeat top center/cover;">
 	<aside>
-		<Nav logoScale={1} navigationBarColor="var(--app-color-red)" navItemsStyle="align-items: flex-start;" />
+		<Nav logoScale={1} navigationBarColor={navigationBarColor} navItemsStyle="align-items: flex-start;" />
 	</aside>
 	<div class="main">
 		<div class="categories">
@@ -14,10 +16,10 @@ import Logo from "../svg/Logo.svelte";
 			<div>+ Digital Advertising</div>
 		</div>
 		<div class="heading">
-			Gallagher     
+			{title}     
 		</div>
 		<div class="subheading">
-			Global insurance broker, risk management expert and business consultancy
+			{description}
 		</div>
 		<div class="hidden-desktop">
 			<svg width="310" height="1" viewBox="0 0 310 1" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +62,6 @@ import Logo from "../svg/Logo.svelte";
 
 <style lang="scss">
 	.container {
-		background: linear-gradient(180deg, rgba(18, 24, 45, 0.75) 15%, rgba(18, 24, 45, 1) 86%), url('/casestudy/gallagher-cover.png') no-repeat top center/cover;
 		background-size: cover;
 		background-color: var(--app-color-navy);
 		color: var(--app-color-red);
@@ -121,7 +122,6 @@ import Logo from "../svg/Logo.svelte";
         line-height: 110%;
         max-width: 690px;
 		color: var(--app-color-lunarblue-contrast);
-		max-width: 400px;
 	}
 
 	.adtagscontainer {

@@ -1,43 +1,32 @@
 <script lang="ts">
-import Button from "./Button.svelte";
-
-
+	export let challengeImg = '';
+	export let challenge = '';
+	export let solutionImg = '';
+	export let solution = '';
+	export let resultImg = '';
+	export let result = '';
 </script>
 
 <div class="casecardcontainer">
 	<div>
 		<div class="casecardtitle">Challenge</div>
 		<div class="casecarddescription">
-			<img src="/casestudy/gallagher-challenge.png" alt="rigo" />
-			<p>
-				Gallagher sought to understand the trends and output of content marketing in the insurance
-				industry. Doing so would help them develop a best practice for content in order to capture a
-				larger market share.
-			</p>
+			<img src={challengeImg} alt="rigo" />
+			<p>{challenge}</p>
 		</div>
 	</div>
 	<div>
 		<div class="casecardtitle">Solution</div>
 		<div class="casecarddescription">
-			<img src="/casestudy/gallagher-solution.png" alt="rigo" />
-			<p>
-				rigo conducted a review of content across the insurance industry delivering a competitive
-				analysis and marketing intelligence report based on insurance providers. In this review rigo
-				analysed and evaluated the content marketing output and SEO performance of five of
-				Gallagher’s key competitors.
-			</p>
+			<img src={solutionImg} alt="rigo" />
+			<p>{solution}</p>
 		</div>
 	</div>
 	<div>
 		<div class="casecardtitle">Result</div>
 		<div class="casecarddescription">
-			<img src="/casestudy/gallagher-result.png" alt="rigo" />
-			<p>
-				rigo levelled up Gallagher’s understanding of the norms of content marketing in theinsurance
-				sector, identifying strengths and weaknesses across the industry. This allowed us to
-				identify a number of flagship content pieces that Gallagher would benefit from adding to
-				their website.
-			</p>
+			<img src={resultImg} alt="rigo" />
+			<p>{result}</p>
 		</div>
 	</div>
 </div>

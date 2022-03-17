@@ -3,12 +3,13 @@ import About from "$/routes/about.svelte"
 
     export let name = "DEFAULT_NAME"
     export let title = "DEFAULT_TITLE"
+    export let triadNameColor = "";
 </script>
 
 <div class="triad-card">
     <div class="triad-header">
         <div class="triad-image"><img style="width: 100%; height: auto; position: absolute; bottom: 0px;" alt="rigo" src="/casestudy/triad-card.png"></div>
-        <div class="triad-name">{name}</div>
+        <div class="triad-name" style="background-color: {triadNameColor};">{name}</div>
         <div class="triad-title">{title}</div>
     </div>
     <div class="triad-description">
@@ -60,7 +61,6 @@ import About from "$/routes/about.svelte"
         line-height: 24px;
         text-align: center;
 
-        background-color: var(--app-color-red);
         padding: 0.5vw 0vw;
     }
 

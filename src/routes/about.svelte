@@ -52,13 +52,13 @@
 
 	<div class="images">
 		<img
-			src="https://placekitten.com/g/331/462"
+			src="/about/about-img-2.png"
 			alt="3 people working in a workspace"
 			style="transform: translateY(-100px);"
 		/>
 
 		<img
-			src="https://placekitten.com/g/394/233"
+			src="/about/about-img-1.png"
 			alt="stairs"
 			style="transform: translate(-100px, -10px);"
 		/>
@@ -104,7 +104,7 @@
 <br /><br /><br /> <br /><br /><br />
 
 <div style="display: contents;">
-	<Footer href="#contact-us">Contact Us</Footer>
+	<Footer href="/contact">Contact Us</Footer>
 </div>
 
 <style lang="scss">

@@ -57,7 +57,7 @@
     </div>
     <br><br><br>
     <div style="display: contents;">
-        <Footer href="#volta">Volta</Footer>
+        <Footer href="/casestudy/volta">Volta</Footer>
     </div>
 </div>
 

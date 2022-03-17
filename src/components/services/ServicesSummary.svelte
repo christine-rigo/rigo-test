@@ -34,7 +34,7 @@
 
 			<span style="flex: 1 1 auto" />
 
-			<Footer href="#" --color="var(--app-color-navy-contrast)">Our Work</Footer>
+			<Footer href="/work" --color="var(--app-color-navy-contrast)">Our Work</Footer>
 		</div>
 	</div>
 </div>
