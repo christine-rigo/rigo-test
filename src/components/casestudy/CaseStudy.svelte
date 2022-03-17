@@ -4,6 +4,15 @@
 	export let title = '';
 	export let description = '';
 	export let coverPhoto = '';
+	export let columnSeparator = '';
+	export let hdrSvgPath1:string;
+	export let hdrSvgPath2:string;
+	export let hdrSvgPath3:string;
+	export let hdrSvgPath4:string;
+	export let hdrInfo1:string;
+	export let hdrInfo2:string;
+	export let hdrInfo3:string;
+	export let hdrInfo4:string;
 </script>
 
 <div class="container" style="background: linear-gradient(180deg, rgba(18, 24, 45, 0.75) 15%, rgba(18, 24, 45, 1) 86%), url({coverPhoto}) no-repeat top center/cover;">
@@ -27,35 +36,35 @@
 			</svg>				
 		</div>
 		<div class="adtagscontainer">
-			<img class="hidden-mobile" src="/casestudy/Line 3.svg" alt="rigo">
+			<img class="hidden-mobile" src={columnSeparator} alt="rigo">
 			<div class="adtags">
 				<div class="adtagtitle">
-					<img src="/casestudy/+ 3.png" alt="rigo">
+					<img src={hdrSvgPath1} alt="rigo">
 				</div>
-				<div class="adtaginfo">month<br>campaign</div>
+				<div class="adtaginfo" style="color: {navigationBarColor}">{hdrInfo1}</div>
 			</div>
-			<img class="hidden-mobile" src="/casestudy/Line 3.svg" alt="rigo">
+			<img class="hidden-mobile" src={columnSeparator} alt="rigo">
 			<div class="adtags">
 				<div class="adtagtitle">
-					<img src="/casestudy/+ 5.png" alt="rigo">
+					<img src={hdrSvgPath2} alt="rigo">
 				</div>
-				<div class="adtaginfo">competitors<br>scored</div>
+				<div class="adtaginfo" style="color: {navigationBarColor}">{hdrInfo2}</div>
 			</div>
-			<img class="hidden-mobile" src="/casestudy/Line 3.svg" alt="rigo">
+			<img class="hidden-mobile" src={columnSeparator} alt="rigo">
 			<div class="adtags">
 				<div class="adtagtitle">
-					<img src="/casestudy/+ 30.png" alt="rigo">
+					<img src={hdrSvgPath3} alt="rigo">
 				</div>
-				<div class="adtaginfo">key content<br>pieces created</div>
+				<div class="adtaginfo" style="color: {navigationBarColor}">{hdrInfo3}</div>
 			</div>
-			<img class="hidden-mobile" src="/casestudy/Line 3.svg" alt="rigo">
+			<img class="hidden-mobile" src={columnSeparator} alt="rigo">
 			<div class="adtags">
 				<div class="adtagtitle">
-					<img src="/casestudy/+ 29K.png" alt="rigo">
+					<img src={hdrSvgPath4} alt="rigo">
 				</div>
-				<div class="adtaginfo">words<br>written</div>
+				<div class="adtaginfo" style="color: {navigationBarColor}">{hdrInfo4}</div>
 			</div>
-			<img class="hidden-mobile" src="/casestudy/Line 3.svg" alt="rigo">
+			<img class="hidden-mobile" src={columnSeparator} alt="rigo">
 		</div>
 	</div>
 </div>

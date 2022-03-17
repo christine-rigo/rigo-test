@@ -25,7 +25,17 @@
 	<CaseStudy navigationBarColor="var(--app-color-red)" 
 		title="Gallagher" 
 		description="Global insurance broker, risk management expert and business consultancy"
-		coverPhoto="/casestudy/gallagher-cover.png" />
+		coverPhoto="/casestudy/gallagher-cover.png" 
+		columnSeparator="/casestudy/Line 3.svg"
+		hdrSvgPath1="/casestudy/gallagher-cs-1.png"
+		hdrSvgPath2="/casestudy/gallagher-cs-2.png"
+		hdrSvgPath3="/casestudy/gallagher-cs-3.png"
+		hdrSvgPath4="/casestudy/gallagher-cs-4.png"
+		hdrInfo1="month campaign"
+		hdrInfo2="competitors scored"
+		hdrInfo3="key content pieces created"
+		hdrInfo4="words written"
+		/>
 
 	<div class="section2">
 		<div class="challenge-container">

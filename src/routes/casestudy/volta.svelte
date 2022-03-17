@@ -25,7 +25,17 @@
 	<CaseStudy navigationBarColor="var(--app-color-lunarblue)" 
 		title="Volta" 
 		description="An online platform focusing on sustainable living. Volta's mission is to encourage as many people as possible to transition to a more sustainable lifestyle."
-		coverPhoto="/casestudy/volta-cover.png" />
+		coverPhoto="/casestudy/volta-cover.png" 
+		columnSeparator="/casestudy/volta-line-separator.svg"
+		hdrSvgPath1="/casestudy/volta-cs-1.svg"
+		hdrSvgPath2="/casestudy/volta-cs-2.svg"
+		hdrSvgPath3="/casestudy/volta-cs-3.svg"
+		hdrSvgPath4="/casestudy/volta-cs-4.svg"
+		hdrInfo1="page views in first 3 months"
+		hdrInfo2="impressions in 1 month campaign"
+		hdrInfo3="increase in monthly users in first 12 months"
+		hdrInfo4="Listed in Google News on first application"
+		/>
 
 	<div class="section2">
 		<div class="challenge-container">

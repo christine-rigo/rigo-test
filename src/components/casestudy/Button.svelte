@@ -2,7 +2,7 @@
 	export let borderColor = 'var(--app-color-lunarblue)';
 </script>
 
-<button style="border: 1px solid {borderColor}" class="startyourascentbutton">Start Your Ascent</button>
+<button style="border: 1px solid {borderColor};" class="startyourascentbutton"><a href="/contact" style="color: {borderColor}">Start Your Ascent</a></button>
 
 <style lang="scss">
     button {
