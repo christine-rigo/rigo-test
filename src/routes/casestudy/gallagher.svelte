@@ -55,7 +55,7 @@
 				identify a number of flagship content pieces that Gallagher would benefit from adding to
 				their website."
 				/>
-			<Button borderColor="var(--app-color-red)" />
+				<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
 		</div>
 		<div class="ascension-container">
 			<AscensionCard title="Creative" imgsource="/casestudy/gallagher-ascension-1.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
@@ -80,7 +80,7 @@
 				As a team we took the initial learnings and put them to work to create thought-provoking content that reaffirms Gallagher’s position as a heavyweight in the insurance sector to newcomers and existing customers alike.” 
 			</TriadCard>
 		</div>
-		<Button borderColor="var(--app-color-red)" />
+		<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
 	</div>
 
 	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">

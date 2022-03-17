@@ -47,7 +47,7 @@
 				resultImg="/casestudy/volta-result.svg"
 				result="With regular features, a successful Google News application and carefully targeted campaigns, the site has seen substantial growth in traffic and an influx of big name partners."
 			/>
-			<Button borderColor="var(--app-color-lunarblue)" />
+			<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
 		</div>
 		<div class="ascension-container">
 			<AscensionCard title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
@@ -86,7 +86,7 @@
 				</TriadCard>
 			</div>
 		</div>
-		<Button borderColor="var(--app-color-lunarblue)" />
+		<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
 	</div>
 
 	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
