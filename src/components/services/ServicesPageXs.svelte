@@ -124,7 +124,7 @@ import Footer from "../Footer.svelte";
             </div>
         </div>
         <div>
-            <a href="/digital-adversiting/volta"><button class="services-btn" style="background-color: var(--app-color-yellow); border: 1px solid var(--app-color-yellow;">Discover more</button></a>
+            <a href="/digital-advertising/volta"><button class="services-btn" style="background-color: var(--app-color-yellow); border: 1px solid var(--app-color-yellow;">Discover more</button></a>
         </div>
     </div>
 
@@ -219,7 +219,7 @@ import Footer from "../Footer.svelte";
     </div>
 
     <div style="margin: 10vw 5vw;">
-        <Footer href="">Gallagher</Footer>
+        <Footer marginright=0 href="">Gallagher</Footer>
     </div>
 
 </div>
