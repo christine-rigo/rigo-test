@@ -56,7 +56,7 @@
         </div>
     </div>
     <br><br><br>
-    <div style="display: contents;">
+    <div class="footer-container" style="display: contents;">
         <Footer href="/casestudy/volta">Volta</Footer>
     </div>
 </div>
@@ -202,4 +202,11 @@
             display: none;
         }
     }
+
+    @media(max-width: 425px) {
+		.footer-container {
+			margin: 10vw 5vw;
+			padding-bottom: 10vw;
+		}
+	}
 </style>

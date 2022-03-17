@@ -168,4 +168,10 @@
 			display: none !important;
 		}
 	}
+
+	@media(max-width: 425px) {
+		footer {
+			margin-right: 0 !important;
+		}
+	}
 </style>

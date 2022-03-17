@@ -2,94 +2,6 @@
 import Footer from "../Footer.svelte";
 
 </script>
-
-<style lang="scss">
-    .services {
-        color: var(--app-color-navy-contrast);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4vw;
-        margin-bottom: 20vw;
-    }
-
-    .services-main-heading {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 80px;
-    }
-
-    .services-main-subheading {
-        font-size: 12px;
-        line-height: 140%;
-        text-align: center;
-        padding: 0vw 20vw;
-    }
-
-    // NEW COMPONENT
-
-    .services-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5vw;
-    }
-
-    .services-heading {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 80px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    .services-subheading {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 0vw 10vw;
-        text-transform: uppercase;
-        gap: 5vw;
-
-        .services-card {
-            display: flex;
-            flex-direction: column;
-            gap: 2vw;
-
-            .services-title {
-                font-family: "Bebas Neue";
-                font-weight: normal;
-                font-size: 20px;
-                line-height: 25px;
-                text-transform: uppercase;
-            }
-
-            .services-info {
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 140%;
-            }
-        }
-    }
-
-    .services-btn {
-        font-family: "Bebas Neue";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 24px;
-        box-sizing: border-box;
-        border-radius: 50px;
-        color: white;
-        padding: 3.55vw 15vw;
-        text-transform: uppercase;
-        margin-bottom: 20vw;
-        margin-top: 8vw;
-        cursor: pointer;
-    }
-    
-</style>
     
 <div>
     <div class="services">
@@ -219,7 +131,95 @@ import Footer from "../Footer.svelte";
     </div>
 
     <div style="margin: 10vw 5vw;">
-        <Footer marginright=0 href="">Gallagher</Footer>
+        <Footer marginright=0 href="/casestudy/gallagher">Gallagher</Footer>
     </div>
 
 </div>
+
+<style lang="scss">
+    .services {
+        color: var(--app-color-navy-contrast);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+        margin-bottom: 20vw;
+    }
+
+    .services-main-heading {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 80px;
+    }
+
+    .services-main-subheading {
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        padding: 0vw 20vw;
+    }
+
+    // NEW COMPONENT
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .services-heading {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 80px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .services-subheading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0vw 10vw;
+        text-transform: uppercase;
+        gap: 5vw;
+
+        .services-card {
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+
+            .services-title {
+                font-family: "Bebas Neue";
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 25px;
+                text-transform: uppercase;
+            }
+
+            .services-info {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+    }
+
+    .services-btn {
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        box-sizing: border-box;
+        border-radius: 50px;
+        color: white;
+        padding: 3.55vw 15vw;
+        text-transform: uppercase;
+        margin-bottom: 20vw;
+        margin-top: 8vw;
+        cursor: pointer;
+    }
+    
+</style>

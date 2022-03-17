@@ -68,7 +68,9 @@
 	</div> -->
 </div>
 
-<Footer href="/services">Services</Footer>
+<div class="footer-container">
+	<Footer href="/services">Services</Footer>
+</div>
 
 <style lang="scss">
 	h1 {
@@ -126,6 +128,13 @@
 		}
 		.work-page-container {
 			margin-right: 0rem;
+		}
+	}
+
+	@media(max-width: 425px) {
+		.footer-container {
+			margin: 10vw 5vw;
+			padding-bottom: 10vw;
 		}
 	}
 </style>

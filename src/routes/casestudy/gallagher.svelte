@@ -83,7 +83,7 @@
 		<Button borderColor="var(--app-color-red)" />
 	</div>
 
-	<div style="display: flex; padding: 15vw 15vw 15vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
+	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/volta">Volta</Footer>
 	</div>
 </div>
