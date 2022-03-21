@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="item">
-            <form class="contact-form-grid" name="contact" method="POST" data-netlify="true">
+            <form class="contact-form-grid" name="contactform" method="POST" data-netlify="true">
                 <div class="contact-form-row">
                     <div class="contact-form-label">NAME</div>
                     <input type="text" name="name" class="contact-form-input"/>
