@@ -138,6 +138,7 @@
 		padding: 4rem 15vw 4rem 15vw;
 		background-color: var(--app-color-navy);
 		width: 100vw;
+		gap: 4vw;
 	}
 
 	@media(max-width: 768px) {

@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="carousel-container">
-        <div class="carousel-slider" style="background-image: url({carouselImage})"></div>
+        <div class="carousel-slider" style="background: url({carouselImage}) no-repeat top center/cover"></div>
         <div class="carousel-heading">
             <div class="carousel-heading-left" style="color: {headerColor}">01</div>
             <div class="carousel-heading-right"><slot /></div>

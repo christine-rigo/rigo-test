@@ -64,9 +64,9 @@
 	</div>
 
 	<div class="section3">
-		<div style="display: flex;">
-			<div>
-				<TriadCard name="Clare Farah" title="Co-Founder, Volta" triadNameColor="var(--app-color-lunarblue)">
+		<div class="section3-flex" style="display: flex;">
+			<div style="flex: 1">
+				<TriadCard textAlign="left" flexMargin="0vw 10%" flexDirection="row" name="Clare Farah" title="Co-Founder, Volta" triadNameColor="var(--app-color-lunarblue)">
 					“Prior to working with rigo, we were outsourcing much of our articles to a whole plethora of journalists and content writers.
 					<br><br>
 					Rigo has changed this for us entirely now within no time, they were generating and delivering excellent SEO-optimised content and engaging on
@@ -76,8 +76,8 @@
 					To us, they’re not just a company we outsource to, they’re integral to our business now and part of the team.”
 				</TriadCard>
 			</div>
-			<div>
-				<TriadCard name="Pete Adams" title="Copywriter, Rigo" triadNameColor="var(--app-color-lunarblue)">
+			<div style="flex: 1">
+				<TriadCard textAlign="left" flexMargin="0vw 10%" flexDirection="row-reverse" name="Pete Adams" title="Copywriter, Rigo" triadNameColor="var(--app-color-lunarblue)">
 					“Work on the account has evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.
 					<br><br>
 					“Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.
@@ -144,6 +144,7 @@
 		padding: 4rem 15vw 4rem 15vw;
 		background-color: var(--app-color-navy);
 		width: 100vw;
+		gap: 4vw;
 	}
 
 	@media(max-width: 768px) {
@@ -171,5 +172,13 @@
         .casecarddescription {
 		    line-height: 140%;
         }
+
+		.section3 {
+			gap: 16vw;
+		}
+		.section3-flex {
+			flex-direction: column;
+			gap: 12vw;
+		}
 	}
 </style>
