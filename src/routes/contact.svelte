@@ -35,19 +35,19 @@
             <div class="contact-form-grid">
                 <div class="contact-form-row">
                     <div class="contact-form-label">NAME</div>
-                    <div class="contact-form-input"></div>
+                    <input class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">QUERY</div>
-                    <div class="contact-form-input"></div>
+                    <input class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">EMAIL</div>
-                    <div class="contact-form-input"></div>
+                    <input class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">PHONE</div>
-                    <div class="contact-form-input"></div>
+                    <input class="contact-form-input"/>
                 </div>
                 <div class="contact-form-button">
                     <button>START YOUR ASCENT</button>
@@ -68,6 +68,12 @@
 
 		color: var(--color);
 	}
+
+    input {
+        border: none;
+        background-color: var(--app-color-lunarblue-contrast);
+        padding: 2vw;
+    }
 
     h1 {
 		padding-right: 7rem;
