@@ -15,7 +15,15 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
 
 <div class="service-container">
     <div class="service-container-heading hidden-mobile">
-        + Data: <span class="service-container-heading-casestudy">Gallagher</span>
+        <div>+ Data: <span class="service-container-heading-casestudy">Gallagher</span></div>
+        <div>
+            <a href="/services">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4668 1.15039L9.86776 9.55135" stroke="#FAF5EE" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9.86816 1.1499L1.4672 9.55086" stroke="#FAF5EE" stroke-width="2" stroke-linecap="round"/>
+                </svg>     
+            </a>           
+        </div>
     </div>
     <div class="service-container-body">
         <div class="service-container-body-left">
@@ -63,6 +71,11 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
     }
 
     .service-container-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
         font-family: "Satoshi";
         font-style: normal;
         font-weight: bold;
