@@ -32,27 +32,27 @@
             </div>
         </div>
         <div class="item">
-            <div class="contact-form-grid">
+            <form class="contact-form-grid" name="contact" method="POST" data-netlify="true">
                 <div class="contact-form-row">
                     <div class="contact-form-label">NAME</div>
-                    <input class="contact-form-input"/>
+                    <input type="text" name="name" class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">QUERY</div>
-                    <input class="contact-form-input"/>
+                    <input type="text" name="query" class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">EMAIL</div>
-                    <input class="contact-form-input"/>
+                    <input type="email" name="email" class="contact-form-input"/>
                 </div>
                 <div class="contact-form-row">
                     <div class="contact-form-label">PHONE</div>
-                    <input class="contact-form-input"/>
+                    <input type="tel" name="phone" class="contact-form-input"/>
                 </div>
                 <div class="contact-form-button">
-                    <button>START YOUR ASCENT</button>
+                    <button type="submit">START YOUR ASCENT</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <br><br><br>
