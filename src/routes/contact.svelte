@@ -32,7 +32,9 @@
             </div>
         </div>
         <div class="item">
-            <form class="contact-form-grid" name="contactform" method="POST" data-netlify="true">
+            <form class="contact-form-grid" name="contactform" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contactform" />
+                <input type="text" name="bot-field" />
                 <div class="contact-form-row">
                     <div class="contact-form-label">NAME</div>
                     <input type="text" name="name" class="contact-form-input"/>
