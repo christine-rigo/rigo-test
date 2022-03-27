@@ -26,7 +26,8 @@ import { navColor } from '$/stores/nav.store';
     </div>
     <div class="service-container-body">
         <div class="service-container-body-left">
-            <img class="service-container-body-left-img" src="/services-img/volta-impressions.png" alt="rigo">
+            <img class="service-container-body-left-img hidden-mobile" src="/services-img/volta-impressions.png" alt="rigo">
+            <img class="service-container-body-left-img hidden-desktop" src="/services-img/impressions-xs.png" alt="rigo">
         </div>
         <div class="service-container-body-right">
             <div class="service-container-body-right-btn-group">
@@ -57,7 +58,7 @@ import { navColor } from '$/stores/nav.store';
         overflow: hidden;
         padding: 2rem 9vw 2rem 20vw;
         width: 100%;
-        height: 100%;
+        height: auto;
 
         display: flex;
         flex-direction: column;
@@ -134,8 +135,8 @@ import { navColor } from '$/stores/nav.store';
 
             .service-container-body-left {
                 .service-container-body-left-img {
-                    height: 313px;
-                    width: auto;
+                    height: auto;
+                    width: 100%;
                 }
             }
 
