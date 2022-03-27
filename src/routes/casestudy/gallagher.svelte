@@ -10,6 +10,12 @@
 	import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
 	import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
 	import ChallengeCard from '$/components/casestudy/ChallengeCard.svelte';
+
+	const carouselList = [
+		{ 'index': '01', 'img': '/casestudy/gallagher-carousel-1.png', 'text': 'To ensure comparable data sets rigo only analysed articles with 2%+ website traffic, this helped us identify the articles driving the conversation in the sector'},
+        { 'index': '02', 'img': '/casestudy/gallagher-carousel-2.png', 'text': 'When producing new articles, rigo addressed Gallagher’s value proposition, capabilities and thought leader status to create content with a purpose'},
+	]
+
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -61,9 +67,7 @@
 			<AscensionCard title="Creative" imgsource="/casestudy/gallagher-ascension-1.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
 			<AscensionCard title="Digital Advertising" imgsource="/casestudy/gallagher-ascension-2.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
 		</div>
-		<Carousel carouselImage="/casestudy/gallagher-carousel-1.png">
-			To ensure comparable data sets rigo only analysed articles with 2%+ website traffic, this helped us identify the articles driving the conversation in the sector
-		</Carousel>
+		<Carousel carouselList={carouselList} />
 		<ExtremeCard heading="Research" imgUrl="/casestudy/gallagher-research.png">
 			Research included exploration of search engine traffic and competitor funnels. This gave Gallagher a snapshot of what’s happening in the industry and oversight of why certain pieces of content were performing well. 
             <br><br>

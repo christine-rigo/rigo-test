@@ -1,16 +1,57 @@
 <script lang="ts">
     export let headerColor = 'var(--app-color-red)';
-    export let carouselImage = '';
+    export let carouselList = [];
+
+    import { onMount } from 'svelte';
+    onMount(() => {
+        let slideIndex = 0;
+
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = Array.from(document.getElementsByClassName("carousel-container") as HTMLCollectionOf<HTMLElement>);
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    });
 </script>
 
-<div class="container">
+<div class="container fade">
+    {#each carouselList as carousel}
     <div class="carousel-container">
+        <div class="carousel-slider" style="background: url({carousel.img}) no-repeat top center/cover"></div>
+        <div class="carousel-heading">
+            <div class="carousel-heading-left" style="color: {headerColor}">{carousel.index}</div>
+            <div class="carousel-heading-right">{carousel.text}</div>
+        </div>
+    </div>
+    {/each}
+    <!-- <div class="carousel-container">
         <div class="carousel-slider" style="background: url({carouselImage}) no-repeat top center/cover"></div>
         <div class="carousel-heading">
             <div class="carousel-heading-left" style="color: {headerColor}">01</div>
             <div class="carousel-heading-right"><slot /></div>
         </div>
     </div>
+    <div class="carousel-container">
+        <div class="carousel-slider" style="background: url('https://via.placeholder.com/728x90.png/FF0000/?text=Image 2') no-repeat top center/cover"></div>
+        <div class="carousel-heading">
+            <div class="carousel-heading-left" style="color: {headerColor}">02</div>
+            <div class="carousel-heading-right"><slot /></div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel-slider" style="background: url('https://via.placeholder.com/728x90.png/FFF/?text=Image 3') no-repeat top center/cover"></div>
+        <div class="carousel-heading">
+            <div class="carousel-heading-left" style="color: {headerColor}">03</div>
+            <div class="carousel-heading-right"><slot /></div>
+        </div>
+    </div> -->
 </div>
 
 <style lang="scss">
@@ -78,6 +119,19 @@
         }
         .carousel-heading-right {
             color: var(--app-color-red);
+        }
+    }
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
         }
     }
 </style>

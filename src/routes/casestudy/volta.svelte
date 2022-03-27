@@ -10,6 +10,12 @@
 	import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
 	import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
 	import ChallengeCard from '$/components/casestudy/ChallengeCard.svelte';
+
+	const carouselList = [
+		{ 'index': '01', 'img': '/casestudy/volta-carousel-1.png', 'text': '‘Future-positive’ tone and content – inspiring followers with the innovation and progress'},
+        { 'index': '02', 'img': '/casestudy/volta-carousel-2.png', 'text': 'Committed to quality and quantity reasures readers that Volta is a trusted information source'},
+        { 'index': '03', 'img': '/casestudy/volta-carousel-3.png', 'text': 'Tailored to an intelligent audience at a level that drives new conversations in technology, science and the environment'}
+	]
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -53,9 +59,7 @@
 			<AscensionCard title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
 			<AscensionCard title="Digital Advertising" imgsource="/casestudy/volta-ascension-2.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
 		</div>
-		<Carousel carouselImage="/casestudy/volta-carousel-1.png">
-			‘Future-positive’ tone and content – inspiring followers with the innovation and progress
-		</Carousel>
+		<Carousel headerColor="var(--app-color-lunarblue)" carouselList={carouselList} />
 		<ExtremeCard heading="Extreme E" imgUrl="/casestudy/volta-extreme.png">
 			Volta was given the nod as a trusted outlet to report on Extreme E’s 2021 inaugural season, focusing on the organisation’s legacy projects.
 			<br><br>
