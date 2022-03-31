@@ -164,6 +164,7 @@ import Logo from '$/components/svg/Logo.svelte';
     @media(max-width: 425px) {
         .main-container {
             padding: 0vw 9vw;
+            height: 100vh;
         }
     }
 
