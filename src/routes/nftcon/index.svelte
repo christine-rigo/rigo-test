@@ -184,6 +184,16 @@ import Logo from '$/components/svg/Logo.svelte';
             opacity: 0;
         }
     }
+    @media(max-width: 425px) {
+        .gif-container {
+            flex-direction: column;
+            .gif-card {
+                flex: 1;
+                position: relative;
+            }
+        }
+        
+    }
 
     .contact-container {
         padding: 4vw 8vw;
