@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Footer from '$/components/Footer.svelte';
+    import DropUsALine from '$/components/DropUsALine.svelte';
+    import Footer from '$/components/Footer.svelte';
 	import { navColor } from '$/stores/nav.store';
 	import { onMount } from 'svelte';
 	import { style } from 'svelte-body';
@@ -16,47 +17,7 @@
 </svelte:head>
 
 <div style="padding: 0rem 2rem 2rem 2rem;">
-    <div class="container">
-        <div class="item">
-            <div class="contact-form-info">
-                <div>
-                    <h1>Drop Us a Line</h1>
-                    <img class="hidden-1024" src="/contact-svg/arrow-2.svg" alt="rigo line" width="172px" style="transform: translate(270px, -35px);">
-                </div>
-                <div>
-                    <img style="transform: translateY(-10px)" src="/contact-svg/hr-line.svg" alt="contact rigo" height="5px" width="57px">
-                    <p>We'd love to hear from you.</p>
-                    <div class="contact-form-image"><img class="" src="/contact-img/contact-us.png" alt="contact rigo"></div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="item">
-            <form class="contact-form-grid" name="contactform" method="POST" netlify netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contactform" />
-                <input type="hidden" name="bot-field" />
-                <div class="contact-form-row">
-                    <div class="contact-form-label">NAME</div>
-                    <input type="text" name="name" class="contact-form-input"/>
-                </div>
-                <div class="contact-form-row">
-                    <div class="contact-form-label">QUERY</div>
-                    <input type="text" name="query" class="contact-form-input"/>
-                </div>
-                <div class="contact-form-row">
-                    <div class="contact-form-label">EMAIL</div>
-                    <input type="email" name="email" class="contact-form-input"/>
-                </div>
-                <div class="contact-form-row">
-                    <div class="contact-form-label">PHONE</div>
-                    <input type="tel" name="phone" class="contact-form-input"/>
-                </div>
-                <div class="contact-form-button">
-                    <button type="submit">START YOUR ASCENT</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    <DropUsALine></DropUsALine>
     <br><br><br>
     <div class="footer-container" style="display: contents;">
         <Footer href="/casestudy/volta">Volta</Footer>
