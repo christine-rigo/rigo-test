@@ -1,12 +1,5 @@
 <script lang="ts">
-	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
-	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
-	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
-	import SiBox from '$/components/services/SIBox.svelte';
-	import Hr from '$/components/utils/Hr.svelte';
 	import { navColor } from '$/stores/nav.store';
-	import { browser } from '$app/env';
-	import { inview } from 'svelte-inview';
 	import Footer from '$/components/Footer.svelte';
 	import { onMount } from 'svelte';
 	onMount(() => {
