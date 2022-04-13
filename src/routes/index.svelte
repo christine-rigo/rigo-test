@@ -1,12 +1,25 @@
 <script>
 	import { navColor } from '$/stores/nav.store';
 	import Footer from '$/components/Footer.svelte';
+    import Logo from '$/components/svg/Logo.svelte';
 	import { style } from 'svelte-body';
 	import { onMount } from 'svelte';
     import Nav from "$/components/Nav.svelte";
+    import ButtonRigoPopup from "$/components/ButtonRigoPopup.svelte";
+import HomeGrid from '$/components/home/HomeGrid.svelte';
 
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
+
+        document.querySelector('.rigoprelaunch').classList.remove('animate');
+
+        const rigoPopup = document.querySelector('#rigo-mode');
+        rigoPopup.addEventListener('click', function(e) {
+            document.querySelector('.rigoprelaunch').classList.add('animate');
+            document.querySelector('.home-container').classList.remove('hidden');
+            document.querySelector('.home-footer').classList.remove('hidden');
+            document.querySelector('.homepage').classList.remove('stop-scrolling');
+        })
 	});
 </script>
 
@@ -16,51 +29,105 @@
 
 <svelte:body use:style={{ background: 'var(--app-color-navy)' }} />
 
-<div class="homepage">
-    <div class="home-container">
+<div class="homepage stop-scrolling" style="position: relative;">
+    <div class="rigoprelaunch animate">
+        <div class="prelaunch-logo"><a href="/"><Logo scale={2} /></a></div>
+        <div class="prelaunch-title">
+            <div class="prelaunch-heading">Your climb is ours.<br>We're here to help your business reach its potential.</div>
+            <div class="prelaunch-subheading"><strong style="color: var(--app-color-lunarblue)">/ˈrɛdʒəʊ/ rigo  –  to ascend</strong>. rigo means to ascend in Igbo; co-founder Stephen’s family language.</div>
+        </div>
+        <div class="prelaunch-btn" id="rigo-mode"><ButtonRigoPopup btnColor="btn-lunarblue" cta="Discover More"></ButtonRigoPopup></div>
+    </div>
+
+    <div class="home-container hidden">
         <aside>
             <Nav logoScale={1} navigationBarColor="var(--app-color-navy-contrast)" navItemsStyle="align-items: flex-start;" />
         </aside>
-        <div class="homegridcontainer">
-            <div class="homegrid" style="background: url('/home/grid-1.png') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-2.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-3.svg') no-repeat top center/cover;"></div>
-            
-            <div class="homegrid" style="background: url('/home/grid-4.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-5.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-6.png') no-repeat top center/cover;"></div>
-
-            <div class="homegrid" style="background: url('/home/grid-7.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-8.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-9.svg') no-repeat top center/cover;"></div>
-
-            <div class="homegrid" style="background: url('/home/grid-10.png') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-11.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-12.svg') no-repeat top center/cover;"></div>
-
-            <div class="homegrid" style="background: url('/home/grid-13.svg') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-14.png') no-repeat top center/cover;"></div>
-            <div class="homegrid" style="background: url('/home/grid-15.svg') no-repeat top center/cover;"></div>
-        </div>
+        <HomeGrid></HomeGrid>
     </div>
 
-	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
+	<div class="home-footer hidden" style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/services">Services</Footer>
 	</div>
 </div>
 
 <style lang="scss">
 	* {
-		--color: var(--app-color-navy-contrast);
+		--color: var(--app-color-lunarblue-contrast);
 		--color-contrast: var(--app-color-navy-contrast);
 
 		color: var(--color);
 	}
 
 	:global(::selection) {
-		background: var(--color);
+		background-color: var(--color);
 		color: var(--color-contrast);
 	}
+
+    .animate {
+        transform: translateY(-200vh);
+    }
+
+    .rigoprelaunch {
+        transition: all 1.25s ease-in;
+
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--app-color-lunarblue-contrast);
+        z-index: 99999;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+
+        div {
+            color: var(--app-color-lunarblue);
+        }
+    }
+
+    .prelaunch-logo {
+        a {
+            --color: var(--app-color-lunarblue);
+        }
+    }
+
+    .prelaunch-title {
+        text-align: center;
+        padding: 0vw 28vw;
+
+        .prelaunch-heading {
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 90%;
+        }
+
+        .prelaunch-subheading {
+            margin-top: 1vw; font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+        }
+    }
+    @media(max-width: 425px) {
+        .prelaunch-title {
+            padding: 0vw 10vw;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+    }
 
     .home-container {
         background-size: cover;
@@ -88,19 +155,4 @@
 			position: relative;
 		}
 	}
-
-    .homegridcontainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-items: center;
-
-        .homegrid {
-            flex: 1 1 30%;
-            width: 100%;
-            height: 38vw;
-            text-align: center;
-        }
-    }
 </style>
