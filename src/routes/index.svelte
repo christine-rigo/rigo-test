@@ -121,7 +121,7 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
     }
 
     .hidden {
-        display: none;
+        display: none !important;
     }
 
     .stop-scrolling {
