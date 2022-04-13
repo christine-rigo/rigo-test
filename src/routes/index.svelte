@@ -11,11 +11,13 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 
+        document.querySelector('.rigoprelaunch').classList.remove('animate');
+
         const rigoPopup = document.querySelector('#rigo-mode');
         rigoPopup.addEventListener('click', function(e) {
-            document.querySelector('.rigoprelaunch').remove();
-            const homeContainer = document.querySelector('.home-container');
-            homeContainer.classList.remove('hidden');
+            document.querySelector('.rigoprelaunch').classList.add('animate');
+            document.querySelector('.home-container').classList.remove('hidden');
+            document.querySelector('.home-footer').classList.remove('hidden');
             document.querySelector('.homepage').classList.remove('stop-scrolling');
         })
 	});
@@ -28,7 +30,7 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
 <svelte:body use:style={{ background: 'var(--app-color-navy)' }} />
 
 <div class="homepage stop-scrolling" style="position: relative;">
-    <div class="rigoprelaunch">
+    <div class="rigoprelaunch animate">
         <div class="prelaunch-logo"><a href="/"><Logo scale={2} /></a></div>
         <div class="prelaunch-title">
             <div class="prelaunch-heading">Your climb is ours.<br>We're here to help your business reach its potential.</div>
@@ -44,7 +46,7 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
         <HomeGrid></HomeGrid>
     </div>
 
-	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
+	<div class="home-footer hidden" style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/services">Services</Footer>
 	</div>
 </div>
@@ -62,7 +64,13 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
 		color: var(--color-contrast);
 	}
 
+    .animate {
+        transform: translateY(-200vh);
+    }
+
     .rigoprelaunch {
+        transition: all 1.25s ease-in;
+
         position: absolute;
         height: 100vh;
         width: 100vw;
