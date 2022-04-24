@@ -47,7 +47,7 @@
 		<div class="challenge-container">
 			<ChallengeCard 
 				challengeImg="/casestudy/volta-challenge.svg"
-				challenge="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaing the scale and quality of their content."
+				challenge="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content."
 				solutionImg="/casestudy/volta-solution.svg"
 				solution="rigo creates regular news articles, interviews and campaigns to drive engagment. From pitching to production, the team integrates with Volta to deliver a seamless service."
 				resultImg="/casestudy/volta-result.svg"
