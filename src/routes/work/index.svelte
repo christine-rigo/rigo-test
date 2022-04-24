@@ -19,7 +19,7 @@
 	<div class="showcase-container-1">
 		<a href="/casestudy/volta">
 			<div class="showcase-card">
-				<div class="showcase-img" style="background-image: url('/work-img/volta-work.jpg'); background-size: cover;"></div>
+				<div class="showcase-img" style="background-image: url('/work-img/volta-work.png'); background-size: cover;"></div>
 				<div class="showcase-title">VOLTA</div>
 				<div class="showcase-category">
 					<div>+ CREATIVE</div>
@@ -81,7 +81,7 @@
 	.showcase-container-1 {
 		margin-top: 4rem;
 		display: grid;
-		grid-template-columns: 2.6fr 1fr;
+		grid-template-columns: 2fr 1fr;
 		gap: 0.5rem;
 	}
 	.showcase-container-2 {
@@ -115,7 +115,7 @@
 			color: var(--app-color-lunarblue-contrast);
 		}
 	}
-	@media(max-width: 1023px) {
+	@media(max-width: 1024px) {
 		.showcase-container-1, .showcase-container-2 {
 			grid-template-columns: 1fr;
 		}

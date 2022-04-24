@@ -34,7 +34,7 @@ import HomeGrid from '$/components/home/HomeGrid.svelte';
         <div class="prelaunch-logo"><a href="/"><Logo scale={2} /></a></div>
         <div class="prelaunch-title">
             <div class="prelaunch-heading">Your climb is ours.<br>We're here to help your business reach its potential.</div>
-            <div class="prelaunch-subheading"><strong style="color: var(--app-color-lunarblue)">/ˈrɛdʒəʊ/ rigo  –  to ascend</strong>. rigo means to ascend in Igbo; co-founder Stephen’s family language.</div>
+            <div class="prelaunch-subheading"><strong style="color: var(--app-color-lunarblue)">/ˈrɛdʒəʊ/ rigo  –  to ascend</strong>. rigo means to <i style="color: var(--app-color-lunarblue)">ascend</i> in Igbo; co-founder Stephen’s family language.</div>
         </div>
         <div class="prelaunch-btn" id="rigo-mode"><ButtonRigoPopup btnColor="btn-lunarblue" cta="Discover More"></ButtonRigoPopup></div>
     </div>

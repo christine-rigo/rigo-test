@@ -40,7 +40,7 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
     </div>
     <div class="service-container-footer">
         <div class="service-container-heading hidden-desktop">
-            + Creative: <span class="service-container-heading-casestudy">Volta</span>
+            + Creative: <span class="service-container-heading-casestudy">Gallagher</span>
         </div>
         <div class="service-container-footer-title" style="color: var(--app-color-lunarblue-contrast)">Cornerstone Content</div>
         <div class="service-container-footer-description">Long and short-form thought leadership content designed to educate and engage readers and reinforce Gallagher’s brand proposition. Topics, keyword selection and approach designed to target content gaps identified in a prior audit.</div>
