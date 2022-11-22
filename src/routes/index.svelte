@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
     import Nav from "$/components/Nav.svelte";
     import ButtonRigoPopup from "$/components/ButtonRigoPopup.svelte";
-import HomeGrid from '$/components/home/HomeGrid.svelte';
+    import HomeGrid from '$/components/home/HomeGrid.svelte';
 
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
