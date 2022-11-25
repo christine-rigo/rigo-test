@@ -54,46 +54,89 @@
 
 <style lang="scss">
   .services-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     max-height: 990px;
   }
+  .item-container {
+    border-radius: 50%;
+    border: 1px solid #FAF5EE;
+    text-transform: uppercase;
+    width: calc(100% - 20px);
+    height: 300px;
+    max-width: 300px;
+    margin: 1.5rem 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-size: 16px;
+      padding-bottom: 1rem;
+      color: var(--app-color-yellow);
+    }
+    p {
+      font-size: 10px;
+      text-align: center;
+      max-width: 25ch;
+    }
+  }
 
-
-  @media (min-width: 1440px) {
+  @media(min-width: 425px) {
     .services-container {
-      margin-top: 10rem;
-      display: grid;
-      grid-template-rows: 327px;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 45px;
+      align-items: center;
     }
 
     .item-container {
-      border-radius: 50%;
-      border: 1px solid #FAF5EE;
-      text-transform: uppercase;
-      padding: 3.25rem 3rem 2rem;
+      width: 400px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .services-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
 
+    .item-container {
+      padding: 1rem 0;
+      padding-bottom: 0;
       h3 {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 700;
-        margin-bottom: 1rem;
+        color: white;
       }
       div {
         overflow: hidden;
         text-align: center;
        p {
-          font-size: 8px;
-          padding-bottom: 8px;
-          max-width: 30ch;
+          font-size: 10px;
+          padding-bottom: 4px;
+          width: 140px;
        }
       }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .services-container {
+      margin-top: 8rem;
+      margin-left: -4rem;
+      justify-content: space-between;
+      min-width: 1079px;
+
+      .item-container {
+        height: 326px;
+        max-width: 326px;
+      }
+    }
+  }
+
+  @media (min-width: 1441px) {
+    .services-container {
+
     }
   }
 </style>
