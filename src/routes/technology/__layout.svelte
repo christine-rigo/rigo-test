@@ -5,7 +5,7 @@
 
 <main>
 	<aside>
-		<Nav />
+		<Nav logoScale={1} navItemsStyle="align-items: flex-start;"/>
 	</aside>
 
   <section class="container">
@@ -20,7 +20,7 @@
 	}
 
   aside {
-		position: static;
+		position: relative;
 		top: 0;
 		left: 0;
 		z-index: 9999;
@@ -28,10 +28,7 @@
 		display: flex;
 		justify-content: center;
 
-		padding: 2rem 0;
-
-		height: unset;
-		width: unset;
+		padding: 6% 5% 6% 5%;
 	}
 
 	section {

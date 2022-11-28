@@ -57,6 +57,7 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-height: 990px;
   }
   .item-container {
@@ -92,13 +93,17 @@
       width: 400px;
     }
   }
-  @media (min-width: 1024px) {
+
+  @media (min-width: 768px) {
     .services-container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-evenly;
     }
+  }
+  @media (min-width: 1024px) {
+   
 
     .item-container {
       padding: 1rem 0;
@@ -123,9 +128,7 @@
   @media (min-width: 1440px) {
     .services-container {
       margin-top: 8rem;
-      margin-left: -4rem;
       justify-content: space-between;
-      min-width: 1079px;
 
       .item-container {
         height: 326px;

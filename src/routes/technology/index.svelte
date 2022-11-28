@@ -130,7 +130,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
   .services {
     font-size: 24px;
@@ -168,7 +168,7 @@
 
   .section-carousel {
     padding: 0 3.5rem;
-    margin-top: 4rem;
+    margin: 8rem 0 4rem 0;
   }
 
   .footer {
@@ -196,6 +196,12 @@
     }
   }
 
+  @media (min-width: 768px) {
+    .section-carousel {
+      margin: 0;
+    }
+  }
+
   @media (min-width: 1024px) {
     h1 {
       font-size: calc(2.375rem + 1.5vw);
@@ -203,7 +209,7 @@
     }
     .main-content,
     .section-carousel {
-      padding: 2rem 0 2rem 20vw;
+      padding: 2rem 15vw;
     }
 
     .section-carousel {
@@ -212,9 +218,6 @@
   } 
 
   @media (min-width: 1440px) {
-    .main-content {
-      margin-right: 11rem;
-    }
     h1 {
       font-size: 6.25rem;
       line-height: 200px;

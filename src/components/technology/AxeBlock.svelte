@@ -146,10 +146,12 @@
     margin-left: -2.5em; /* Also needed for space (tweak if needed) */
   }
 
-  .start-ascent {
-    display: flex;
-    justify-content: center;
-    padding: 8.375rem 0;
+  .axeblock-container {
+    .start-ascent {
+      display: flex;
+      justify-content: center;
+      padding-top: 5rem;
+    }
   }
 
 
@@ -157,6 +159,10 @@
     .axeblock-container {
       .axeblock-image {
         height: 367px;
+      }
+
+      .start-ascent {
+        padding-bottom: 5rem;
       }
     }
   }

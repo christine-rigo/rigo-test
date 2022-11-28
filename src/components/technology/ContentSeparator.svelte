@@ -96,7 +96,6 @@
     }
 
     .separator-container {
-   
       .tags {
         .taginfo {
           padding: 0;
