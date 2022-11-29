@@ -71,12 +71,12 @@
     <p class="description">rigo is a London-based digital agency specialising in bespoke technology solutions.</p>
   </div>
   <ContentSeparator
-    content1="/technology/28m.png"
+    content1="/technology/30m.png"
     content2="/technology/240k.png"
     content3="/technology/90p.png"
     content4="/technology/1000+.png"
     columnSeparator="/technology/Line 2.png"
-    info1="Raised NFT Sales"
+    info1="Raised in client NFT Sales"
     info2="Accumulative visits per month"
     info3="Average page score on Google page speed insights"
     info4="Collective Sites built"
@@ -104,21 +104,27 @@
 </section>
 <section class="gif-container">
   <div class="gif-card">
-    <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_1.png" alt="rigo">
-    <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/PlanetXolo.gif" alt="rigo">
+    <a href="https://planetxolo.com/" target="_blank">
+      <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_1.png" alt="rigo">
+      <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/PlanetXolo.gif" alt="rigo">
+    </a>
   </div>
   <div class="gif-card">
-    <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_2.png" alt="rigo">
-    <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/NFTCON.gif" alt="rigo">
+    <a href="https://nftcon.org/" target="_blank">
+      <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_2.png" alt="rigo">
+      <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/NFTCON.gif" alt="rigo">
+    </a>
   </div>
   <div class="gif-card">
-    <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_3.png" alt="rigo">
-    <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/Arkh.gif" alt="rigo">
+    <a href="https://arkh.com" target="_blank">
+      <img class="static" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/static_gif_3.png" alt="rigo">
+      <img class="active" style="width: 100%; height: auto; max-height: 712px;" src="/nftcon/Arkh.gif" alt="rigo">
+    </a>
   </div>
 </section>
 
 <section class="footer">
-  <Footer marginright=0 href="/casestudy/gallagher">Gallagher</Footer>
+  <Footer hideUpNext={true} marginright=0 href="/casestudy/gallagher">Gallagher</Footer>
 </section>
 
 <style lang="scss">
@@ -168,7 +174,7 @@
 
   .section-carousel {
     padding: 0 3.5rem;
-    margin: 8rem 0 4rem 0;
+    margin: 5rem 0;
   }
 
   .footer {

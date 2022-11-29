@@ -25,7 +25,7 @@
               <a href="https://planetxolo.com/" target="_blank">Planet Xolo</a>
             </li>
             <li>
-              <a href="clucoin.com" target="_blank">Clucoin</a>
+              <a href="https://clucoin.com" target="_blank">Clucoin</a>
             </li>
             <li>
               <a href="https://nftcon.org/" target="_blank">NFTCon</a>
@@ -112,7 +112,7 @@
   .ascent {
     display: flex;
     justify-content: center;
-    padding: 6rem 0;
+    padding: 6rem 0 4rem;
 
     a {
       color: #36E0BA;

@@ -67,16 +67,17 @@
     </div>
   </div>
 
-  <div class="start-ascent">
-    <StartYourAscent />
-  </div>
+</div>
+
+<div class="start-ascent">
+  <StartYourAscent />
 </div>
 
 <style lang="scss">
   .axeblock-container {
     width: 100%;
     background-color: rgba(80, 77, 230, 0.1);
-    padding: 5.375rem 3.5rem;
+    padding: 4rem 3.5rem 5rem;
     .axeblock-title {
       text-align: center;
       font-size: 40px;
@@ -146,24 +147,24 @@
     margin-left: -2.5em; /* Also needed for space (tweak if needed) */
   }
 
-  .axeblock-container {
-    .start-ascent {
-      display: flex;
-      justify-content: center;
-      padding-top: 5rem;
-    }
+  .start-ascent {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    background-color: rgba(80, 77, 230, 0.1);
   }
 
 
   @media (min-width: 768px) {
     .axeblock-container {
+      padding-bottom: 0;
       .axeblock-image {
         height: 367px;
       }
+    }
 
-      .start-ascent {
-        padding-bottom: 5rem;
-      }
+    .start-ascent {
+      padding-bottom: 5rem;
     }
   }
 
@@ -210,7 +211,9 @@
 
   @media(min-width: 1440px) {
     .axeblock-container {
-      padding-left: 5.625rem;
+      display: table;
+      padding: 10rem 15vw;
+      padding-bottom: 0;
     }
   }
 

@@ -144,7 +144,7 @@
 
   @media(min-width: 768px) {
     .carousel-container {
-      padding: 8rem 4rem;
+      padding: 5rem 4rem;
     }
 
     .carousel-slide {
@@ -155,7 +155,7 @@
   }
   @media (min-width: 1024px) {
     .carousel-container {
-      padding: 8rem 0;
+      padding: 0;
     }
    
     .carousel-slide {
