@@ -88,7 +88,8 @@
 	.main-content {
 		width: 100%;
 
-		padding: 2rem 8vw 10rem 6vw;
+		padding: 2rem 0;
+		padding-bottom: 15vw;
 	}
 
 	.banner {

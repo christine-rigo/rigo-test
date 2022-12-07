@@ -4,9 +4,10 @@
 	import Logo from './svg/Logo.svelte';
 	import TheDotsSvg from './svg/TheDotsSVG.svelte';
 
-	export let marginright = '9rem';
+	export let marginright = '0rem';
 	export let marginleft = '0rem';
 	export let href: string;
+
 </script>
 
 <footer style="margin-left: {marginleft}; margin-right: {marginright};">
@@ -78,8 +79,11 @@
 		}
 
 		a {
-			font-weight: 500;
+			font-weight: bold;
 			font-size: 2.5rem;
+			&:hover {
+				text-decoration: underline;
+			}
 			// font-family: ;
 		}
 	}
@@ -88,6 +92,7 @@
 		display: flex;
 		font-size: 0.8rem;
 		flex-direction: row;
+		font-size: 10px;
 		border-bottom: solid 1px var(--internal-color);
 
 		& > div {
@@ -134,7 +139,8 @@
 	.bottom {
 		display: flex;
 		justify-content: center;
-		padding: 2rem;
+		padding: 12px 2rem;
+		font-size: 10px;
 	}
 
 	@media(max-width: 1023px) {
@@ -173,5 +179,14 @@
 		footer {
 			margin-right: 0 !important;
 		}
+	}
+
+
+	@media(min-width: 1024px) {
+		.middle,
+		.bottom {
+			font-size: 14px;
+		}
+		
 	}
 </style>

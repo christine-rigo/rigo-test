@@ -130,8 +130,8 @@ import Footer from "../Footer.svelte";
         </div>
     </div>
 
-    <div style="margin: 10vw 5vw;">
-        <Footer marginright=0 href="/casestudy/gallagher">Gallagher</Footer>
+    <div style="margin: 10vw 5vw; padding-bottom: 5vw;">
+        <Footer marginright={"0rem"} href="/casestudy/gallagher">Gallagher</Footer>
     </div>
 
 </div>

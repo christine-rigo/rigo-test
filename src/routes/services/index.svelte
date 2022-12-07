@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
 	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
-import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
+	import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
 	import Hr from '$/components/utils/Hr.svelte';
@@ -378,6 +378,21 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 	@media(max-width: 1023px) {
 		.service .inner .content {
 			position: static;
+		}
+	}
+
+
+	@media (min-width: 1024px) {
+		.service {
+			:global(.inner) { 
+				padding: 5% 15vw;
+			}
+
+			:global(.inner .content) {
+				top: 6rem;
+				width: calc(100% - 30vw);
+				left: unset;
+			}
 		}
 	}
 </style>

@@ -16,7 +16,7 @@
 	<title>Contact Us / Rigo Agency</title>
 </svelte:head>
 
-<div style="padding: 0rem 2rem 2rem 2rem;">
+<div>
     <DropUsALine></DropUsALine>
     <br><br><br>
     <div class="footer-container" style="display: contents;">
@@ -31,6 +31,7 @@
 
 		color: var(--color);
 	}
+
 
     input {
         border: none;
@@ -61,13 +62,21 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-right: 9rem;
+        margin: 0;
     }
     .item {
         flex-grow: 1;
         width: 100%;
         margin-bottom: 2rem;
     }
+
+
+    @media (max-width: 425px) {
+        div {
+            padding: 0rem 2rem 2rem 2rem;
+        }
+    }
+    
     @media(min-width: 1440px) {
         .item {
             width: 30%;
@@ -132,16 +141,14 @@
         align-self: center;
         button {
 			font-family: 'Bebas Neue', sans-serif;
-			box-shadow: 0 0 0 1px #504de6;
 			border-radius: 2rem;
 			padding: 1.2rem 2.5rem 1rem 2.5rem;
 			font-size: 1.25rem;
 			line-height: 1;
-			transition: background-color 150ms ease-in, box-shadow 150ms ease-in;
+			transition: background-color 150ms ease-in;
 			&:hover {
 				background-color: #504de6;
                 color: white;
-				box-shadow: 0px 1.8px 4.5px rgba(0, 0, 0, 0.1), 0px 14px 36px rgba(0, 0, 0, 0.2);
 			}
 		}
     }

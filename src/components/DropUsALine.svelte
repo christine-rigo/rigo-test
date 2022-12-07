@@ -77,7 +77,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-right: 9rem;
     }
     .item {
         flex-grow: 1;
@@ -153,11 +152,10 @@
 			padding: 1.2rem 2.5rem 1rem 2.5rem;
 			font-size: 1.25rem;
 			line-height: 1;
-			transition: background-color 150ms ease-in, box-shadow 150ms ease-in;
+			transition: background-color 150ms ease-in;
 			&:hover {
 				background-color: #504de6;
                 color: white;
-				box-shadow: 0px 1.8px 4.5px rgba(0, 0, 0, 0.1), 0px 14px 36px rgba(0, 0, 0, 0.2);
 			}
 		}
     }

@@ -31,7 +31,7 @@
 	<CaseStudy navigationBarColor="var(--app-color-red)" 
 		title="Gallagher" 
 		description="Global insurance broker, risk management expert and business consultancy"
-		coverPhoto="/casestudy/gallagher-cover.png" 
+		coverPhoto="/casestudy/gallagher-cover.gif" 
 		columnSeparator="/casestudy/Line 3.svg"
 		hdrSvgPath1="/casestudy/gallagher-cs-1.png"
 		hdrSvgPath2="/casestudy/gallagher-cs-2.png"
@@ -64,8 +64,8 @@
 				<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
 		</div>
 		<div class="ascension-container">
-			<AscensionCard title="Creative" imgsource="/casestudy/gallagher-ascension-1.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
-			<AscensionCard title="Digital Advertising" imgsource="/casestudy/gallagher-ascension-2.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
+			<AscensionCard arrowUrl="/creative/volta" title="Creative" imgsource="/casestudy/gallagher-ascension-1.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
+			<AscensionCard arrowUrl="/digital-advertising/volta-ad-creative" title="Digital Advertising" imgsource="/casestudy/gallagher-ascension-2.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
 		</div>
 		<Carousel carouselList={carouselList} />
 		<ExtremeCard heading="Research" imgUrl="/casestudy/gallagher-research.png">
@@ -87,7 +87,7 @@
 		<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
 	</div>
 
-	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
+	<div style="display: flex; padding: 5vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/volta">Volta</Footer>
 	</div>
 </div>

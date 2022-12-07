@@ -5,7 +5,7 @@
 
 <main>
 	<aside>
-		<Nav />
+		<Nav logoScale={1}/>
 	</aside>
 
 	<section>
@@ -28,7 +28,7 @@
 		display: flex;
 		justify-content: center;
 
-		padding: 2rem 0;
+		padding: 6% 5%;
 
 		height: unset;
 		width: unset;
@@ -42,9 +42,6 @@
 	@media(min-width: 1024px) {
 		aside {
 			position: absolute;
-			width: 20vw;
-			height: 100%;
-			padding: 3rem 0;
 		}
 	}
 </style>

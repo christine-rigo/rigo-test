@@ -180,6 +180,10 @@
 		}
 	}
 
+	p {
+		font-size: 16px;
+	}
+
 	.start-ascent {
 		display: flex;
 		justify-content: center;
@@ -187,5 +191,23 @@
 		padding-right: 10vw;
 
 		width: 100%;
+	}
+
+	@media(min-width: 1024px) {
+
+		p {
+			font-size: 22px;
+		}
+		.main-content {
+			padding: 2rem 0 15rem 0;
+		}
+		
+		.qualities {
+			padding: 2rem 0;
+		}
+
+		.start-ascent {
+			padding-right: 0;
+		}
 	}
 </style>

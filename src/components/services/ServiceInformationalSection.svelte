@@ -81,13 +81,12 @@
 
 			font-size: 1.25rem;
 			line-height: 1;
-
-			transition: background-color 150ms ease-in, box-shadow 150ms ease-in;
+			color: white;
+			transition: background-color 150ms ease-in;
 
 			&:hover {
 				background-color: var(--app-color-navy-contrast);
-				box-shadow: 0px 1.8px 4.5px rgba(0, 0, 0, 0.1), 0px 14px 36px rgba(0, 0, 0, 0.2);
-			}
+	}
 		}
 	}
 
@@ -95,5 +94,12 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, 11rem);
 		gap: 3.2rem;
+	}
+
+
+	@media(min-width: 1024px) {
+		.top-panel {
+			padding: 0;
+		}
 	}
 </style>
