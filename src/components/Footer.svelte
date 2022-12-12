@@ -8,13 +8,14 @@
 	export let marginleft = '0rem';
 	export let href: string;
 
+	export let hideUpNext = false;
 </script>
 
 <footer style="margin-left: {marginleft}; margin-right: {marginright};">
 	<section class="top">
-		<span class="up-next"> UP NEXT: </span>
+		<span class="up-next" style="opacity: {hideUpNext ? 0 : 1}"> UP NEXT: </span>
 
-		<a {href}>
+		<a {href} style="display: {hideUpNext ? 'none' : 'block'}">
 			<slot />
 		</a>
 	</section>
