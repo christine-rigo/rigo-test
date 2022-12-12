@@ -1,5 +1,9 @@
 <script lang="ts">
   import type { Services } from './types';
+  import { inview } from 'svelte-inview';
+
+  let isInView;
+
   // TODO: Set this to props for dynamic purposes
   const services: Array<Services> = [{
     type: 'design',
@@ -39,9 +43,17 @@
   }]
 </script>
 
-<div class="services-container">
+<div class="services-container"
+class:cotainerInview="{isInView}"
+use:inview={{ unobserveOnEnter: false, rootMargin: '10%' }}
+on:change={({ detail }) => {
+  isInView = detail.inView;
+}}
+>
   {#each services as { type, items } }
-    <div class="item-container">
+    <div class="item-container"
+    class:inview="{isInView}"
+    >
       <h3>{type}</h3>
       {#each items as item}
       <div>
@@ -72,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform .75s ease-in-out .25s, opacity .5s ease-in-out .25s; 
     h3 {
       font-size: 16px;
       padding-bottom: 1rem;
@@ -123,6 +136,39 @@
        }
       }
     }
+  }
+
+  @media (min-width:1286px) {
+    .item-container:nth-child(1) {
+      transform: translateX(50%);
+    }
+    .item-container:nth-child(3) {
+      transform: translateX(-50%);
+    }
+
+    .item-container{ opacity: .5; }
+
+    .item-container.inview:hover ~ div,
+    .item-container.inview:has(~ div:hover) {
+        opacity:.1;
+    }
+    .item-container.inview:hover {
+      transform:scale(1.1);
+    }
+
+    .item-container.inview:hover,
+    .item-container.inview:has(~ div:hover) {
+      transition-delay: 0;
+      transition-duration: .35s;
+      transition-timing-function: ease-in;
+    }
+
+
+    .item-container.inview {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
   }
 
   @media (min-width: 1440px) {

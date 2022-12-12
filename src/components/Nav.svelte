@@ -19,7 +19,6 @@
 		<a class="hidden-xs" href="/about" sveltekit:prefetch>About</a>
 		<!-- <a href="/team" sveltekit:prefetch>Team</a> -->
 		<a href="/contact">Contact</a>
-		<a href="/technology">Technology</a>
 	</nav>
 </div>
 

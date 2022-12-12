@@ -69,7 +69,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 			use:inview={{ threshold: 0.7 }}
 			on:enter={() => ($navColor = 'var(--app-color-navy)')}
 		>
-			<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
+			<ServiceInformationalSection discoverMoreHref="/technology">
 				<svelte:fragment slot="title">technology</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">

@@ -14,25 +14,26 @@
         </div>
     </div>
     <div class="item">
-        <form class="contact-form-grid" name="contactform" method="POST" netlify netlify-honeypot="bot-field">
+        <form class="contact-form-grid" name="contactform" method="POST" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
             <input type="hidden" name="form-name" value="contactform" />
             <input type="hidden" name="bot-field" />
             <div class="contact-form-row">
                 <div class="contact-form-label">NAME</div>
-                <input type="text" name="name" class="contact-form-input"/>
+                <input required type="text" name="name" class="contact-form-input"/>
             </div>
             <div class="contact-form-row">
                 <div class="contact-form-label">QUERY</div>
-                <input type="text" name="query" class="contact-form-input"/>
+                <input required type="text" name="query" class="contact-form-input"/>
             </div>
             <div class="contact-form-row">
                 <div class="contact-form-label">EMAIL</div>
-                <input type="email" name="email" class="contact-form-input"/>
+                <input required type="email" name="email" class="contact-form-input"/>
             </div>
             <div class="contact-form-row">
                 <div class="contact-form-label">PHONE</div>
-                <input type="tel" name="phone" class="contact-form-input"/>
+                <input required type="tel" name="phone" class="contact-form-input"/>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <div class="contact-form-button">
                 <button type="submit">START YOUR ASCENT</button>
             </div>

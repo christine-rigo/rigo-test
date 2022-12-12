@@ -10,7 +10,7 @@
 				<div class="category-name-section" style="--color: var(--app-color-yellow)">
 					<h2>+ technology</h2>
 					<hr />
-					<a href="/digital-advertising/volta-site-traffic"><button>Discover More</button></a>
+					<a href="/technology"><button>Discover More</button></a>
 				</div>
 
 				<div class="category-name-section" style="--color: var(--app-color-green)">
