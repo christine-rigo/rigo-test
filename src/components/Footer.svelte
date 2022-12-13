@@ -31,9 +31,15 @@
 		</div>
 
 		<div class="s3">
-			<TheDotsSvg />
-			<LinkedInSvg />
-			<InstagramSvg />
+			<a href="https://the-dots.com/pages/rigo-458527">
+				<TheDotsSvg />
+			</a>
+			<a href="https://www.linkedin.com/company/rigo-agency">
+				<LinkedInSvg />
+			</a>
+			<a href="https://www.instagram.com/rigo.agency">
+				<InstagramSvg />
+			</a>
 		</div>
 
 		<div class="s4 hidden-m">
