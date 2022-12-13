@@ -9,7 +9,6 @@
                     <input type="text" name="name" class="contact-form-input"/>
                 </div>
             </div>
-            
             <div class="contact-form-row">
                 <div class="col-2">
                     <div class="contact-form-label">EMAIL</div>
@@ -26,6 +25,7 @@
                     <input type="text" name="query" class="contact-form-input"/>
                 </div>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <div class="contact-form-button">
                 <button type="submit">START YOUR ASCENT</button>
             </div>
@@ -59,6 +59,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding-bottom: 10rem;
     }
     .item {
         flex-grow: 1;

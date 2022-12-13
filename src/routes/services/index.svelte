@@ -80,20 +80,31 @@
 			use:inview={{ threshold: 0.7 }}
 			on:enter={() => ($navColor = 'var(--app-color-navy)')}
 		>
-			<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
-				<svelte:fragment slot="title">technical</svelte:fragment>
+			<ServiceInformationalSection discoverMoreHref="/technology">
+				<svelte:fragment slot="title">technology</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">
 					<SiBox>
-						<span slot="title">brochure websites</span>
+						<span slot="title">design websites</span>
 						<span slot="description">
-							design, UX, seo, copy and development. everything you need with rigo.
+						ux, ui, site mapping, wireframing, brand engine, copy, full suite branding, brand refresh, 
+						comerce strategy
 						</span>
 					</SiBox>
 
 					<SiBox>
-						<span slot="title">crypto / nft</span>
-						<span slot="description"> coming soon </span>
+						<span slot="title">development</span>
+						<span slot="description"> ecommerce, portfolio, cms, site crawl application, seo, blogs </span>
+					</SiBox>
+
+					<SiBox>
+						<span slot="title">infrastructure</span>
+						<span slot="description">design, ux, seo, copy and development. everything you need with rigo.</span>
+					</SiBox>
+
+					<SiBox>
+						<span slot="title">skill set</span>
+						<span slot="description">full stack development, cloud architecture, database architecture</span>
 					</SiBox>
 				</svelte:fragment>
 			</ServiceInformationalSection>
