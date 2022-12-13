@@ -1,13 +1,8 @@
 <script lang="ts">
     import DropUsALine from '$/components/DropUsALine.svelte';
     import Footer from '$/components/Footer.svelte';
-	import { navColor } from '$/stores/nav.store';
-	import { onMount } from 'svelte';
 	import { style } from 'svelte-body';
 
-	onMount(() => {
-		$navColor = 'var(--app-color-lunarblue)';
-	});
 </script>
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
@@ -17,8 +12,8 @@
 </svelte:head>
 
 <div>
+    <h1>Contact</h1>
     <DropUsALine></DropUsALine>
-    <br><br><br>
     <div class="footer-container" style="display: contents;">
         <Footer href="/casestudy/volta">Volta</Footer>
     </div>
@@ -26,12 +21,20 @@
 
 <style lang="scss">
 	* {
-		--color: var(--app-color-lunarblue);
-		--color-contrast: var(--app-color-lunarblue-contrast);
+        --color: white;
 
 		color: var(--color);
 	}
 
+    h1 {
+
+        color: #504de699;
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+        font-size: 27vw;
+        position: absolute;
+        z-index: 0;
+    }
 
     input {
         border: none;
@@ -39,19 +42,6 @@
         padding: 2vw;
     }
 
-    h1 {
-		padding-right: 7rem;
-	}
-
-	// Class for responsive h1
-	h1 {
-        font-size: calc(2.375rem + 1.5vw);
-    }
-    @media (min-width: 1200px) {
-        h1 {
-            font-size: 5.5rem;
-        }
-    }
 
 	:global(::selection) {
 		background: var(--color);
@@ -162,9 +152,6 @@
         height: auto;
     }
     @media(max-width: 1023px) {
-        h1 {
-		padding-right: 0rem;
-	    }
 
         .container {
             margin-right: 0rem;
@@ -185,4 +172,26 @@
 			padding-bottom: 10vw;
 		}
 	}
+
+
+    @media(min-width: 1024px) {
+        h1 {
+            top: -120px;
+            left: -40px;
+        }
+
+    }
+
+    @media(min-width: 1440px) {
+        h1 {
+            top: -140px;
+        }
+    }
+
+
+    @media(min-width: 1920px) {
+        h1 {
+            top: -205px;
+        }
+    }
 </style>
