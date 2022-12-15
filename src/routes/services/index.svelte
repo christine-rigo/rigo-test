@@ -61,7 +61,7 @@
 				</div>
 				<div class="hide-mobile">
 					<Hr />
-					<h1>
+					<h1 style="padding:2rem 0;">
 						Services developed from years of problem solving for brands <span>just like yours.</span>
 					</h1>
 					<p>
@@ -69,6 +69,9 @@
 						<br/>create a website from scratch with persuasive copy, eye-catching design and
 						<br /> seamless UX, or increase your lead flow with email marketing. 
 					</p>
+					<br />
+
+							<ScrollerIndicator href="#technical-services-section" />
 				</div>
 			</div>
 		</section>
