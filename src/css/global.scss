@@ -152,3 +152,10 @@ a[href] {
 	// 	display: none;
 	// }
 }
+
+@media screen and (max-width: 767px) {
+	main > aside {
+		padding-left: 2rem !important;
+		padding-right: 2rem !important;
+	}
+}

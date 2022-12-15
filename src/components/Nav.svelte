@@ -87,6 +87,10 @@
 	@media(max-width: 768px) {
 		.nav-container > a {
 			transform: scale(0.7);
+			transform-origin: left;
+		}
+		.nav-container {
+			padding: 0;
 		}
 	}
 </style>

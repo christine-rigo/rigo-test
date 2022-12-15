@@ -94,6 +94,8 @@
 		aside {
 			position: relative;
 		}
+
+		.container {height: auto;}
 	}
 
 	.main {

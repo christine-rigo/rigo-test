@@ -2,16 +2,22 @@
     import DropUsALine from '$/components/DropUsALine.svelte';
     import Footer from '$/components/Footer.svelte';
 	import { style } from 'svelte-body';
+    import { navColor } from '$/stores/nav.store';
+	import { onMount } from 'svelte';
+
+    onMount(() => {
+		$navColor = 'var(--app-color-lunarblue-contrast)';
+	});
 
 </script>
 
-<svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
+<!-- <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} /> -->
 
 <svelte:head>
 	<title>Contact Us / Rigo Agency</title>
 </svelte:head>
 
-<div>
+<div class="contact-section">
     <h1>Contact</h1>
     <DropUsALine></DropUsALine>
     <div class="footer-container" style="display: contents;">
@@ -59,6 +65,8 @@
         width: 100%;
         margin-bottom: 2rem;
     }
+
+    .contact-section {padding: 4rem 2rem 4rem 2rem;}
 
 
     @media (max-width: 425px) {
