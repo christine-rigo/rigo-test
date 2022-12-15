@@ -17,7 +17,7 @@
 
 <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
 
-<h1>
+<h1 class="tagline">
 	<span class="we-are"> We Are: </span>
 	copywriters, designers, developers, strategists
 </h1>
@@ -210,4 +210,24 @@
 			padding-right: 0;
 		}
 	}
+
+	@media(max-width: 767px) {
+
+		.tagline { padding: 0 2rem; }
+		.main-content { 
+			display:block ;
+			padding: 2rem;
+		}
+		.qualities {
+			display:flex;
+			flex-direction: column;
+			gap:5vw;
+			padding: 2rem;
+		}
+		.start-ascent {
+			padding-right: 0;
+		}
+
+	}
+
 </style>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="item">
-        <form class="contact-form-grid" name="contactform" method="POST" netlify netlify-honeypot="bot-field">
+        <form class="contact-form-grid" name="contactform" action="/thank-you" method="POST" netlify netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contactform" />
             <input type="hidden" name="bot-field" />
             <div class="contact-form-row">
@@ -25,7 +25,6 @@
                     <input type="text" name="query" class="contact-form-input"/>
                 </div>
             </div>
-            <div data-netlify-recaptcha="true"></div>
             <div class="contact-form-button">
                 <button type="submit">START YOUR ASCENT</button>
             </div>
