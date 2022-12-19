@@ -49,7 +49,7 @@
 		</div>
 	</section>
 
-	<section class="bottom">Copyright &copy; Rigo 2021</section>
+	<section class="bottom">Copyright &copy; Rigo 2022</section>
 </footer>
 
 <style lang="scss">

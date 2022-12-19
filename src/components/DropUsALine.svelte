@@ -6,23 +6,23 @@
             <div class="contact-form-row">
                 <div class="col-2">
                     <div class="contact-form-label">NAME</div>
-                    <input type="text" name="name" class="contact-form-input"/>
+                    <input required type="text" name="name" class="contact-form-input"/>
                 </div>
             </div>
             <div class="contact-form-row">
                 <div class="col-2">
                     <div class="contact-form-label">EMAIL</div>
-                    <input type="email" name="email" class="contact-form-input"/>
+                    <input required type="email" name="email" class="contact-form-input"/>
                 </div>
                 <div class="col-2">
                     <div class="contact-form-label">PHONE</div>
-                    <input type="tel" name="phone" class="contact-form-input"/>
+                    <input required type="tel" name="phone" class="contact-form-input"/>
                 </div>
             </div>
             <div class="contact-form-row">
                 <div class="col-1">
                     <div class="contact-form-label">QUERY</div>
-                    <input type="text" name="query" class="contact-form-input"/>
+                    <input required type="text" name="query" class="contact-form-input"/>
                 </div>
             </div>
             <div class="contact-form-button">
@@ -134,7 +134,7 @@
             border: 1px solid white;
 			transition: background-color 150ms ease-in;
 			&:hover {
-                color: #504de6;
+                color: #faf5eebe;
 			}
 		}
     }
