@@ -57,7 +57,7 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
-        padding: 2rem 9vw 2rem 20vw;
+        padding: 5% 15vw;
         width: 100%;
         height: auto;
 

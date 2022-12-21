@@ -1,24 +1,25 @@
 <script lang="ts">
     import DropUsALine from '$/components/DropUsALine.svelte';
     import Footer from '$/components/Footer.svelte';
-	import { navColor } from '$/stores/nav.store';
-	import { onMount } from 'svelte';
 	import { style } from 'svelte-body';
+    import { navColor } from '$/stores/nav.store';
+	import { onMount } from 'svelte';
 
-	onMount(() => {
-		$navColor = 'var(--app-color-lunarblue)';
+    onMount(() => {
+		$navColor = 'var(--app-color-lunarblue-contrast)';
 	});
+
 </script>
 
-<svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} />
+<!-- <svelte:body use:style={{ background: 'var(--app-color-lunarblue-contrast)' }} /> -->
 
 <svelte:head>
 	<title>Contact Us / Rigo Agency</title>
 </svelte:head>
 
-<div style="padding: 0rem 2rem 2rem 2rem;">
+<div class="contact-section">
+    <h1>Contact</h1>
     <DropUsALine></DropUsALine>
-    <br><br><br>
     <div class="footer-container" style="display: contents;">
         <Footer href="/casestudy/volta">Volta</Footer>
     </div>
@@ -26,11 +27,20 @@
 
 <style lang="scss">
 	* {
-		--color: var(--app-color-lunarblue);
-		--color-contrast: var(--app-color-lunarblue-contrast);
+        --color: white;
 
 		color: var(--color);
 	}
+
+    h1 {
+
+        color: #504de699;
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+        font-size: 27vw;
+        position: absolute;
+        z-index: 0;
+    }
 
     input {
         border: none;
@@ -38,19 +48,6 @@
         padding: 2vw;
     }
 
-    h1 {
-		padding-right: 7rem;
-	}
-
-	// Class for responsive h1
-	h1 {
-        font-size: calc(2.375rem + 1.5vw);
-    }
-    @media (min-width: 1200px) {
-        h1 {
-            font-size: 5.5rem;
-        }
-    }
 
 	:global(::selection) {
 		background: var(--color);
@@ -61,13 +58,23 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-right: 9rem;
+        margin: 0;
     }
     .item {
         flex-grow: 1;
         width: 100%;
         margin-bottom: 2rem;
     }
+
+    .contact-section {padding: 4rem 2rem 4rem 2rem;}
+
+
+    @media (max-width: 425px) {
+        div {
+            padding: 0rem 2rem 2rem 2rem;
+        }
+    }
+    
     @media(min-width: 1440px) {
         .item {
             width: 30%;
@@ -132,16 +139,14 @@
         align-self: center;
         button {
 			font-family: 'Bebas Neue', sans-serif;
-			box-shadow: 0 0 0 1px #504de6;
 			border-radius: 2rem;
 			padding: 1.2rem 2.5rem 1rem 2.5rem;
 			font-size: 1.25rem;
 			line-height: 1;
-			transition: background-color 150ms ease-in, box-shadow 150ms ease-in;
+			transition: background-color 150ms ease-in;
 			&:hover {
 				background-color: #504de6;
                 color: white;
-				box-shadow: 0px 1.8px 4.5px rgba(0, 0, 0, 0.1), 0px 14px 36px rgba(0, 0, 0, 0.2);
 			}
 		}
     }
@@ -155,9 +160,6 @@
         height: auto;
     }
     @media(max-width: 1023px) {
-        h1 {
-		padding-right: 0rem;
-	    }
 
         .container {
             margin-right: 0rem;
@@ -178,4 +180,26 @@
 			padding-bottom: 10vw;
 		}
 	}
+
+
+    @media(min-width: 1024px) {
+        h1 {
+            top: -120px;
+            left: -40px;
+        }
+
+    }
+
+    @media(min-width: 1440px) {
+        h1 {
+            top: -140px;
+        }
+    }
+
+
+    @media(min-width: 1920px) {
+        h1 {
+            top: -205px;
+        }
+    }
 </style>

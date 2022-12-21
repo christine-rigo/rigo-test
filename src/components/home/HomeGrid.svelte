@@ -1,23 +1,34 @@
 <div class="homegridcontainer">
     <div class="homegrid grid1" style="background: url('/home/grid-1.png') no-repeat top center/cover;"></div>
     <div class="homegrid grid2" style="background: url('/home/grid-2.svg') no-repeat top center/cover;"></div>
-    <div class="homegrid grid3" style="background: url('/home/grid-3.svg') no-repeat top center/cover;"></div>
-    
-    <div class="homegrid grid4" style="background: url('/home/grid-4.svg') no-repeat top center/cover;"></div>
+    <div class="homegrid grid3" style="background: url('/home/grid-3.svg') no-repeat top center/cover;">
+        <a href="/creative/volta" style="display:inline-block;width: 100%; height: 100%;">
+        </a>    
+    </div>
+    <div class="homegrid grid4" style="background: url('/home/grid-4.svg') no-repeat top center/cover;">
+        <a href="/data/gallagher" style="display:inline-block;width: 100%; height: 100%;">
+        </a>   
+    </div>
     <div class="homegrid grid5" style="background: url('/home/grid-5.svg') no-repeat top center/cover;"></div>
     <div class="homegrid grid6" style="background: url('/home/grid-6.png') no-repeat top center/cover;"></div>
 
-    <div class="homegrid grid7" style="background: url('/home/grid-7.svg') no-repeat top center/cover;"></div>
+    <div class="homegrid grid7" style="background: url('/home/grid-7.svg') no-repeat top center/cover;">
+        <a href="/digital-advertising/volta-site-traffic" style="display:inline-block;width: 100%; height: 100%;">
+        </a>   
+    </div>
     <div class="homegrid grid8" style="background: url('/home/grid-8.svg') no-repeat top center/cover;"></div>
-    <div class="homegrid grid9" style="background: url('/home/grid-9.svg') no-repeat top center/cover;"></div>
+    <div class="homegrid grid9" style="background: url('/home/grid-9.svg') no-repeat top center/cover;">
+        <a href="/technology" style="display:inline-block;width: 100%; height: 100%;">
+        </a>   
+    </div>
 
     <div class="homegrid grid10" style="background: url('/home/grid-10.png') no-repeat top center/cover;"></div>
     <div class="homegrid grid11" style="background: url('/home/grid-11.svg') no-repeat top center/cover;"></div>
-    <div class="homegrid grid12" style="background: url('/home/grid-12.svg') no-repeat top center/cover;"></div>
+    <div class="homegrid grid12" style="background: url('/home/grid-12.png') no-repeat top center/cover;"></div>
 
     <div class="homegrid grid13" style="background: url('/home/grid-13.svg') no-repeat top center/cover;"></div>
     <div class="homegrid grid14" style="background: url('/home/grid-14.png') no-repeat top center/cover;"></div>
-    <div class="homegrid grid15" style="background: url('/home/grid-15.svg') no-repeat top center/cover;"></div>
+    <div class="homegrid grid15" style="background: url('/home/grid-15.png') no-repeat top center/cover;"></div>
 </div>
 
 <style lang="scss">

@@ -31,7 +31,7 @@
 	<CaseStudy navigationBarColor="var(--app-color-lunarblue)" 
 		title="Volta" 
 		description="An online platform focusing on sustainable living. Volta's mission is to encourage as many people as possible to transition to a more sustainable lifestyle."
-		coverPhoto="/casestudy/volta-cover.png" 
+		coverPhoto="/casestudy/volta-cover.gif" 
 		columnSeparator="/casestudy/volta-line-separator.svg"
 		hdrSvgPath1="/casestudy/volta-cs-1.svg"
 		hdrSvgPath2="/casestudy/volta-cs-2.svg"
@@ -46,18 +46,18 @@
 	<div class="section2">
 		<div class="challenge-container">
 			<ChallengeCard 
-				challengeImg="/casestudy/volta-challenge.svg"
-				challenge="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content."
+				resultImg="/casestudy/volta-challenge.svg"
+				result="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content."
 				solutionImg="/casestudy/volta-solution.svg"
 				solution="rigo creates regular news articles, interviews and campaigns to drive engagment. From pitching to production, the team integrates with Volta to deliver a seamless service."
-				resultImg="/casestudy/volta-result.svg"
-				result="With regular features, a successful Google News application and carefully targeted campaigns, the site has seen substantial growth in traffic and an influx of big name partners."
+				challengeImg="/casestudy/volta-result.svg"
+				challenge="With regular features, a successful Google News application and carefully targeted campaigns, the site has seen substantial growth in traffic and an influx of big name partners."
 			/>
 			<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
 		</div>
 		<div class="ascension-container">
-			<AscensionCard title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
-			<AscensionCard title="Digital Advertising" imgsource="/casestudy/volta-ascension-2.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
+			<AscensionCard arrowUrl="/creative/volta" title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
+			<AscensionCard arrowUrl="/digital-advertising/volta-site-traffic" title="Digital Advertising" imgsource="/casestudy/volta-ascension-2.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
 		</div>
 		<Carousel headerColor="var(--app-color-lunarblue)" carouselList={carouselList} />
 		<ExtremeCard heading="Extreme E" imgUrl="/casestudy/volta-extreme.png">
@@ -93,7 +93,7 @@
 		<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
 	</div>
 
-	<div style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
+	<div style="display: flex; padding: 5vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/gallagher">Gallagher</Footer>
 	</div>
 </div>
@@ -183,6 +183,14 @@
 		.section3-flex {
 			flex-direction: column;
 			gap: 12vw;
+		}
+	}
+
+	@media(min-width: 1024px) {
+		.section3-flex {
+			div:first-child {
+				border-right: 1px solid #fff;
+			}
 		}
 	}
 </style>

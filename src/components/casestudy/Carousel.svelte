@@ -94,7 +94,8 @@
     }
 
     .carousel-heading-right {
-        max-width: 575px;;
+        max-width: 575px;
+        font-size: 12px;
     }
 
     @media(max-width: 768px) {

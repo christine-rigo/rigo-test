@@ -77,6 +77,8 @@ button {
 	text-decoration: none;
 	vertical-align: middle;
 	font-family: inherit;
+	width: 215px;
+	height: 52px;
 
 	border: 0;
 	border-radius: 0;
@@ -149,4 +151,11 @@ a[href] {
 	// ::-webkit-scrollbar-thumb:hover {
 	// 	display: none;
 	// }
+}
+
+@media screen and (max-width: 767px) {
+	main > aside {
+		padding-left: 2rem !important;
+		padding-right: 2rem !important;
+	}
 }

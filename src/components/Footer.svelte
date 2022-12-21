@@ -4,9 +4,10 @@
 	import Logo from './svg/Logo.svelte';
 	import TheDotsSvg from './svg/TheDotsSVG.svelte';
 
-	export let marginright = '9rem';
+	export let marginright = '0rem';
 	export let marginleft = '0rem';
 	export let href: string;
+
 	export let hideUpNext = false;
 </script>
 
@@ -30,9 +31,15 @@
 		</div>
 
 		<div class="s3">
-			<TheDotsSvg />
-			<LinkedInSvg />
-			<InstagramSvg />
+			<a href="https://the-dots.com/pages/rigo-458527">
+				<TheDotsSvg />
+			</a>
+			<a href="https://www.linkedin.com/company/rigo-agency">
+				<LinkedInSvg />
+			</a>
+			<a href="https://www.instagram.com/rigo.agency">
+				<InstagramSvg />
+			</a>
 		</div>
 
 		<div class="s4 hidden-m">
@@ -42,7 +49,7 @@
 		</div>
 	</section>
 
-	<section class="bottom">Copyright &copy; Rigo 2021</section>
+	<section class="bottom">Copyright &copy; Rigo 2022</section>
 </footer>
 
 <style lang="scss">
@@ -79,8 +86,11 @@
 		}
 
 		a {
-			font-weight: 500;
+			font-weight: bold;
 			font-size: 2.5rem;
+			&:hover {
+				text-decoration: underline;
+			}
 			// font-family: ;
 		}
 	}
@@ -89,6 +99,7 @@
 		display: flex;
 		font-size: 0.8rem;
 		flex-direction: row;
+		font-size: 10px;
 		border-bottom: solid 1px var(--internal-color);
 
 		& > div {
@@ -135,7 +146,8 @@
 	.bottom {
 		display: flex;
 		justify-content: center;
-		padding: 2rem;
+		padding: 12px 2rem;
+		font-size: 10px;
 	}
 
 	@media(max-width: 1023px) {
@@ -174,5 +186,14 @@
 		footer {
 			margin-right: 0 !important;
 		}
+	}
+
+
+	@media(min-width: 1024px) {
+		.middle,
+		.bottom {
+			font-size: 14px;
+		}
+		
 	}
 </style>

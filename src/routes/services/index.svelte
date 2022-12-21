@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ScrollerIndicator from '$/components/ScrollerIndicator.svelte';
 	import ServiceInformationalSection from '$/components/services/ServiceInformationalSection.svelte';
-import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
+	import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 	import ServicesSummary from '$/components/services/ServicesSummary.svelte';
 	import SiBox from '$/components/services/SIBox.svelte';
 	import Hr from '$/components/utils/Hr.svelte';
@@ -29,7 +29,7 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 			on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 		>
 			<div class="inner">
-				<div class="content">
+				<div class="content hide-desktop">
 					<div class="backdrop" />
 
 					<div class="text-content">
@@ -58,6 +58,20 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 					<div class="image">
 						<img src="/services-img/baloon-71-72 1.png" alt="Hero banner" />
 					</div>
+				</div>
+				<div class="hide-mobile">
+					<Hr />
+					<h1 style="padding:2rem 0;">
+						Services developed from years of problem solving for brands <span>just like yours.</span>
+					</h1>
+					<p>
+						Elevate credibility with diligently crafted thought leadership content; 
+						<br/>create a website from scratch with persuasive copy, eye-catching design and
+						<br /> seamless UX, or increase your lead flow with email marketing. 
+					</p>
+					<br />
+
+							<ScrollerIndicator href="#technical-services-section" />
 				</div>
 			</div>
 		</section>
@@ -386,9 +400,54 @@ import ServicesPageXs from '$/components/services/ServicesPageXs.svelte';
 		}
 	}
 
+	.hide-mobile {
+		display: none;
+	}
 	@media(max-width: 1023px) {
 		.service .inner .content {
 			position: static;
+		}
+	}
+
+
+	@media (min-width: 1024px) {
+
+		.service {
+			&.services-home .inner .content  {
+				display: none;
+			}
+
+			.hide-mobile {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+				padding: 0 15vw;
+				padding-top: 1.5rem;
+				h1 {
+					color: white;
+					text-transform: uppercase;
+					font-size: 50px;
+					font-weight: 400;
+					font-family: 'Bebas Neue';
+					span {
+						color: #7270FF;
+					}
+				}
+				p {
+					color: white;
+					font-size: 16px;
+				}
+			}
+			:global(.inner) { 
+				padding: 5% 15vw;
+			}
+
+			:global(.inner .content) {
+				top: 6rem;
+				width: calc(100% - 30vw);
+				left: unset;
+			}
 		}
 	}
 </style>

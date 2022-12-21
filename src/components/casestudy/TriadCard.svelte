@@ -4,7 +4,7 @@
     export let triadNameColor = "";
     
     export let flexDirection = "column";
-    export let flexMargin = "0vw 24%";
+    export let flexMargin = "0vw 26%";
     export let textAlign = "center";
 </script>
 

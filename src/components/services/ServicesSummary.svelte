@@ -98,7 +98,6 @@
 		align-items: center;
 		gap: 1.5rem;
 
-		padding-right: 9rem;
 
 		width: 100%;
 
@@ -126,14 +125,18 @@
 			font-size: 1.25rem;
 			line-height: 1;
 
-			transition: background-color 150ms ease-in, box-shadow 150ms ease-in;
+			transition: background-color 150ms ease-in;
 
 			&:hover,
 			&:focus-visible {
 				background-color: var(--app-color-navy-contrast);
-
-				box-shadow: 0px 1.8px 4.5px rgba(0, 0, 0, 0.1), 0px 14px 36px rgba(0, 0, 0, 0.2);
 			}
+		}
+	}
+
+	@media (min-width: 1440px) {
+		span {
+			display: none;
 		}
 	}
 </style>

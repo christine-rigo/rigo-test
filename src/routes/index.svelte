@@ -46,7 +46,7 @@
         <HomeGrid></HomeGrid>
     </div>
 
-	<div class="home-footer hidden" style="display: flex; padding: 15vw 5vw 15vw 5vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
+	<div class="home-footer hidden" style="display: flex; padding: 5vw 15vw; background-color: var(--app-color-navy); justify-content: space-evenly;">
 		<Footer marginleft={'2vw'} marginright={'2vw'} href="/services">Services</Footer>
 	</div>
 </div>

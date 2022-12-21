@@ -15,7 +15,7 @@
 	export let hdrInfo4:string;
 </script>
 
-<div class="container" style="background: linear-gradient(180deg, rgba(18, 24, 45, 0.75) 15%, rgba(18, 24, 45, 1) 86%), url({coverPhoto}) no-repeat top center/cover;">
+<div class="container" style="background: linear-gradient(10deg, #12182D 30%, rgba(18, 24, 45, 0) 100%), url({coverPhoto}) no-repeat top center/cover;">
 	<aside>
 		<Nav logoScale={1} navigationBarColor={navigationBarColor} navItemsStyle="align-items: flex-start;" />
 	</aside>
@@ -74,8 +74,7 @@
 		background-size: cover;
 		background-color: var(--app-color-navy);
 		color: var(--app-color-red);
-		min-height: 60vh;
-
+		height: 472px;
 		position: relative;
 	}
 
@@ -95,6 +94,8 @@
 		aside {
 			position: relative;
 		}
+
+		.container {height: auto;}
 	}
 
 	.main {
@@ -191,4 +192,10 @@
 			margin-bottom: 6vw;
 		}
     }
+
+		@media (min-width: 1441px) {
+			.container {
+				height: auto;
+			}
+		}
 </style>

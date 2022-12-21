@@ -261,4 +261,10 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
             display: block;
         }
     }
+
+    @media(min-width: 1024px) {
+        .service-container {
+            padding: 5% 15vw;
+        }
+    }
 </style>

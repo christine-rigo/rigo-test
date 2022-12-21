@@ -12,7 +12,7 @@
 	<title>Work / Rigo Agency</title>
 </svelte:head>
 
-<div class="work-page-container" style="padding: 0rem 2rem 2rem 2rem;">
+<div class="work-page-container">
 	<div>
         <h1>Our Work</h1>
     </div>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="footer-container">
-	<Footer href="/services">Services</Footer>
+	<Footer marginright={"0rem"} href="/services">Services</Footer>
 </div>
 
 <style lang="scss">
@@ -75,7 +75,7 @@
         }
     }
 	.work-page-container {
-		margin-right: 9rem;
+		padding: 0rem 2rem 2rem 2rem;
 		margin-bottom: 6rem;
 	}
 	.showcase-container-1 {
@@ -128,6 +128,12 @@
 		.footer-container {
 			margin: 10vw 5vw;
 			padding-bottom: 10vw;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.work-page-container {
+			padding: 0;
 		}
 	}
 </style>
