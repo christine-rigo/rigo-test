@@ -98,7 +98,6 @@
 		align-items: center;
 		gap: 1.5rem;
 
-
 		width: 100%;
 
 		hr {
