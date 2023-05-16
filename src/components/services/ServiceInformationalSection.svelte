@@ -85,8 +85,8 @@
 			transition: background-color 150ms ease-in;
 
 			&:hover {
-				background-color: var(--app-color-navy-contrast);
-	}
+				background-color: rgba(0, 0, 0, 0.2);
+			}
 		}
 	}
 
@@ -96,8 +96,7 @@
 		gap: 3.2rem;
 	}
 
-
-	@media(min-width: 1024px) {
+	@media (min-width: 1024px) {
 		.top-panel {
 			padding: 0;
 		}

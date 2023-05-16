@@ -26,8 +26,9 @@
 		</div>
 
 		<div class="s2">
-			20-22 Wenlock Road, London, N1 7GU<br>Ascent Marketing Group Ltd, trading as rigo is a company
-			registered in England and Wales with company number 13040428, VAT Registered: 766352117.
+			20-22 Wenlock Road, London, N1 7GU<br />Ascent Marketing Group Ltd, trading as rigo is a
+			company registered in England and Wales with company number 13040428, VAT Registered:
+			766352117.
 		</div>
 
 		<div class="s3">
@@ -49,7 +50,7 @@
 		</div>
 	</section>
 
-	<section class="bottom">Copyright &copy; Rigo 2022</section>
+	<section class="bottom">Copyright &copy; Rigo 2023</section>
 </footer>
 
 <style lang="scss">
@@ -150,7 +151,7 @@
 		font-size: 10px;
 	}
 
-	@media(max-width: 1023px) {
+	@media (max-width: 1023px) {
 		footer {
 			margin-right: 0rem;
 		}
@@ -159,7 +160,9 @@
 			justify-content: center;
 			flex-wrap: wrap;
 
-			.s1, .s2, .s3 {
+			.s1,
+			.s2,
+			.s3 {
 				border-right: none;
 				border-bottom: solid 1px var(--internal-color);
 			}
@@ -182,18 +185,16 @@
 		}
 	}
 
-	@media(max-width: 425px) {
+	@media (max-width: 425px) {
 		footer {
 			margin-right: 0 !important;
 		}
 	}
 
-
-	@media(min-width: 1024px) {
+	@media (min-width: 1024px) {
 		.middle,
 		.bottom {
 			font-size: 14px;
 		}
-		
 	}
 </style>

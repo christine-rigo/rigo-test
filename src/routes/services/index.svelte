@@ -29,49 +29,20 @@
 			on:enter={() => ($navColor = 'var(--app-color-navy-contrast)')}
 		>
 			<div class="inner">
-				<div class="content hide-desktop">
-					<div class="backdrop" />
-
-					<div class="text-content">
-						<h1>Services</h1>
-
-						<div class="description">
-							<Hr />
-
-							<p>
-								<br />
-								Services developed from years of problem solving for brands just like yours.
-
-								<br /><br />
-
-								Elevate credibility with diligently crafted thought leadership content; create a
-								website from scratch with persuasive copy, eye-catching design and seamless UX, or
-								increase your lead flow with email marketing.
-							</p>
-
-							<br />
-
-							<ScrollerIndicator href="#technical-services-section" />
-						</div>
-					</div>
-
-					<div class="image">
-						<img src="/services-img/baloon-71-72 1.png" alt="Hero banner" />
-					</div>
-				</div>
-				<div class="hide-mobile">
+				<div class="block">
 					<Hr />
 					<h1 style="padding:2rem 0;">
-						Services developed from years of problem solving for brands <span>just like yours.</span>
+						Services developed from years of problem solving for brands <span>just like yours.</span
+						>
 					</h1>
 					<p>
-						Elevate credibility with diligently crafted thought leadership content; 
-						<br/>create a website from scratch with persuasive copy, eye-catching design and
-						<br /> seamless UX, or increase your lead flow with email marketing. 
+						Elevate credibility with diligently crafted thought leadership content;
+						<br />create a website from scratch with persuasive copy, eye-catching design and
+						<br /> seamless UX, or increase your lead flow with email marketing.
 					</p>
 					<br />
 
-							<ScrollerIndicator href="#technical-services-section" />
+					<ScrollerIndicator href="#technical-services-section" />
 				</div>
 			</div>
 		</section>
@@ -90,24 +61,30 @@
 					<SiBox>
 						<span slot="title">design websites</span>
 						<span slot="description">
-						ux, ui, site mapping, wireframing, brand engine, copy, full suite branding, brand refresh, 
-						comerce strategy
+							ux, ui, site mapping, wireframing, brand engine, copy, full suite branding, brand
+							refresh, comerce strategy
 						</span>
 					</SiBox>
 
 					<SiBox>
 						<span slot="title">development</span>
-						<span slot="description"> ecommerce, portfolio, cms, site crawl application, seo, blogs </span>
+						<span slot="description">
+							ecommerce, portfolio, cms, site crawl application, seo, blogs
+						</span>
 					</SiBox>
 
 					<SiBox>
 						<span slot="title">infrastructure</span>
-						<span slot="description">design, ux, seo, copy and development. everything you need with rigo.</span>
+						<span slot="description"
+							>design, ux, seo, copy and development. everything you need with rigo.</span
+						>
 					</SiBox>
 
 					<SiBox>
 						<span slot="title">skill set</span>
-						<span slot="description">full stack development, cloud architecture, database architecture</span>
+						<span slot="description"
+							>full stack development, cloud architecture, database architecture</span
+						>
 					</SiBox>
 				</svelte:fragment>
 			</ServiceInformationalSection>
@@ -121,16 +98,16 @@
 					<SiBox>
 						<span slot="title">seo</span>
 						<span slot="description">
-							start by finding your target search terms, them watch your traffic and leads grow as you
-							climb through the ranks.
+							start by finding your target search terms, them watch your traffic and leads grow as
+							you climb through the ranks.
 						</span>
 					</SiBox>
 
 					<SiBox>
 						<span slot="title">data dashboard</span>
 						<span slot="description">
-							start by finding your target search terms, them watch your traffic and leads grow as you
-							climb through the ranks.
+							start by finding your target search terms, them watch your traffic and leads grow as
+							you climb through the ranks.
 						</span>
 					</SiBox>
 
@@ -153,8 +130,8 @@
 					<SiBox>
 						<span slot="title">original articles</span>
 						<span slot="description">
-							from idea to publication, thought leadership pieces to showcase your expertise and build
-							trust with your customers
+							from idea to publication, thought leadership pieces to showcase your expertise and
+							build trust with your customers
 						</span>
 					</SiBox>
 
@@ -181,8 +158,8 @@
 					<SiBox>
 						<span slot="title"> google News </span>
 						<span slot="description">
-							the content and experience needed to get your publication or website accepted to google
-							news
+							the content and experience needed to get your publication or website accepted to
+							google news
 						</span>
 					</SiBox>
 				</svelte:fragment>
@@ -195,15 +172,15 @@
 			use:inview={{ threshold: 0.4 }}
 			on:enter={() => ($navColor = 'var(--app-color-navy)')}
 		>
-		<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
+			<ServiceInformationalSection discoverMoreHref="/digital-advertising/volta-site-traffic">
 				<svelte:fragment slot="title">digital advertising</svelte:fragment>
 
 				<svelte:fragment slot="info-boxes">
 					<SiBox>
 						<span slot="title"> linkedin campaigns </span>
 						<span slot="description">
-							in-depth audience targeting and standout creative will get your business n front of the
-							right audience
+							in-depth audience targeting and standout creative will get your business n front of
+							the right audience
 						</span>
 					</SiBox>
 
@@ -225,7 +202,8 @@
 					<SiBox>
 						<span slot="title"> email marketing </span>
 						<span slot="description">
-							powerful automated email welcome series, nurture your contacts and leads into customers.
+							powerful automated email welcome series, nurture your contacts and leads into
+							customers.
 						</span>
 					</SiBox>
 				</svelte:fragment>
@@ -243,7 +221,7 @@
 	</div>
 
 	<div class="servicespage-xs">
-		<ServicesPageXs></ServicesPageXs>	
+		<ServicesPageXs />
 	</div>
 </div>
 
@@ -263,18 +241,18 @@
 	}
 
 	h1 {
-        font-size: calc(2.375rem + 1.5vw);
-    }
-    @media (min-width: 1200px) {
-        h1 {
-            font-size: 5.5rem;
-        }
-    }
+		font-size: calc(2.375rem + 1.5vw);
+	}
+	@media (min-width: 1200px) {
+		h1 {
+			font-size: 5.5rem;
+		}
+	}
 
 	.servicespage-xs {
 		display: none;
 	}
-	@media(max-width: 425px) {
+	@media (max-width: 425px) {
 		.hidden-xs {
 			display: none;
 		}
@@ -403,51 +381,50 @@
 	.hide-mobile {
 		display: none;
 	}
-	@media(max-width: 1023px) {
+	@media (max-width: 1023px) {
 		.service .inner .content {
 			position: static;
 		}
 	}
 
-
 	@media (min-width: 1024px) {
+	}
 
-		.service {
-			&.services-home .inner .content  {
-				display: none;
-			}
+	.service {
+		&.services-home .inner .content {
+			display: none;
+		}
 
-			.hide-mobile {
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-				text-align: center;
-				padding: 0 15vw;
-				padding-top: 1.5rem;
-				h1 {
-					color: white;
-					text-transform: uppercase;
-					font-size: 50px;
-					font-weight: 400;
-					font-family: 'Bebas Neue';
-					span {
-						color: #7270FF;
-					}
-				}
-				p {
-					color: white;
-					font-size: 16px;
+		.block {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			padding: 0 15vw;
+			padding-top: 1.5rem;
+			h1 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 50px;
+				font-weight: 400;
+				font-family: 'Bebas Neue';
+				span {
+					color: #7270ff;
 				}
 			}
-			:global(.inner) { 
-				padding: 5% 15vw;
+			p {
+				color: white;
+				font-size: 16px;
 			}
+		}
+		:global(.inner) {
+			padding: 5% 15vw;
+		}
 
-			:global(.inner .content) {
-				top: 6rem;
-				width: calc(100% - 30vw);
-				left: unset;
-			}
+		:global(.inner .content) {
+			top: 6rem;
+			width: calc(100% - 30vw);
+			left: unset;
 		}
 	}
 </style>
