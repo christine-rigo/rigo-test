@@ -1,7 +1,7 @@
 <script lang="ts">
-import RectangularBtn from '$/components/services/RectangularBtn.svelte';
+	import RectangularBtn from '$/components/services/RectangularBtn.svelte';
 
-    import { navColor } from '$/stores/nav.store';
+	import { navColor } from '$/stores/nav.store';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -14,251 +14,327 @@ import RectangularBtn from '$/components/services/RectangularBtn.svelte';
 </svelte:head>
 
 <div class="service-container">
-    <div class="service-container-heading hidden-mobile">
-        <div>+ Creative: <span class="service-container-heading-casestudy">Volta</span></div>
-        <div>
-            <a href="/services">
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.4668 1.15039L9.86776 9.55135" stroke="#FAF5EE" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M9.86816 1.1499L1.4672 9.55086" stroke="#FAF5EE" stroke-width="2" stroke-linecap="round"/>
-                </svg>     
-            </a>           
-        </div>
-    </div>
-    <div class="service-container-body">
-        <div class="service-container-body-left">
-            <img class="service-container-body-left-img hidden-mobile" src="/services-img/volta-creative.png" alt="rigo">
-            <img class="service-container-body-left-img hidden-desktop" src="/services-img/words-for-change-xs.png" alt="rigo">
-        </div>
-        <div class="service-container-body-right">
-            <div class="service-container-body-right-btn-group">
-                <RectangularBtn cta="next" href="/editorial/gallagher" btnColor="btn-red"></RectangularBtn>
-                <RectangularBtn cta="see full case study" href="/casestudy/volta" btnColor="btn-red"></RectangularBtn>
-            </div>
-            <RectangularBtn cta="Start your ascent" href="/contact" btnColor="btn-red hidden-mobile"></RectangularBtn>
-        </div>
-    </div>
-    <div class="service-container-footer">
-        <div class="service-container-heading hidden-desktop">
-            + Creative: <span class="service-container-heading-casestudy">Volta</span>
-        </div>
-        <div class="service-container-footer-title">Words for change</div>
-        <div class="service-container-footer-description">With a concerted focus on engaging, original and consistent content from rigo, Volta quickly saw their readership numbers grow with a 112% increase in page views in just the first 3 months of engagement.</div>
-        <a href="/contact"><div class="service-container-footer-btn hidden-desktop">Start your ascent</div></a>
-    </div>
+	<div class="service-container-heading hidden-mobile">
+		<div>+ Creative: <span class="service-container-heading-casestudy">Volta</span></div>
+		<div>
+			<a href="/services">
+				<svg
+					width="11"
+					height="11"
+					viewBox="0 0 11 11"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M1.4668 1.15039L9.86776 9.55135"
+						stroke="#FAF5EE"
+						stroke-width="2"
+						stroke-linecap="round"
+					/>
+					<path
+						d="M9.86816 1.1499L1.4672 9.55086"
+						stroke="#FAF5EE"
+						stroke-width="2"
+						stroke-linecap="round"
+					/>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="service-container-body">
+		<div class="service-container-body-left">
+			<img
+				class="service-container-body-left-img hidden-mobile"
+				src="/services-img/volta-creative.png"
+				alt="rigo"
+			/>
+			<img
+				class="service-container-body-left-img hidden-desktop"
+				src="/services-img/words-for-change-xs.png"
+				alt="rigo"
+			/>
+		</div>
+		<div class="service-container-body-right">
+			<div class="service-container-body-right-btn-group">
+				<RectangularBtn cta="next" href="/editorial/gallagher" btnColor="btn-red" />
+				<RectangularBtn cta="see full case study" href="/casestudy/volta" btnColor="btn-red" />
+			</div>
+			<!-- <RectangularBtn cta="Start your ascent" href="/contact" btnColor="btn-red hidden-mobile" /> -->
+			<button
+				class="btn-red hidden-mobile service-container-body-right-btn"
+				data-tf-popup="EHpJH0kW"
+				data-tf-opacity="100"
+				data-tf-size="100"
+				data-tf-iframe-props="title=Rigo Landing Page Trial"
+				data-tf-transitive-search-params
+				data-tf-medium="snippet">Start your ascent</button
+			><script src="//embed.typeform.com/next/embed.js"></script>
+		</div>
+	</div>
+	<div class="service-container-footer">
+		<div class="service-container-heading hidden-desktop">
+			+ Creative: <span class="service-container-heading-casestudy">Volta</span>
+		</div>
+		<div class="service-container-footer-title">Words for change</div>
+		<div class="service-container-footer-description">
+			With a concerted focus on engaging, original and consistent content from rigo, Volta quickly
+			saw their readership numbers grow with a 112% increase in page views in just the first 3
+			months of engagement.
+		</div>
+		<!-- <a href="/contact"><div class="service-container-footer-btn hidden-desktop">Start your ascent</div></a> -->
+		<button
+			class="service-container-footer-btn hidden-desktop"
+			data-tf-popup="EHpJH0kW"
+			data-tf-opacity="100"
+			data-tf-size="100"
+			data-tf-iframe-props="title=Rigo Landing Page Trial"
+			data-tf-transitive-search-params
+			data-tf-medium="snippet">Start your ascent</button
+		><script src="//embed.typeform.com/next/embed.js"></script>
+	</div>
 </div>
 
 <style lang="scss">
-    .service-container {
-        color: var(--app-color-red);
-        
-        position: absolute;
-        z-index: var(--elevation);
-        display: grid;
-        grid-template-columns: 1fr;
-        overflow: hidden;
-        padding: 5% 15vw;
-        width: 100%;
-        height: auto;
+	.service-container {
+		color: var(--app-color-red);
 
-        display: flex;
-        flex-direction: column;
-        gap: 1vw;
-    }
-    @media(max-width: 768px) {
-        .service-container {
-            padding: 1rem 12vw 1rem 12vw;
-        }
-    }
+		position: absolute;
+		z-index: var(--elevation);
+		display: grid;
+		grid-template-columns: 1fr;
+		overflow: hidden;
+		padding: 5% 15vw;
+		width: 100%;
+		height: auto;
 
-    .service-container-heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		gap: 1vw;
+	}
+	@media (max-width: 768px) {
+		.service-container {
+			padding: 1rem 12vw 1rem 12vw;
+		}
+	}
 
-        font-family: "Satoshi";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 80px;
-        text-transform: uppercase;
+	.service-container-heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
 
-        .service-container-heading-casestudy {
-            text-transform: capitalize;
-            color: var(--app-color-lunarblue-contrast);
-        }
-    }
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 80px;
+		text-transform: uppercase;
 
-    .service-container-body {
-        display: flex;
-        flex-direction: row;
-        gap: 1vw;
+		.service-container-heading-casestudy {
+			text-transform: capitalize;
+			color: var(--app-color-lunarblue-contrast);
+		}
+	}
 
-        .service-container-body-left {
-            flex: 4;
+	.service-container-body {
+		display: flex;
+		flex-direction: row;
+		gap: 1vw;
 
-            .service-container-body-left-img {
-                width: 100%; 
-                height: auto;
-            }
-        }
+		.service-container-body-left {
+			flex: 4;
 
-        .service-container-body-right {
-            flex: 1;
+			.service-container-body-left-img {
+				width: 100%;
+				height: auto;
+			}
+		}
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+		.service-container-body-right {
+			flex: 1;
 
-            text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-            .service-container-body-right-btn-group {
-                display: flex;
-                flex-direction: column;
-                gap: 1vw;
-            }
-            
-            .service-container-body-right-btn {
-                font-family: "Bebas Neue";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 20px;
-                line-height: 24px;
-                text-align: center;
-                letter-spacing: 0.02em;
-                
-                color: var(--app-color-lunarblue-contrast);
+			text-align: center;
 
-                border: 1px solid #EE6338;
-                padding: 0.75vw;
-                cursor: pointer;
-            }
-        }
-    }
+			.service-container-body-right-btn-group {
+				display: flex;
+				flex-direction: column;
+				gap: 1vw;
+			}
 
-    @media(max-width: 1024px) {
-        .service-container-body {
-            .service-container-body-left {
-                flex: 3;
-            }
-        }
-    }
+			.service-container-body-right-btn {
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 24px;
+				text-align: center;
+				letter-spacing: 0.02em;
 
-    @media(max-width: 768px) {
-        .service-container-body {
-            flex-direction: column;
-            gap: 6vw;
+				color: var(--app-color-lunarblue-contrast);
 
-            .service-container-body-left {
-                .service-container-body-left-img {
-                    height: auto;
-                    width: 100%;
-                }
-            }
+				border: 1px solid #ee6338;
+				padding: 0.75vw;
+				cursor: pointer;
+			}
+		}
+	}
 
-            .service-container-body-right {
-                order: -1;
+	@media (max-width: 1024px) {
+		.service-container-body {
+			.service-container-body-left {
+				flex: 3;
+			}
+		}
+	}
 
-                .service-container-body-right-btn-group {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    justify-content: space-between;
+	@media (max-width: 768px) {
+		.service-container-body {
+			flex-direction: column;
+			gap: 6vw;
 
-                    .service-container-body-right-btn {
-                        padding: 2vw 6vw;
-                    }
-                }
-            }
-        }
-    }
+			.service-container-body-left {
+				.service-container-body-left-img {
+					height: auto;
+					width: 100%;
+				}
+			}
 
-    .service-container-footer {
-        display: flex;
-        flex-direction: row;
-        max-width: 50vw;
-        gap: 1vw;
+			.service-container-body-right {
+				order: -1;
 
-        .service-container-footer-title {
-            font-family: "Bebas Neue";
-            font-style: normal;
-            font-weight: normal;
-            font-size: 40px;
-            line-height: 38px;
-            flex: 2;
-        }
+				.service-container-body-right-btn-group {
+					display: flex;
+					flex-direction: row-reverse;
+					justify-content: space-between;
 
-        .service-container-footer-description {
-            color: var(--app-color-lunarblue-contrast);
-            flex: 7;
-        }
-    }
-    @media(max-width: 768px) {
-        .service-container-footer {
-            display: flex;
-            flex-direction: column;
-            gap: 6vw;
+					.service-container-body-right-btn {
+						padding: 2vw 6vw;
+					}
+				}
+			}
+		}
+	}
 
-            max-width: 100vw;
-            transform: translateY(-1vw);
+	.service-container-footer {
+		display: flex;
+		flex-direction: row;
+		max-width: 50vw;
+		gap: 1vw;
 
-            border: 1px solid var(--app-color-red);
-            padding: 10vw 8vw;
+		.service-container-footer-title {
+			font-family: 'Bebas Neue';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 40px;
+			line-height: 38px;
+			flex: 2;
+		}
 
-            .service-container-footer-title {
-                flex: 1;
-                font-family: "Bebas Neue";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 25px;
-                line-height: 38px;
-            }
+		.service-container-footer-description {
+			color: var(--app-color-lunarblue-contrast);
+			flex: 7;
+		}
+	}
+	@media (max-width: 768px) {
+		.service-container-footer {
+			display: flex;
+			flex-direction: column;
+			gap: 6vw;
 
-            .service-container-footer-description {
-                flex: 1;
-                font-family: "Satoshi";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 16px;
-            }
+			max-width: 100vw;
+			transform: translateY(-1vw);
 
-            .service-container-heading {
-                font-family: "Satoshi";
-                font-style: normal;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 20px;
-                text-transform: uppercase;
-            }
+			border: 1px solid var(--app-color-red);
+			padding: 10vw 8vw;
 
-            .service-container-footer-btn {
-                font-family: "Bebas Neue";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 20px;
-                text-align: center;
-                letter-spacing: 0.02em;
-                color: var(--app-color-lunarblue-contrast);
-                border: 1px solid var(--app-color-red);
-                padding: 1.5vw 8vw;
-                max-width: 80%;
-                margin: 2vw auto;
-            }
-        }
-    }
+			.service-container-footer-title {
+				flex: 1;
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 25px;
+				line-height: 38px;
+			}
 
-    .hidden-desktop {
-        display: none;
-    }
+			.service-container-footer-description {
+				flex: 1;
+				font-family: 'Satoshi';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 16px;
+			}
 
-    @media(max-width: 768px) {
-        .hidden-mobile {
-            display: none;
-        }
+			.service-container-heading {
+				font-family: 'Satoshi';
+				font-style: normal;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 20px;
+				text-transform: uppercase;
+			}
 
-        .hidden-desktop {
-            display: block;
-        }
-    }
+			.service-container-footer-btn {
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				text-align: center;
+				letter-spacing: 0.02em;
+				color: var(--app-color-lunarblue-contrast);
+				border: 1px solid var(--app-color-red);
+				padding: 1.5vw 8vw;
+				max-width: 80%;
+				margin: 2vw auto;
+			}
+		}
+	}
+
+	.hidden-desktop {
+		display: none;
+	}
+
+	@media (max-width: 768px) {
+		.hidden-mobile {
+			display: none;
+		}
+
+		.hidden-desktop {
+			display: block;
+		}
+	}
+
+	button.service-container-body-right-btn {
+		width: 100%;
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.02em;
+
+		padding: 0.75vw;
+		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		.service-container-body-right-btn {
+			padding: 2vw 6vw;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hidden-mobile {
+			display: none;
+		}
+
+		.hidden-desktop {
+			display: block;
+		}
+	}
 </style>
