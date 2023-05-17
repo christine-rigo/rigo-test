@@ -57,11 +57,7 @@
 			style="transform: translateY(-100px);"
 		/>
 
-		<img
-			src="/about/about-img-1.png"
-			alt="stairs"
-			style="transform: translate(-100px, -10px);"
-		/>
+		<img src="/about/about-img-1.png" alt="stairs" style="transform: translate(-100px, -10px);" />
 	</div>
 </section>
 
@@ -131,13 +127,13 @@
 	}
 
 	h1 {
-        font-size: calc(2.375rem + 1.5vw);
-    }
-    @media (min-width: 1200px) {
-        h1 {
-            font-size: 5.5rem;
-        }
-    }
+		font-size: calc(2.375rem + 1.5vw);
+	}
+	@media (min-width: 1200px) {
+		h1 {
+			font-size: 5.5rem;
+		}
+	}
 	.main-content {
 		width: 100%;
 
@@ -193,15 +189,14 @@
 		width: 100%;
 	}
 
-	@media(min-width: 1024px) {
-
+	@media (min-width: 1024px) {
 		p {
 			font-size: 22px;
 		}
 		.main-content {
 			padding: 2rem 0 15rem 0;
 		}
-		
+
 		.qualities {
 			padding: 2rem 0;
 		}
@@ -211,23 +206,22 @@
 		}
 	}
 
-	@media(max-width: 767px) {
-
-		.tagline { padding: 0 2rem; }
-		.main-content { 
-			display:block ;
+	@media (max-width: 767px) {
+		.tagline {
+			padding: 0 2rem;
+		}
+		.main-content {
+			display: block;
 			padding: 2rem;
 		}
 		.qualities {
-			display:flex;
+			display: flex;
 			flex-direction: column;
-			gap:5vw;
+			gap: 5vw;
 			padding: 2rem;
 		}
 		.start-ascent {
 			padding-right: 0;
 		}
-
 	}
-
 </style>
