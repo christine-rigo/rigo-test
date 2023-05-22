@@ -3,6 +3,7 @@
 	import Button from '$/components/casestudy/Button.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
+	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 
 	const strengths = [
 		{
@@ -82,7 +83,69 @@
 </section>
 
 <RollingText />
+<FullpageSlider step="01" title="T NZUKO" --fp-bg-color="#FFB436" --fp-top-heading="#504DE6">
+	<span slot="heading"> Consultation & onboarding </span>
+	<div class="step1-content" slot="content">
+		Nobody knows your business better than you.<br /> Help us understand what you do and what keeps
+		you going.<br />Tell us all about your goals and target audience. Our team will then create a
+		roadmap to make your website dreams a reality!
+	</div>
+	<img slot="icon" class="step-icon" src="/technology/step1.png" alt="Step 1" />
+</FullpageSlider>
+
+<FullpageSlider step="02" title="INYOCHA" --fp-bg-color="#6562F5" --fp-top-heading="#FFAA1C">
+	<span slot="heading"> Consultation & onboarding </span>
+	<div class="step2-content" slot="content">
+		We're strategic thinkers who love a challenge. With a deep market understanding,<br /> we’ll
+		identify specific growth opportunities to keep you up to speed.<br />
+		You will have complete visibility into the project scope, timeline, and budget at every step of the
+		way.
+	</div>
+	<img slot="icon" class="step-icon" src="/technology/step2.png" alt="Step 2" />
+</FullpageSlider>
+
+<FullpageSlider step="03" title="AZUKA" --fp-bg-color="#36E0BA" --fp-top-heading="#EE6338">
+	<span slot="heading"> Meet your pod </span>
+	<div class="step3-content" slot="content">
+		We are brand builders. Our creative team will meet with you for an initial free consultation
+		around branding, positioning, content & communication style.<br />
+		We’ll work closely with you to highlight your business USP, strengths and values. With custom, carefully
+		crafted design, we’re sure we can help you stand out!
+	</div>
+	<img slot="icon" class="step-icon" src="/technology/step3.png" alt="Step 3" />
+</FullpageSlider>
+
+<FullpageSlider step="04" title="ANARA" --fp-bg-color="#EE6338" --fp-top-heading="#36E0BA">
+	<span slot="heading"> Project kick off </span>
+	<div class="step4-content" slot="content">
+		We're ready to bring your website to life! Every little development milestone, information flow
+		and project deliverable will be shared with you.<br />
+		Our team will rigorously test the website to ensure it's bug-free and optimised, and launch it with
+		the confidence of a winner!
+	</div>
+	<img slot="icon" class="step-icon" src="/technology/step4.png" alt="Step 4" />
+</FullpageSlider>
 <RollingText />
+
+<section class="work-intro">
+	<div class="container">
+		<div class="title">Our work speaks for itself</div>
+		<div class="testimonial-wrap">
+			<div class="testimonial">
+				I loved working with Stephen and the rigo team, they kept me informed at every stage of the
+				project and set clear measurable goals to ensure the website launch was a success<br /><br
+				/>
+				Mark Fuller, Founder <br />
+				Axe Block Management
+			</div>
+			<div class="testimonial">
+				“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+				ut labore et dolore magna aliqua”<br /><br />
+				Testimonial, Someone nice
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="footer">
 	<Footer hideUpNext={true} marginright="0" href="/casestudy/gallagher">Gallagher</Footer>
@@ -158,7 +221,7 @@
 
 	// Benefit
 	.benefits {
-		padding: 100px 15px;
+		padding: 100px 30px;
 		h2 {
 			font-family: 'Bebas Neue', sans-serif;
 			font-size: 130px;
@@ -166,7 +229,6 @@
 			line-height: 0.9;
 		}
 		.container {
-			padding: 0 6vw;
 			display: flex;
 			justify-content: space-between;
 			max-width: 1600px;
@@ -203,6 +265,72 @@
 		gap: 30px;
 		@media (min-width: 768px) {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	// Workflow
+	.step1-content {
+		max-width: 445px;
+		margin: 0 auto;
+	}
+	.step3-content,
+	.step4-content {
+		max-width: 570px;
+		margin: 0 auto;
+	}
+	.step-icon {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		transform: translateY(-50%);
+	}
+
+	// Work Intro
+	.work-intro {
+		background-color: white;
+		color: #12182e;
+		padding: 120px 30px 100px;
+
+		@media (min-width: 768px) {
+			padding: 220px 30px 200px;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1600px;
+			margin: 0 auto;
+			gap: 60px;
+			justify-content: center;
+			@media (min-width: 768px) {
+				justify-content: space-between;
+			}
+		}
+		.testimonial-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			@media (min-width: 768px) {
+				flex: 1 0;
+				gap: 60px;
+			}
+		}
+		.title,
+		.testimonial {
+			max-width: 336px;
+		}
+		.title {
+			font-size: 80px;
+			font-family: 'Bebas Neue', sans-serif;
+			line-height: 0.9;
+			@media (min-width: 768px) {
+				max-width: 400px;
+				margin-right: 20px;
+			}
+		}
+		.testimonial {
+			line-height: 1.3;
 		}
 	}
 

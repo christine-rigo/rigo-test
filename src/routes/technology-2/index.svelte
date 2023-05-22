@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FullpageSection from '$/components/technology/FullpageSection.svelte';
+	import FullpageSection from '$/components/technology/FullpageSlider.svelte';
 </script>
 
 <FullpageSection step="01" title="T NZUKO" --fp-bg-color="#FFB436" --fp-top-heading="#504DE6">
