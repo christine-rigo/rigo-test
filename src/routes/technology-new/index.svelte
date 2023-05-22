@@ -4,6 +4,7 @@
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
+	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
 
 	const strengths = [
 		{
@@ -23,6 +24,106 @@
 			image: '/technology/strength3.png',
 			description:
 				"Whether you're looking to create a brand-new website or upgrade an existing one, our creative team will wow you with high quality, visually stunning designs that exceed expectations!",
+		},
+	];
+	const caseStudy = [
+		{
+			image: '/technology/cs-1.png',
+			project_name: 'VOLTA',
+			title: 'VOLTA',
+			description:
+				'An online platform focusing on sustainable living. Volta’s mission is to encourage As many people as possible to transition to a more sustainable lifestyle.',
+			metrics: [
+				{
+					pre: '+',
+					value: 112,
+					append: '%',
+					text: 'page views in first 3 months',
+				},
+				{
+					pre: '+',
+					value: 403,
+					append: '%',
+					text: 'increase in monthly users in first 12 months',
+				},
+				{
+					pre: '+',
+					value: 120,
+					append: 'K',
+					text: 'impressions in 1 month campaign',
+				},
+				{
+					pre: '+',
+					value: 1,
+					append: '',
+					text: 'Listed in Google News on first application',
+				},
+			],
+		},
+		{
+			image: '/technology/cs-2.png',
+			project_name: 'GALLAGHER',
+			title: 'GALLAGHER',
+			description: 'Global insurance broker, risk management expert & business consultancy',
+			metrics: [
+				{
+					pre: '+',
+					value: 3,
+					append: '',
+					text: 'month campaign',
+				},
+				{
+					pre: '+',
+					value: 5,
+					append: '',
+					text: 'competitors scored',
+				},
+				{
+					pre: '+',
+					value: 30,
+					append: '',
+					text: 'key content pieces created',
+				},
+				{
+					pre: '+',
+					value: 29,
+					append: 'K',
+					text: 'words written',
+				},
+			],
+		},
+		{
+			image: '/technology/cs-3.png',
+			project_name: 'Axe block',
+			title: 'Axe block',
+			description:
+				'Axe Block Management needed a new website that reflected their extensive experience and set them up to grow their business online',
+			metrics: [
+				{
+					pre: '+',
+					value: 100,
+					append: '%',
+					text: 'engagement',
+				},
+				{
+					pre: '-',
+					value: 35,
+					append: '%',
+					text: 'bounce rate',
+				},
+				{
+					pre: '+',
+					value: 220,
+					append: '%',
+					text: 'social media impact',
+				},
+				{
+					pre: '+',
+					value: 260,
+					append: '%',
+					text: 'enquiries increase',
+				},
+			],
 		},
 	];
 </script>
@@ -127,7 +228,7 @@
 </FullpageSlider>
 <RollingText />
 
-<section class="work-intro">
+<section class="testimonial">
 	<div class="container">
 		<div class="title">Our work speaks for itself</div>
 		<div class="testimonial-wrap">
@@ -145,6 +246,16 @@
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="cs-feature">
+	<div class="container">Feature</div>
+</section>
+
+<section class="cs-list">
+	{#each caseStudy as data, i}
+		<CaseStudy {...data} class={'case-study-' + (i + 1)} />
+	{/each}
 </section>
 
 <section class="footer">
@@ -287,8 +398,8 @@
 		transform: translateY(-50%);
 	}
 
-	// Work Intro
-	.work-intro {
+	// Testimonial
+	.testimonial {
 		background-color: white;
 		color: #12182e;
 		padding: 120px 30px 100px;
@@ -332,6 +443,25 @@
 		.testimonial {
 			line-height: 1.3;
 		}
+	}
+
+	// Case Study
+	.cs-feature {
+	}
+	.cs-list {
+		display: grid;
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+	.cs-list :global(.case-study-1) {
+		--cs-color: var(--app-color-yellow);
+	}
+	.cs-list :global(.case-study-2) {
+		--cs-color: var(--app-color-blue);
+	}
+	.cs-list :global(.case-study-3) {
+		--cs-color: var(--app-color-red);
 	}
 
 	// Footer
