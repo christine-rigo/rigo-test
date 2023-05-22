@@ -1,6 +1,28 @@
 <script lang="ts">
 	import Footer from '$/components/Footer.svelte';
 	import Button from '$/components/casestudy/Button.svelte';
+	import Card from '$/components/technology/ImageTextCard.svelte';
+
+	const strengths = [
+		{
+			title: 'combining realistic goals',
+			image: '/technology/strength1.png',
+			description:
+				"We understand your business's needs and align them with set targets to help you achieve measurable success.",
+		},
+		{
+			title: 'and a versatile support structure',
+			image: '/technology/strength2.png',
+			description:
+				'Our services include regular updates, security checks and backups to to keep your website up-to-date. Our team is also skilled in cloud hosting support. Your website will run smoothly at all times.',
+		},
+		{
+			title: 'with creative experience',
+			image: '/technology/strength3.png',
+			description:
+				"Whether you're looking to create a brand-new website or upgrade an existing one, our creative team will wow you with high quality, visually stunning designs that exceed expectations!",
+		},
+	];
 </script>
 
 <section class="video-banner">
@@ -50,6 +72,12 @@
 			<img src="/technology/plane.png" alt="airplane" />
 		</div>
 	</div>
+</section>
+
+<section class="strengths">
+	{#each strengths as data}
+		<Card {...data} />
+	{/each}
 </section>
 
 <section class="footer">
@@ -160,6 +188,17 @@
 				width: 300px;
 				margin-bottom: 50px;
 			}
+		}
+	}
+
+	// Strengths
+	.strengths {
+		background-color: white;
+		padding: 30px 0;
+		display: grid;
+		gap: 30px;
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
 
