@@ -2,6 +2,7 @@
 	import Footer from '$/components/Footer.svelte';
 	import Button from '$/components/casestudy/Button.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
+	import RollingText from '$/components/technology/RollingText.svelte';
 
 	const strengths = [
 		{
@@ -79,6 +80,9 @@
 		<Card {...data} />
 	{/each}
 </section>
+
+<RollingText />
+<RollingText />
 
 <section class="footer">
 	<Footer hideUpNext={true} marginright="0" href="/casestudy/gallagher">Gallagher</Footer>
