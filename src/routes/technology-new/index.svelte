@@ -249,7 +249,7 @@
 </section>
 
 <section class="cs-feature">
-	<div class="container">Feature</div>
+	<div class="container">Feature content here</div>
 </section>
 
 <section class="cs-list">
@@ -447,6 +447,7 @@
 
 	// Case Study
 	.cs-feature {
+		background-color: white;
 	}
 	.cs-list {
 		display: grid;
