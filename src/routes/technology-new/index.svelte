@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Footer from '$/components/Footer.svelte';
-	import Button from '$/components/casestudy/Button.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
@@ -126,6 +125,39 @@
 			],
 		},
 	];
+	const csFeature = {
+		image: '',
+		project_name: 'SMF',
+		title: 'High end woodwork specialists',
+		description:
+			'rigo transformed SMF’s dull e-commerce site into a beautiful gallery portfolio; from selling a product, to selling a dream home.',
+		metrics: [
+			{
+				pre: '+',
+				value: 300,
+				append: '%',
+				text: 'engagement',
+			},
+			{
+				pre: '-',
+				value: 40,
+				append: '%',
+				text: 'bounce rate',
+			},
+			{
+				pre: '+',
+				value: 80,
+				append: '',
+				text: 'leads per month',
+			},
+			{
+				pre: '',
+				value: 100,
+				append: '%',
+				text: 'enquiries',
+			},
+		],
+	};
 </script>
 
 <section class="video-banner">
@@ -228,7 +260,7 @@
 </FullpageSlider>
 <RollingText />
 
-<section class="testimonial">
+<section class="testimonials">
 	<div class="container">
 		<div class="title">Our work speaks for itself</div>
 		<div class="testimonial-wrap">
@@ -249,7 +281,14 @@
 </section>
 
 <section class="cs-feature">
-	<div class="container">Feature content here</div>
+	<div class="cs-inner">
+		<div class="container">
+			<div class="text">
+				<CaseStudy {...csFeature} class={'cs-feat'} />
+			</div>
+		</div>
+		<div class="image" style="background-image: url('/technology/cs-feat.png')" />
+	</div>
 </section>
 
 <section class="cs-list">
@@ -328,6 +367,21 @@
 			text-align: center;
 			line-height: 1.35;
 		}
+		.contact-button {
+			font-family: 'Bebas Neue', sans-serif;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 0.9;
+			color: var(--app-color-navy);
+			border: 1px solid var(--app-color-navy);
+			border-radius: 25px;
+			transition: 0.3s ease all;
+			&:hover {
+				border-color: var(--app-color-lunarblue);
+				background-color: var(--app-color-lunarblue);
+				color: white;
+			}
+		}
 	}
 
 	// Benefit
@@ -398,14 +452,14 @@
 		transform: translateY(-50%);
 	}
 
-	// Testimonial
-	.testimonial {
+	// Testimonials
+	.testimonials {
 		background-color: white;
 		color: #12182e;
 		padding: 120px 30px 100px;
 
 		@media (min-width: 768px) {
-			padding: 220px 30px 200px;
+			padding: 210px 30px 150px;
 		}
 		.container {
 			display: flex;
@@ -448,6 +502,74 @@
 	// Case Study
 	.cs-feature {
 		background-color: white;
+		padding-top: 30px;
+		overflow: hidden;
+		@media (min-width: 1024px) {
+			padding-bottom: 150px;
+		}
+		.cs-inner {
+			position: relative;
+			background-color: #18181a;
+			padding: 1px 0;
+		}
+		.container {
+			max-width: 1600px;
+			margin: 0 auto;
+			@media (min-width: 1024px) {
+				display: flex;
+			}
+		}
+		.text {
+			@media (min-width: 1024px) {
+				max-width: 370px;
+			}
+		}
+		.image {
+			width: 100%;
+			height: 300px;
+			top: 0;
+			right: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: right;
+			@media (min-width: 1024px) {
+				position: absolute;
+				width: 60vw;
+				height: 100%;
+			}
+		}
+	}
+	.cs-feature :global(.cs-feat) {
+		--cs-color: var(--app-color-green);
+		margin-top: -20px;
+		@media (min-width: 1024px) {
+			margin-bottom: -30px;
+			text-align: left;
+		}
+	}
+	.cs-feature :global(.cs-feat .tag) {
+		@media (min-width: 1024px) {
+			margin-left: 30px;
+			margin-bottom: 55px;
+		}
+	}
+	.cs-feature :global(.cs-feat .title) {
+		color: var(--app-color-green);
+		@media (min-width: 1024px) {
+			font-size: 60px;
+		}
+	}
+	.cs-feature :global(.cs-feat .title),
+	.cs-feature :global(.cs-feat .desc) {
+		@media (min-width: 1024px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	.cs-feature :global(.cs-feat .metrics) {
+		@media (min-width: 1024px) {
+			padding-bottom: 0;
+		}
 	}
 	.cs-list {
 		display: grid;

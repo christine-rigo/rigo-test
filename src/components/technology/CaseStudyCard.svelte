@@ -60,13 +60,19 @@
 		}
 	}
 	.title {
-		font-size: 80px;
+		font-size: 60px;
 		margin-bottom: 20px;
+		@media (min-width: 768px) {
+			font-size: 80px;
+		}
 	}
 	.desc {
-		font-size: 30px;
+		font-size: 25px;
 		max-width: 500px;
 		margin: 0 auto;
+		@media (min-width: 768px) {
+			font-size: 30px;
+		}
 	}
 	.metrics {
 		padding: 50px 30px;
