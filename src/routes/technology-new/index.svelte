@@ -165,6 +165,9 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Technology / Rigo Agency</title>
+</svelte:head>
 
 <div class="main">
 	<section
