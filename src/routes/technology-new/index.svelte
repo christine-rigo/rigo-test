@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { inview } from 'svelte-inview';
 	import Footer from '$/components/Footer.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
+
+	// inview vars
+	let vidBannerInview: boolean;
+	let introInview: boolean;
 
 	const strengths = [
 		{
@@ -160,160 +165,198 @@
 	};
 </script>
 
-<section class="video-banner">
-	<button><img src="/technology/play-button.png" alt="play button" /></button>
-</section>
 
-<section class="intro">
-	<div class="round-text">rigo creates impactful web experiences.</div>
-	<div class="container">
-		<h2>Create big brand experiences</h2>
-		<h2>Without a <br /> big brand budget</h2>
-		<p>
-			As an experienced website development company we understand that every business is unique. No
-			matter the size or scale of the projects we undertake, our services are always tailored to
-			your demands.
-		</p>
-		<button
-			class="contact-button"
-			data-tf-popup="EHpJH0kW"
-			data-tf-opacity="100"
-			data-tf-size="100"
-			data-tf-iframe-props="title=Rigo Landing Page Trial"
-			data-tf-transitive-search-params
-			data-tf-medium="snippet">Start your ascent</button
-		><script src="//embed.typeform.com/next/embed.js"></script>
-	</div>
-</section>
+<div class="main">
+	<section
+		class="video-banner"
+		use:inview={{ rootMargin: '-50px', unobserveOnEnter: true }}
+		on:change={({ detail }) => {
+			vidBannerInview = detail.inView;
+		}}
+	>
+		<button class:animate={vidBannerInview}
+			><img src="/technology/play-button.png" alt="play button" /></button
+		>
+	</section>
 
-<section class="benefits first">
-	<div class="container">
-		<div class="text">
+	<section
+		class="intro"
+		use:inview={{ threshold: 0.3, unobserveOnEnter: false }}
+		on:change={({ detail }) => {
+			introInview = detail.inView;
+		}}
+	>
+		<div class="round-text" class:animate={introInview}>
+			<span class="first">rigo creates impactful web experiences.</span>
+			<span class="second"
+				>Our expert team promises success at every stage of your project's journey</span
+			>
+		</div>
+		<div class="container">
 			<h2>
-				Work <br /> with <br /> experts
+				Create <span class="big-text" class:animate={introInview}>big</span> brand experiences
 			</h2>
-		</div>
-		<div class="image">
-			<img src="/technology/sign.png" alt="sign" />
-		</div>
-	</div>
-</section>
-
-<section class="benefits second">
-	<div class="container">
-		<div class="text">
+			<h2>
+				Without a <br /> <span class="big-brand" class:animate={introInview}>big brand budget</span>
+			</h2>
 			<p>
-				“To us, they’re not just a company we outsource to, they’re integral to our business now and
-				part of the team.”<br /><br />
-				Clare farah<br />co-founder, volta
+				As an experienced website development company we understand that every business is unique.
+				No matter the size or scale of the projects we undertake, our services are always tailored
+				to your demands.
 			</p>
-			<h2>
-				Fullstack,<br /> front-end,<br /> back-end.
-			</h2>
+			<button
+				class="contact-button"
+				data-tf-popup="EHpJH0kW"
+				data-tf-opacity="100"
+				data-tf-size="100"
+				data-tf-iframe-props="title=Rigo Landing Page Trial"
+				data-tf-transitive-search-params
+				data-tf-medium="snippet">Start your ascent</button
+			><script src="//embed.typeform.com/next/embed.js"></script>
 		</div>
-		<div class="image">
-			<img src="/technology/plane.png" alt="airplane" />
-		</div>
-	</div>
-</section>
+	</section>
 
-<section class="strengths">
-	{#each strengths as data}
-		<Card {...data} />
-	{/each}
-</section>
-
-<RollingText />
-<FullpageSlider step="01" title="T NZUKO" --fp-bg-color="#FFB436" --fp-top-heading="#504DE6">
-	<span slot="heading"> Consultation & onboarding </span>
-	<div class="step1-content" slot="content">
-		Nobody knows your business better than you.<br /> Help us understand what you do and what keeps
-		you going.<br />Tell us all about your goals and target audience. Our team will then create a
-		roadmap to make your website dreams a reality!
-	</div>
-	<img slot="icon" class="step-icon" src="/technology/step1.png" alt="Step 1" />
-</FullpageSlider>
-
-<FullpageSlider step="02" title="INYOCHA" --fp-bg-color="#6562F5" --fp-top-heading="#FFAA1C">
-	<span slot="heading"> Consultation & onboarding </span>
-	<div class="step2-content" slot="content">
-		We're strategic thinkers who love a challenge. With a deep market understanding,<br /> we’ll
-		identify specific growth opportunities to keep you up to speed.<br />
-		You will have complete visibility into the project scope, timeline, and budget at every step of the
-		way.
-	</div>
-	<img slot="icon" class="step-icon" src="/technology/step2.png" alt="Step 2" />
-</FullpageSlider>
-
-<FullpageSlider step="03" title="AZUKA" --fp-bg-color="#36E0BA" --fp-top-heading="#EE6338">
-	<span slot="heading"> Meet your pod </span>
-	<div class="step3-content" slot="content">
-		We are brand builders. Our creative team will meet with you for an initial free consultation
-		around branding, positioning, content & communication style.<br />
-		We’ll work closely with you to highlight your business USP, strengths and values. With custom, carefully
-		crafted design, we’re sure we can help you stand out!
-	</div>
-	<img slot="icon" class="step-icon" src="/technology/step3.png" alt="Step 3" />
-</FullpageSlider>
-
-<FullpageSlider step="04" title="ANARA" --fp-bg-color="#EE6338" --fp-top-heading="#36E0BA">
-	<span slot="heading"> Project kick off </span>
-	<div class="step4-content" slot="content">
-		We're ready to bring your website to life! Every little development milestone, information flow
-		and project deliverable will be shared with you.<br />
-		Our team will rigorously test the website to ensure it's bug-free and optimised, and launch it with
-		the confidence of a winner!
-	</div>
-	<img slot="icon" class="step-icon" src="/technology/step4.png" alt="Step 4" />
-</FullpageSlider>
-<RollingText />
-
-<section class="testimonials">
-	<div class="container">
-		<div class="title">Our work speaks for itself</div>
-		<div class="testimonial-wrap">
-			<div class="testimonial">
-				I loved working with Stephen and the rigo team, they kept me informed at every stage of the
-				project and set clear measurable goals to ensure the website launch was a success<br /><br
-				/>
-				Mark Fuller, Founder <br />
-				Axe Block Management
-			</div>
-			<div class="testimonial">
-				“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-				ut labore et dolore magna aliqua”<br /><br />
-				Testimonial, Someone nice
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="cs-feature">
-	<div class="cs-inner">
+	<section class="benefits first">
 		<div class="container">
 			<div class="text">
-				<CaseStudy {...csFeature} class={'cs-feat'} />
+				<h2>
+					Work <br /> with <br /> experts
+				</h2>
+			</div>
+			<div class="image">
+				<img src="/technology/sign.png" alt="sign" />
 			</div>
 		</div>
-		<div class="image" style="background-image: url('/technology/cs-feat.png')" />
-	</div>
-</section>
+	</section>
 
-<section class="cs-list">
-	{#each caseStudy as data, i}
-		<CaseStudy {...data} class={'case-study-' + (i + 1)} />
-	{/each}
-</section>
+	<section class="benefits second">
+		<div class="container">
+			<div class="text">
+				<p>
+					“To us, they’re not just a company we outsource to, they’re integral to our business now
+					and part of the team.”<br /><br />
+					Clare farah<br />co-founder, volta
+				</p>
+				<h2>
+					Fullstack,<br /> front-end,<br /> back-end.
+				</h2>
+			</div>
+			<div class="image">
+				<img src="/technology/plane.png" alt="airplane" />
+			</div>
+		</div>
+	</section>
 
-<section class="footer">
-	<Footer hideUpNext={true} marginright="0" href="/casestudy/gallagher">Gallagher</Footer>
-</section>
+	<section class="strengths">
+		{#each strengths as data}
+			<Card {...data} />
+		{/each}
+	</section>
+
+	<RollingText />
+	<FullpageSlider step="01" title="T NZUKO" --fp-bg-color="#FFB436" --fp-top-heading="#504DE6">
+		<span slot="heading"> Consultation & onboarding </span>
+		<div class="step1-content" slot="content">
+			Nobody knows your business better than you.<br /> Help us understand what you do and what
+			keeps you going.<br />Tell us all about your goals and target audience. Our team will then
+			create a roadmap to make your website dreams a reality!
+		</div>
+		<img slot="icon" class="step-icon" src="/technology/step1.png" alt="Step 1" />
+	</FullpageSlider>
+
+	<FullpageSlider step="02" title="INYOCHA" --fp-bg-color="#6562F5" --fp-top-heading="#FFAA1C">
+		<span slot="heading"> Consultation & onboarding </span>
+		<div class="step2-content" slot="content">
+			We're strategic thinkers who love a challenge. With a deep market understanding,<br /> we’ll
+			identify specific growth opportunities to keep you up to speed.<br />
+			You will have complete visibility into the project scope, timeline, and budget at every step of
+			the way.
+		</div>
+		<img slot="icon" class="step-icon" src="/technology/step2.png" alt="Step 2" />
+	</FullpageSlider>
+
+	<FullpageSlider step="03" title="AZUKA" --fp-bg-color="#36E0BA" --fp-top-heading="#EE6338">
+		<span slot="heading"> Meet your pod </span>
+		<div class="step3-content" slot="content">
+			We are brand builders. Our creative team will meet with you for an initial free consultation
+			around branding, positioning, content & communication style.<br />
+			We’ll work closely with you to highlight your business USP, strengths and values. With custom,
+			carefully crafted design, we’re sure we can help you stand out!
+		</div>
+		<img slot="icon" class="step-icon" src="/technology/step3.png" alt="Step 3" />
+	</FullpageSlider>
+
+	<FullpageSlider step="04" title="ANARA" --fp-bg-color="#EE6338" --fp-top-heading="#36E0BA">
+		<span slot="heading"> Project kick off </span>
+		<div class="step4-content" slot="content">
+			We're ready to bring your website to life! Every little development milestone, information
+			flow and project deliverable will be shared with you.<br />
+			Our team will rigorously test the website to ensure it's bug-free and optimised, and launch it
+			with the confidence of a winner!
+		</div>
+		<img slot="icon" class="step-icon" src="/technology/step4.png" alt="Step 4" />
+	</FullpageSlider>
+	<RollingText />
+
+	<section class="testimonials">
+		<div class="container">
+			<div class="title">Our work speaks for itself</div>
+			<div class="testimonial-wrap">
+				<div class="testimonial">
+					I loved working with Stephen and the rigo team, they kept me informed at every stage of
+					the project and set clear measurable goals to ensure the website launch was a success<br
+					/><br />
+					Mark Fuller, Founder <br />
+					Axe Block Management
+				</div>
+				<div class="testimonial">
+					“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua”<br /><br />
+					Testimonial, Someone nice
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cs-feature">
+		<div class="cs-inner">
+			<div class="container">
+				<div class="text">
+					<CaseStudy {...csFeature} class={'cs-feat'} />
+				</div>
+			</div>
+			<div class="image" style="background-image: url('/technology/cs-feat.png')" />
+		</div>
+	</section>
+
+	<section class="cs-list">
+		{#each caseStudy as data, i}
+			<CaseStudy {...data} class={'case-study-' + (i + 1)} />
+		{/each}
+	</section>
+
+	<section class="footer">
+		<Footer hideUpNext={true} marginright="0" href="/casestudy/gallagher">Gallagher</Footer>
+	</section>
+</div>
 
 <style lang="scss">
+	.main {
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
+		height: 100vh;
+		> section {
+			scroll-snap-align: center;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
 	// Video banner
 	.video-banner {
 		position: relative;
-		min-height: 100vh;
+		height: 100vh;
+		max-height: 1000px;
 		background-color: var(--app-color-lunarblue);
 		background-image: url('/technology/rigo-logo-big.png');
 		background-repeat: no-repeat;
@@ -328,6 +371,11 @@
 			top: 50%;
 			left: 0;
 			right: 0;
+			opacity: 0;
+			transition: 0.8s ease all;
+			&.animate {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -374,7 +422,28 @@
 			font-size: 12px;
 			text-align: center;
 			line-height: 1.35;
+			transition: 0.8s ease transform 2s;
+			.first,
+			.second {
+				transition: 0.4s ease all 2s;
+			}
+			.second {
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				padding: 15px;
+			}
 		}
+		.round-text.animate {
+			transform: translateX(68vw) scale(1.5);
+			.first {
+				opacity: 0;
+			}
+			.second {
+				opacity: 1;
+			}
+		}
+
 		.contact-button {
 			font-family: 'Bebas Neue', sans-serif;
 			font-size: 20px;
@@ -389,6 +458,33 @@
 				background-color: var(--app-color-lunarblue);
 				color: white;
 			}
+		}
+
+		.big-text {
+			transition: color 0.4s ease-in, font-size 0.8s ease;
+		}
+		.big-text.animate {
+			color: var(--app-color-red);
+			font-size: 170%;
+		}
+
+		.big-brand {
+			position: relative;
+			padding: 0 10px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 4px;
+				background-color: var(--app-color-red);
+				left: 0;
+				top: calc(50% - 4px);
+				transform: rotate(-2deg) scale(0);
+				transition: transform 0.4s ease 0.4s;
+			}
+		}
+		.big-brand.animate:before {
+			transform: rotate(-2deg);
 		}
 	}
 
