@@ -171,7 +171,7 @@
 
 <div class="main">
 	<section
-		class="video-banner"
+		class="video-banner snap"
 		use:inview={{ rootMargin: '-50px', unobserveOnEnter: true }}
 		on:change={({ detail }) => {
 			vidBannerInview = detail.inView;
@@ -183,7 +183,7 @@
 	</section>
 
 	<section
-		class="intro"
+		class="intro snap"
 		use:inview={{ threshold: 0.3, unobserveOnEnter: false }}
 		on:change={({ detail }) => {
 			introInview = detail.inView;
@@ -345,10 +345,10 @@
 
 <style lang="scss">
 	.main {
-		scroll-snap-type: y mandatory;
+		scroll-snap-type: y proximity;
 		overflow-y: scroll;
 		height: 100vh;
-		> section {
+		.snap {
 			scroll-snap-align: center;
 			height: 100%;
 			width: 100%;
@@ -438,12 +438,12 @@
 			}
 		}
 		.round-text.animate {
-			transform: translateX(68vw) scale(1.5);
+			animation: round-tag-toright 5s ease-in-out 1s infinite alternate;
 			.first {
-				opacity: 0;
+				animation: round-text-opacity 5s ease-in-out 1s infinite alternate;
 			}
 			.second {
-				opacity: 1;
+				animation: round-text-opacity 5s ease-in-out 1s infinite alternate-reverse;
 			}
 		}
 
@@ -464,7 +464,7 @@
 		}
 
 		.big-text {
-			transition: color 0.4s ease-in, font-size 0.8s ease;
+			transition: color 0.4s ease-in 0.4s, font-size 0.8s ease 0.4s;
 		}
 		.big-text.animate {
 			color: var(--app-color-red);
@@ -474,6 +474,7 @@
 		.big-brand {
 			position: relative;
 			padding: 0 10px;
+			cursor: default;
 			&:before {
 				content: '';
 				position: absolute;
@@ -483,11 +484,14 @@
 				left: 0;
 				top: calc(50% - 4px);
 				transform: rotate(-2deg) scale(0);
-				transition: transform 0.4s ease 0.4s;
+				transition: transform 1s ease 0.4s;
 			}
 		}
 		.big-brand.animate:before {
 			transform: rotate(-2deg);
+		}
+		.big-brand.animate:hover:before {
+			transform: rotate(-2deg) scale(0);
 		}
 	}
 
@@ -701,5 +705,27 @@
 		align-items: center;
 		padding: 3rem 0;
 		background-color: var(--app-color-navy);
+	}
+
+	/* Animations */
+	@keyframes round-tag-toright {
+		0%,
+		40% {
+			transform: translateX(0) scale(1);
+		}
+		60%,
+		100% {
+			transform: translateX(68vw) scale(1.5);
+		}
+	}
+	@keyframes round-text-opacity {
+		0%,
+		40% {
+			opacity: 1;
+		}
+		60%,
+		100% {
+			opacity: 0;
+		}
 	}
 </style>
