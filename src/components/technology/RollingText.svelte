@@ -23,7 +23,7 @@
 		> div {
 			display: flex;
 			gap: 30px;
-			animation: scroll-back-forth 12s linear infinite;
+			animation: scroll-back-forth 12s linear infinite alternate;
 		}
 		span {
 			flex: 1 0;
@@ -32,14 +32,11 @@
 	}
 
 	@keyframes scroll-back-forth {
-		0% {
+		to {
 			transform: translateX(0);
 		}
-		50% {
+		from {
 			transform: translateX(calc(-100% + (30 * 30px)));
-		}
-		100% {
-			transform: translateX(0);
 		}
 	}
 </style>
