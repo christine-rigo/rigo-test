@@ -4,11 +4,11 @@
 
 	export let title = '';
 	export let description = '';
-	export let backgroundColor:string;
-	export let color:string;
-	export let btnColor:string;
-	export let borderColor:string = 'var(--app-color-lunarblue)';
-	export let subheadingColor:string = 'var(--app-color-navy)';
+	export let backgroundColor = '';
+	export let color = '';
+	export let btnColor = '';
+	export let borderColor = 'var(--app-color-lunarblue)';
+	export let subheadingColor = 'var(--app-color-navy)';
 </script>
 
 <div class="container" style="background-color: {backgroundColor}; color: {color}">

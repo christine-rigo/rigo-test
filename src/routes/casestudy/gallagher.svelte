@@ -62,22 +62,21 @@
 			</div>
 			<div>
 				<div class="challenge-card-title">Solution</div>
-				<div class="challenge-card-desc">rigo conducted a review of content across the insurance industry delivering a competitive analysis and marketing intelligence report based on insurance providers. In this review rigo analysed and evaluated the content marketing output and SEO performance of five of Gallagher’s key competitors.</div>
+				<div class="challenge-card-desc">rigo conducted a review of content across the insurance industry. We delivered a competitive analysis and marketing intelligence report based on industry trends. In this review, we analysed and evaluated the content marketing output and SEO performance of five of Gallagher’s key competitors.</div>
 			</div>
 			<div>
 				<div class="challenge-card-title">Research</div>
-				<div class="challenge-card-desc">rigo levelled up Gallagher’s understanding of the norms of content marketing in theinsurance sector, identifying strengths and weaknesses across the industry. This allowed us to identify a number of flagship content pieces that Gallagher would benefit from adding to their website.</div>
+				<div class="challenge-card-desc">rigo levelled up Gallagher’s understanding of content marketing norms in the insurance sector, identifying strengths and weaknesses across the industry. This allowed us to identify a number of flagship content pieces that Gallagher would benefit from adding to their website.</div>
 			</div>
 			<div>
 				<div class="challenge-card-title">Result</div>
 				<div class="challenge-card-desc">
-					Research included exploration of search engine traffic and competitor funnels. This gave Gallagher a snapshot of what’s happening in the industry and oversight of why certain pieces of content were performing well. A custom ranking system ensured analysis remained subjective in terms of style and
-					formatting, but objective in terms of commercial impact.
+					Research included exploration of search engine traffic and competitor funnels. This provided Gallagher with a snapshot of the latest industry trends and oversight of why certain content pieces performed well. A custom ranking system ensured analysis remained subjective in terms of style and formatting, but objective in terms of commercial impact.
 				</div>
 			</div>
 		</div>
 	
-		<div class="hero-section" style="padding: 0rem 2rem;">
+		<div class="hero-section">
 			<div class="alex-turner-container">
 				<div>
 					<div class="alex-turner-title">Alex Turner<br>Senior Copywriter,<br>Rigo</div>
@@ -87,8 +86,8 @@
 			</div>
 		</div>
 	
-		<div style="display: flex; padding: 5vw 2rem; background-color: white; justify-content: space-evenly;">
-			<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/volta">Volta</Footer>
+		<div class="footer-container">
+			<Footer marginleft={'0vw'} marginright={'0vw'} href="/casestudy/volta">Volta</Footer>
 		</div>
 	</div>
 </div>
@@ -113,7 +112,7 @@
 	}
 	.main-content {
 		position: absolute;
-		top: 30vh;
+		top: 27vh;
         max-width: 1440px;
         margin: auto;
 	}
@@ -175,6 +174,7 @@
 		font-size: 14px;
 		line-height: 160%;
 		text-align: center;
+		width: 70%;
 	}
 	.alex-turner-container {
 		padding: 35vh 4rem 4rem 0;
@@ -184,12 +184,11 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100%;
-		width: 100%;
 		justify-content: flex-end;
 	}
 
 	.alex-turner-container > div {
-		width: 25vw;
+		width: 23%;
 	}
 
 	.alex-turner-title {
@@ -215,8 +214,12 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 4rem 4rem 4rem 4rem;
-		gap: 6rem;
+		padding: 4rem 8rem 4rem 8rem;
+		gap: 2rem;
+
+		div {
+			flex: 1;
+		}
 	}
 
 	.challenge-card-title {
@@ -235,32 +238,52 @@
 		font-size: 12px;
 		line-height: 160%;
 	}
+	.footer-container {
+		display: flex;
+		padding: 5vw 4rem;
+		background-color: white;
+		justify-content: space-evenly;
+	}
 
+	@media(max-width: 1024px) {
+		.card-content-desc {
+			width: 100%;
+		}
+		.alex-turner-container > div {
+			width: 34%;
+		}
+	}
 	@media(max-width: 768px) {
 		.main-content {
 			position: relative;
 			top: -10vh;
 		}
 		.hero-section {
-			padding: 0rem;
+			padding: 0rem 2rem;
 		}
 		.content-section {
 			padding: 0rem;
+		}
+		.card-content-desc {
+			width: 55%;
 		}
 		.content-card-row {
 			flex-direction: column;
 		}
 		.challenge-section {
 			flex-direction: column;
-			gap: 4rem;
+			gap: 2rem;
 			padding: 2rem;
 		}
 		.alex-turner-container > div {
-			width: 50vw;
+			width: 44%;
 		}
 
 		.alex-turner-container {
 			padding: 35vh auto;
+		}
+		.footer-container {
+			padding: 5vw 2rem;
 		}
 	}
 
@@ -270,8 +293,14 @@
 			justify-content: center;
 			padding: 16rem 0.5rem 4rem 0.5rem;
 		}
+		.alex-turner-container > div {
+			width: 80%;
+		}
 		.card-content-title {
 			font-size: 31px;
+		}
+		.card-content-desc {
+			width: 100%;
 		}
 	}
 </style>
