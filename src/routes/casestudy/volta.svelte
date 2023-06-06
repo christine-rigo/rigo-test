@@ -69,7 +69,7 @@
 				</div>
 				<div class="content-card-row-field" style="background: #6562F5">
 					<div class="card-content-preheader">User increase +268%<br>Session increase +227%</div>
-					<div class="card-content-title" style="color: #36E0BA;">
+					<div class="card-content-title" style="color: #36E0BA; width: 56%;">
 						<img src="/casestudy/user-increase.svg" alt="rigo">
 					</div>
 					<div class="card-content-desc" style="color: white">During the duration of the campaign, we have seen the number of users visiting the website from social platforms increase by 268% / 947 users in total when compared to the previous period. The number of sessions also increased by 226.95% / 1,092 sessions.
@@ -97,7 +97,7 @@
 						</div>
 					</div>
 				</div>
-				<div style="flex: 0 0 60%; width: 100%"><img style="width: 100%" src="/casestudy/beach.png" alt="rigo"></div>
+				<div style="flex: 0 0 70%; width: 100%"><img style="width: 100%" src="/casestudy/beach.png" alt="rigo"></div>
 			</div>
 		</div>
 
@@ -153,7 +153,7 @@
 	}
 	.main-content {
 		position: absolute;
-		top: 20vh;
+		top: 16vh;
         max-width: 1440px;
         margin: auto;
 	}
@@ -236,6 +236,7 @@
 		line-height: 110%;
 		color: #FFFFFF;
 		text-align: center;
+		font-weight: bold;
 	}
 	.card-content-title {
 		font-family: 'Bebas Neue';
@@ -251,6 +252,7 @@
 		font-size: 14px;
 		line-height: 160%;
 		text-align: center;
+		width: 56%;
 	}
 
 	.alex-turner-section {
@@ -274,7 +276,7 @@
 	}
 
 	.alex-turner-container > div {
-		width: 25vw;
+		width: 30%;
 	}
 
 	.alex-turner-title {
@@ -328,6 +330,9 @@
 		.extreme-card-container {
 			gap: 2rem;
 		}
+		.alex-turner-container > div {
+			width: 48%;
+		}
 	}
 
 	@media(max-width: 768px) {
@@ -359,10 +364,6 @@
 		.alex-turner-container > div {
 			width: 50vw;
 		}
-
-		.alex-turner-container {
-			
-		}
 	}
 
 	@media(max-width: 425px) {
@@ -371,6 +372,9 @@
 		}
 		.extreme-card-container {
 			padding: 2rem;
+		}
+		.alex-turner-container > div {
+			width: 80%;
 		}
 	}
 </style>

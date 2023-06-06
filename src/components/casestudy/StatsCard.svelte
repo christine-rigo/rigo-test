@@ -38,7 +38,7 @@
     .stats-lead {
         font-family: 'Bebas Neue';
         font-style: normal;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 32px;
         line-height: 30px;
         text-align: center;
@@ -50,6 +50,7 @@
         font-size: 13px;
         line-height: 140%;
         text-align: center;
+        font-weight: bold;
     }
     @media(max-width: 768px) {
         .stats-section {
