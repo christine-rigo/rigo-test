@@ -65,15 +65,14 @@
 					<div class="card-content-title" style="color: #6562F5">
 						120,000
 					</div>
-					<div class="card-content-desc" style="color: black;">Highly targeted LinkedIn campaigns to increase touch points with select advertising partners to secure high profile meetings.</div>
+					<div class="card-content-desc" style="color: black;">Highly targeted LinkedIn campaigns were run to increase touch points with select advertising partners to secure high profile meetings.</div>
 				</div>
 				<div class="content-card-row-field" style="background: #6562F5">
 					<div class="card-content-preheader">User increase +268%<br>Session increase +227%</div>
 					<div class="card-content-title" style="color: #36E0BA; width: 56%;">
 						<img src="/casestudy/user-increase.svg" alt="rigo">
 					</div>
-					<div class="card-content-desc" style="color: white">During the duration of the campaign, we have seen the number of users visiting the website from social platforms increase by 268% / 947 users in total when compared to the previous period. The number of sessions also increased by 226.95% / 1,092 sessions.
-					</div>
+					<div class="card-content-desc" style="color: white">During the duration of the campaign, the number of website users from social platform redirects increased by 268% (+947 users in total). As compared to the previous period, website sessions also increased by 226.95% or +1,092 sessions!</div>
 				</div>
 			</div>
 		</div>
@@ -83,11 +82,11 @@
 				<div class="extreme-card-container">
 					<div class="extreme-card">
 						<div class="extreme-title">Challenge</div>
-						<div class="extreme-desc">Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaing the scale and quality of their content.</div>
+						<div class="extreme-desc">Volta is a rapidly expanding source of inspirational news. rigo helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content.</div>
 					</div>
 					<div class="extreme-card">
 						<div class="extreme-title">Solution</div>
-						<div class="extreme-desc">rigo creates regular news articles, interviews and campaigns to drive engagment. From pitching to production, the team integrates with Volta to deliver a seamless service.</div>
+						<div class="extreme-desc">rigo created regular news articles, interviews and campaigns to drive engagement. From pitching to production, the team integrated with Volta to deliver a seamless service.</div>
 					</div>
 					<div class="extreme-card">
 						<div class="extreme-title">Extreme E</div>
@@ -111,16 +110,15 @@
 					<div class="alex-turner-title">Clare Farah<br>Co-founder, Volta</div>
 					<div class="alex-turner-desc">
 						“Prior to working with rigo, we were outsourcing much of our articles to a whole plethora of journalists and content writers.<br>
-						Rigo has changed this for us entirely now within no time, they were generating and delivering excellent SEO-optimised content and engaging on our socials whilst simultaneously generating new marketing plans to support our directives.<br>
-						To us, they’re not just a company we outsource to, they’re integral to our
-						business now and part of the team.”
+						rigo has changed this for us entirely now within no time. They were generating and delivering excellent SEO-optimised content and engaging on our socials whilst simultaneously generating new marketing plans to support our directives.<br>
+						To us, they’re not just a company we outsource to, they’re integral to our business now and part of the team!”
 					</div>
 				</div>
 				<div>
 					<div class="alex-turner-title">Pete Adams<br>Copywriter, Rigo</div>
 					<div class="alex-turner-desc">
-						“Work on the account has evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.<br>
-						“Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.<br>
+						“Work on the account evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.<br>
+						Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.<br>
 						Senegal [to cover Extreme E] was undoubtedly a highlight, as it let me firmly put my journalist hat on and become that roving reporter I’ve always dreamt of being.”
 					</div>
 				</div>
