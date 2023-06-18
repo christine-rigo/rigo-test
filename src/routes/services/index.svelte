@@ -62,7 +62,7 @@
 						<span slot="title">design websites</span>
 						<span slot="description">
 							ux, ui, site mapping, wireframing, brand engine, copy, full suite branding, brand
-							refresh, comerce strategy
+							refresh, commerce strategy
 						</span>
 					</SiBox>
 
