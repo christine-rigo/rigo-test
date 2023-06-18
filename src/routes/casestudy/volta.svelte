@@ -7,10 +7,10 @@
 	import StatsCard from '$/components/casestudy/StatsCard.svelte';
 	import FullWidthImage from '$/components/casestudy/FullWidthImage.svelte';
 
-    const statistics = [{'stats': '+112%', 'statsTitle': 'page views in<br>first 3 months'},
-                        {'stats': '+403%', 'statsTitle': 'increase in<br>monthly users in<br>first 12 months'},
-                        {'stats': '+120K', 'statsTitle': 'impressions in<br>1 month campaign'},
-                        {'stats': '+1', 'statsTitle': 'Listed in Google<br>News on first<br>application'}]
+    const statistics = [{'stats': 112, 'statsTitle': 'page views in<br>first 3 months', 'presign': '+', 'postsign': '%'},
+                        {'stats': 403, 'statsTitle': 'increase in<br>monthly users in<br>first 12 months', 'presign': '+', 'postsign': '%'},
+                        {'stats': 120, 'statsTitle': 'impressions in<br>1 month campaign', 'presign': '+', 'postsign': 'K'},
+                        {'stats': 1, 'statsTitle': 'Listed in Google<br>News on first<br>application', 'presign': '+', 'postsign': ''}]
 
 	let headingRef;
 	let gap = 0;

@@ -23,10 +23,10 @@
 		}
 	}
 
-    const statistics = [{'stats': '+3', 'statsTitle': 'month<br>campaign'},
-                        {'stats': '+5', 'statsTitle': 'competitors<br>scored'},
-                        {'stats': '+30', 'statsTitle': 'key content<br>pieces created'},
-                        {'stats': '+29K', 'statsTitle': 'words written'}]
+    const statistics = [{'stats': 3, 'statsTitle': 'month<br>campaign', 'presign': '+', 'postsign': ''},
+                        {'stats': 5, 'statsTitle': 'competitors<br>scored', 'presign': '+', 'postsign': ''},
+                        {'stats': 30, 'statsTitle': 'key content<br>pieces created', 'presign': '+', 'postsign': ''},
+                        {'stats': 29, 'statsTitle': 'words written', 'presign': '+', 'postsign': 'K'}]
 
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';

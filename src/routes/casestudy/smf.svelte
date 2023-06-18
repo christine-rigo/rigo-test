@@ -23,10 +23,10 @@
 		}
 	}
 
-    const statistics = [{'stats': '+ 300%', 'statsTitle': 'engagement'},
-                        {'stats': '- 40%', 'statsTitle': 'bounce rate'},
-                        {'stats': '+ 80', 'statsTitle': 'leads per<br>month'},
-                        {'stats': '+ 100%', 'statsTitle': 'enquiries'}]
+    const statistics = [{'stats': 300, 'statsTitle': 'engagement', 'presign': '+', 'postsign': '%'},
+                        {'stats': 40, 'statsTitle': 'bounce rate', 'presign': '-', 'postsign': '%'},
+                        {'stats': 80, 'statsTitle': 'leads per<br>month', 'presign': '+', 'postsign': ''},
+                        {'stats': 100, 'statsTitle': 'enquiries', 'presign': '+', 'postsign': '%'}]
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
