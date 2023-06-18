@@ -85,7 +85,7 @@
 				</div>
 				<div class="content-card-row-field" style="background: #6562F5">
 					<div class="card-content-preheader">User increase +268%<br>Session increase +227%</div>
-					<div class="card-content-title" style="color: #36E0BA; width: 56%;">
+					<div class="card-content-title" style="color: #36E0BA; position: display;">
 						<img src="/casestudy/user-increase.svg" alt="rigo">
 					</div>
 					<div class="card-content-desc" style="color: white">During the duration of the campaign, the number of website users from social platform redirects increased by 268% (+947 users in total). As compared to the previous period, website sessions also increased by 226.95% or +1,092 sessions!</div>
@@ -235,7 +235,7 @@
 		flex-direction: wrap;
 	}
 	.content-card-row-field {
-		padding: 6rem 4rem;
+		padding: 6rem 0rem;
 		display: flex;
 		flex-basis: 50%;
 		flex-direction: column;
