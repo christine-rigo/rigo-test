@@ -41,7 +41,7 @@
 <div class="workslugcontainer">
 	<CaseStudy on:message={handleGap} bind:headingRef={headingRef}
 		title="SMF: Woodwork Specialists" 
-		description="rigo transformed SMF’s dull e-commerce site<br>into a beautiful gallery portfolio; from selling a<br>product, to selling a dream home."
+		description="rigo transformed SMF’s dull e-commerce site into a beautiful gallery portfolio; from selling a product, to selling a dream home!"
 		backgroundColor="#7270FF"
 		color="#3BF0C8"
 		btnColor="btn-white"
@@ -65,7 +65,7 @@
                 <div>
                     <div class="challenge-card-title">Challenge</div>
 				    <div class="challenge-card-desc">
-                        Square Metre Flooring is a family-run business that has been operating in Fulham for over 15 years. They specialise in providing high-quality, sustainable wood flooring and interior design solutions to both residential and commercial clients. The business had an outdated website that was not optimised for mobile, difficult to navigate, and lacked essential information about their products and services.
+                        Square Metre Flooring is a family-run business that has been operating in Fulham for over 15 years. They specialise in providing high-quality, sustainable wood flooring and interior design solutions to both residential and commercial clients. The business had an outdated website that was difficult to navigate, not optimised for mobile and lacked essential information about their products and services.
                     </div>
                 </div>
                 <div>
@@ -96,7 +96,7 @@
 			</div>
 			<div>
 				<div class="challenge-card-title">Website Content</div>
-				<div class="challenge-card-desc">We worked closely with the SMF to develop clear and concise content that accurately represented their brand and values. We incorporated relevant keywords and phrases throughout the website to improve SEO. Content was kept minimalist where possible as the core focus was on the design.</div>
+				<div class="challenge-card-desc">We worked closely with the SMF to develop clear and concise content that accurately represented their brand and values. Content was kept minimalist as the core focus was on the design. We incorporated relevant keywords and phrases throughout the website to improve SEO.</div>
 			</div>
 			<div>
 				<div class="challenge-card-title">SEO</div>
@@ -117,8 +117,8 @@
 				<div>
 					<div class="alex-turner-title">The Results</div>
 					<div class="alex-turner-desc">
-                        The new website took 6 weeks to develop, from initial consultation to research, design and build stages and the results have been impressive. <br><br>
-                        The website's bounce rate has decreased by -40%, and the average session duration has increased by 245%, indicating that users are finding the website more engaging and user-friendly. Organic traffic to the website has increased by over 365% and rising, following its first 4 months of being live and the website's search engine ranking has improved significantly, resulting in a higher number of leads and conversions for the company.
+                        The new website took 6 weeks to develop, right from initial consultation to research, design and build stages. And the results have been impressive! <br><br>
+						The website's bounce rate has decreased by -40%, and the average session duration has increased by 245%, indicating that users are finding the website more engaging and user-friendly. Organic traffic to the website has increased by over 365% and rising, following its first 4 months of being live and the website's search engine ranking has improved significantly, resulting in a higher number of leads and conversions for the company.
                     </div>
 				</div>
 			</div>
