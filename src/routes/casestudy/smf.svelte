@@ -7,10 +7,26 @@
     import StatsCard from '$/components/casestudy/StatsCard.svelte';
     import FullWidthImage from '$/components/casestudy/FullWidthImage.svelte';
 
-    const statistics = [{'stats': '+300%', 'statsTitle': 'engagement'},
-                        {'stats': '-40%', 'statsTitle': 'bounce rate'},
-                        {'stats': '+80', 'statsTitle': 'leads per<br>month'},
-                        {'stats': '+100%', 'statsTitle': 'enquiries'}]
+	let headingRef;
+	let gap = 0;
+
+	function handleGap(event) {
+		gap = event.detail;
+
+		// Set dynamic padding top
+		const element = document.getElementById('main-content');
+		if (window.innerWidth > 768 && element && headingRef) {
+			element.style.top = (headingRef.offsetHeight + gap + (document.documentElement.scrollWidth * 0.06) - 60) + 'px'; // Set the padding as required
+			console.log(headingRef.offsetHeight)	
+		} else {
+			element.style.top = '-8vh';
+		}
+	}
+
+    const statistics = [{'stats': '+ 300%', 'statsTitle': 'engagement'},
+                        {'stats': '- 40%', 'statsTitle': 'bounce rate'},
+                        {'stats': '+ 80', 'statsTitle': 'leads per<br>month'},
+                        {'stats': '+ 100%', 'statsTitle': 'enquiries'}]
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -23,7 +39,7 @@
 <svelte:body use:style={{ background: 'white' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy
+	<CaseStudy on:message={handleGap} bind:headingRef={headingRef}
 		title="SMF: Woodwork Specialists" 
 		description="rigo transformed SMF’s dull e-commerce site<br>into a beautiful gallery portfolio; from selling a<br>product, to selling a dream home."
 		backgroundColor="#7270FF"
@@ -33,7 +49,7 @@
 		subheadingColor="white"
 		/>
 
-	<div class="main-content">
+	<div id="main-content" class="main-content">
 
         <StatsCard statistics={statistics} backgroundColor="" />
 
@@ -108,8 +124,8 @@
 			</div>
 		</div>
 	
-		<div style="display: flex; padding: 5vw 2rem; background-color: white; justify-content: space-evenly;">
-			<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/gallagher">Gallagher</Footer>
+		<div style="display: flex; padding: 5vw 36px; background-color: white; justify-content: space-evenly;">
+			<Footer marginleft={'0'} marginright={'0'} href="/casestudy/gallagher">Gallagher</Footer>
 		</div>
 	</div>
 </div>
@@ -134,7 +150,7 @@
 	}
 	.main-content {
 		position: absolute;
-		top: 30vh;
+		top: 21vh;
         max-width: 1440px;
         margin: auto;
 	}
@@ -152,10 +168,10 @@
     }
 	.hero-section {
 		display: flex;
-		padding: 2rem 4rem 0rem 4rem;
+		padding: 2rem 36px 0rem 36px;
 	}
     .brand-design-container {
-        padding: 2rem 4rem 0rem 4rem;
+        padding: 2rem 36px 0rem 36px;
     }
     .brand-design-specs {
         display: flex;
@@ -165,7 +181,7 @@
         padding: 2rem;
     }
 	.alex-turner-container {
-		padding: 35vh 4rem 4rem 0;
+		padding: 35vh 4rem 4rem 4rem;
 		display: flex;
 		background-image: url('/casestudy/alex-turner.png');
 		background-position: right;
@@ -173,11 +189,11 @@
 		background-size: cover;
 		height: 100%;
 		width: 100%;
-		justify-content: flex-end;
+		justify-content: flex-start;
 	}
 
 	.alex-turner-container > div {
-		width: 25vw;
+		width: 50vw;
 	}
 
 	.alex-turner-title {
@@ -203,7 +219,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 4rem 4rem 4rem 4rem;
+		padding: 4rem 8rem 4rem 8rem;
 		gap: 6rem;
 	}
 
@@ -213,6 +229,7 @@
 		font-style: normal;
 		font-size: 35px;
 		line-height: 100%;
+		font-weight: bold;
 	}
 
 	.challenge-card-desc {
@@ -239,7 +256,7 @@
 	@media(max-width: 768px) {
         .main-content {
 			position: relative;
-			top: -10vh;
+			top: -8vh;
 		}
 		.hero-section {
 			padding: 2rem 2rem 0rem 2rem;
@@ -247,7 +264,7 @@
 		.challehero-section {
 			flex-direction: column;
 			gap: 4rem;
-			padding: 2rem;
+			padding: 4rem;
 		}
 		.alex-turner-container > div {
 			width: 50vw;
@@ -271,7 +288,11 @@
         .alex-turner-container {
 			display: flex;
 			justify-content: center;
-			padding: 16rem 0.5rem 4rem 0.5rem;
+			padding: 16rem 0rem 4rem 0rem;
+
+			div {
+				width: 70vw;
+			}
 		}
 	}
 </style>

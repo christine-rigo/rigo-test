@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Nav from "../Nav.svelte";
 	import Button from '$/components/casestudy/Button.svelte';
+	import { onMount, onDestroy , createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
 
 	export let title = '';
 	export let description = '';
@@ -9,6 +11,28 @@
 	export let btnColor = '';
 	export let borderColor = 'var(--app-color-lunarblue)';
 	export let subheadingColor = 'var(--app-color-navy)';
+	export let headingRef;
+
+	function handleResize() {
+		// get the elements
+		var element1 = document.getElementById('heading');
+		var element2 = document.getElementById('subheading');
+
+		// get their positions
+		var rect1 = element1.getBoundingClientRect();
+		var rect2 = element2.getBoundingClientRect();
+
+		// calculate the gap
+		var gap = rect2.top - (rect1.top + rect1.height);
+		dispatch('message', gap);
+	}
+
+	onMount(() => {
+		window.addEventListener('resize', handleResize);
+		handleResize();
+	});
+	
+	
 </script>
 
 <div class="container" style="background-color: {backgroundColor}; color: {color}">
@@ -16,10 +40,10 @@
 		<Nav logoScale={1} navigationBarColor={'white'} navItemsStyle="align-items: flex-start;" />
 	</aside>
 	<div class="main">
-		<div class="heading">
+		<div id="heading" class="heading" bind:this={headingRef}>
 			{title}     
 		</div>
-		<div class="subheading" style="color:{subheadingColor}">
+		<div id="subheading" class="subheading" style="color:{subheadingColor}">
 			{@html description}
 		</div>
 		<div>
@@ -53,7 +77,7 @@
 		padding: 6% 15vw 35vh 15vw;
 		display: flex;
 		flex-direction: column;
-		gap: 2.5vw;
+		gap: 40px;
 	}
 
 	@media(max-width: 768px) {

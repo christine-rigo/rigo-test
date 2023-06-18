@@ -7,12 +7,30 @@
 	import StatsCard from '$/components/casestudy/StatsCard.svelte';
 	import FullWidthImage from '$/components/casestudy/FullWidthImage.svelte';
 
+	let headingRef;
+	let gap = 0;
+
+	function handleGap(event) {
+		gap = event.detail;
+
+		// Set dynamic padding top
+		const element = document.getElementById('main-content');
+		if (window.innerWidth > 768 && element && headingRef) {
+			element.style.top = (headingRef.offsetHeight + gap + (document.documentElement.scrollWidth * 0.06) - 60) + 'px'; // Set the padding as required
+			console.log(headingRef.offsetHeight)	
+		} else {
+			element.style.top = '-8vh';
+		}
+	}
+
     const statistics = [{'stats': '+3', 'statsTitle': 'month<br>campaign'},
                         {'stats': '+5', 'statsTitle': 'competitors<br>scored'},
                         {'stats': '+30', 'statsTitle': 'key content<br>pieces created'},
                         {'stats': '+29K', 'statsTitle': 'words written'}]
 
-	onMount(() => { $navColor = 'var(--app-color-lunarblue)'; });
+	onMount(() => {
+		$navColor = 'var(--app-color-lunarblue)';
+	});
 </script>
 
 <svelte:head>
@@ -22,7 +40,7 @@
 <svelte:body use:style={{ background: 'white' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy
+	<CaseStudy on:message={handleGap} bind:headingRef={headingRef} 
 		title="Gallagher: Global Insurance Broker" 
 		description="Global insurance broker, risk management<br>expert and business consultancy"
 		backgroundColor="#36E0BA"
@@ -30,7 +48,7 @@
 		btnColor="btn-lunarblue"
 		/>
 
-	<div class="main-content">
+	<div id="main-content" class="main-content">
 
 		<StatsCard statistics={statistics} backgroundColor="#6562F5" color="white" />
 
@@ -130,12 +148,12 @@
     }
 	.hero-section {
 		display: flex;
-		padding: 0rem 4rem 0rem 4rem;
+		padding: 0rem 36px 0rem 36px;
 	}
 	.content-section {
 		display: flex;
 		flex-direction: column;
-		padding: 0rem 4rem 0rem 4rem;
+		padding: 0rem 36px 0rem 36px;
 	}
 	.content-card-row {
 		display: flex;
@@ -240,7 +258,7 @@
 	}
 	.footer-container {
 		display: flex;
-		padding: 5vw 4rem;
+		padding: 5vw 36px;
 		background-color: white;
 		justify-content: space-evenly;
 	}
@@ -256,10 +274,10 @@
 	@media(max-width: 768px) {
 		.main-content {
 			position: relative;
-			top: -10vh;
+			top: -8vh;
 		}
 		.hero-section {
-			padding: 0rem 2rem;
+			padding: 0rem 36px;
 		}
 		.content-section {
 			padding: 0rem;

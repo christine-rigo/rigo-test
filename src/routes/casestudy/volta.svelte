@@ -12,6 +12,22 @@
                         {'stats': '+120K', 'statsTitle': 'impressions in<br>1 month campaign'},
                         {'stats': '+1', 'statsTitle': 'Listed in Google<br>News on first<br>application'}]
 
+	let headingRef;
+	let gap = 0;
+
+	function handleGap(event) {
+		gap = event.detail;
+
+		// Set dynamic padding top
+		const element = document.getElementById('main-content');
+		if (window.innerWidth > 768 && element && headingRef) {
+			element.style.top = (headingRef.offsetHeight + gap + (document.documentElement.scrollWidth * 0.06) - 60) + 'px'; // Set the padding as required
+			console.log(headingRef.offsetHeight)	
+		} else {
+			element.style.top = '-8vh';
+		}
+	}
+
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -24,7 +40,7 @@
 <svelte:body use:style={{ background: 'white' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy
+	<CaseStudy on:message={handleGap} bind:headingRef={headingRef} 
 		title="Volta: Future Positive" 
 		description="An online platform focusing on sustainable living.<br>Volta’s mission is to encourage as many people as<br>possible to transition to a more sustainable lifestyle."
 		backgroundColor="#EE6338"
@@ -34,7 +50,7 @@
 		subheadingColor="white"
 		/>
 
-	<div class="main-content">
+	<div id="main-content" class="main-content">
 
 		<StatsCard statistics={statistics} backgroundColor="#FFB436" />
 
@@ -125,8 +141,8 @@
 			</div>
 		</div>
 
-		<div style="display: flex; padding: 5vw 2rem; background-color: white; justify-content: space-evenly;">
-			<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/smf">SMF</Footer>
+		<div style="display: flex; padding: 5vw 36px; background-color: white; justify-content: space-evenly;">
+			<Footer marginleft={'0'} marginright={'0'} href="/casestudy/smf">SMF</Footer>
 		</div>
 	</div>
 </div>
@@ -174,7 +190,7 @@
 	}
 	.hero-section {
 		display: flex;
-		padding: 2rem 4rem 0rem 4rem;
+		padding: 2rem 36px 0rem 36px;
 	}
 	.extreme-container {
 		display: flex;
@@ -212,7 +228,7 @@
 	.content-section {
 		display: flex;
 		flex-direction: column;
-		padding: 0rem 4rem 0rem 4rem;
+		padding: 0rem 36px 0rem 36px;
 	}
 	.content-card-row {
 		display: flex;
@@ -336,7 +352,7 @@
 	@media(max-width: 768px) {
 		.main-content {
 			position: relative;
-			top: -10vh;
+			top: -8vh;
 		}
 		.hero-section {
 			padding: 2rem 2rem 0rem 2rem;

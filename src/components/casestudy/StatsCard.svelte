@@ -27,13 +27,13 @@
         grid-template-rows: 1fr 1fr;
         gap: 10px; /* Optional: Set the gap between grid items */
         position: relative;
-        bottom: -6vh;
-        right: 5%;
+        bottom: -60px;
+        right: 3%;
     }
     .stats-card {
         background: #3BF0C8;
         border-radius: 24.4297px;
-        padding: 3rem 3rem;
+        padding: 2.5rem 2.5rem;
     }
     .stats-lead {
         font-family: 'Bebas Neue';
