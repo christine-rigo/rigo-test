@@ -3,12 +3,21 @@
 	import Footer from '$/components/Footer.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
+	import StepsSlideshow from '$/components/technology/StepsSlideshow.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
+
+	// import function to register Swiper custom elements
+	import { register } from 'swiper/element/bundle';
+	// register Swiper custom elements
+	register();
 
 	// inview vars
 	let vidBannerInview: boolean;
 	let introInview: boolean;
+
+	let stepsSliderInview: boolean;
+	// let introInview: boolean;
 
 	const strengths = [
 		{
@@ -32,7 +41,7 @@
 	];
 	const caseStudy = [
 		{
-			image: '/technology/cs-1.png',
+			image: '',
 			project_name: 'VOLTA',
 			title: 'VOLTA',
 			description:
@@ -65,7 +74,7 @@
 			],
 		},
 		{
-			image: '/technology/cs-2.png',
+			image: '/technology/tn-cs2.webp',
 			project_name: 'GALLAGHER',
 			title: 'GALLAGHER',
 			description: 'Global insurance broker, risk management expert & business consultancy',
@@ -97,7 +106,7 @@
 			],
 		},
 		{
-			image: '/technology/cs-3.png',
+			image: '',
 			project_name: 'Axe block',
 			title: 'Axe block',
 			description:
@@ -256,50 +265,89 @@
 		{/each}
 	</section>
 
-	<RollingText />
-	<FullpageSlider step="01" title="T NZUKO" --fp-bg-color="#FFB436" --fp-top-heading="#504DE6">
-		<span slot="heading"> Consultation & onboarding </span>
-		<div class="step1-content" slot="content">
-			Nobody knows your business better than you.<br /> Help us understand what you do and what
-			keeps you going.<br />Tell us all about your goals and target audience. Our team will then
-			create a roadmap to make your website dreams a reality!
-		</div>
-		<img slot="icon" class="step-icon" src="/technology/step1.png" alt="Step 1" />
-	</FullpageSlider>
+	<section
+		class="stepsSlideshow"
+		use:inview={{ rootMargin: '-50px', unobserveOnEnter: false }}
+		on:change={({ detail }) => {
+			stepsSliderInview = detail.inView;
+			console.log(stepsSliderInview);
+			if (stepsSliderInview) {
+				// Start swiper
+				const swiper = document.querySelector('.swiper').swiper;
+				swiper.autoplay.start();
+			} else {
+				// Stop swiper
+				const swiper = document.querySelector('.swiper').swiper;
+				swiper.autoplay.stop();
+				swiper.slideTo(0);
+			}
+		}}
+	>
+		<RollingText />
+		<swiper-container class="swiper" speed="1550" delay="2000">
+			<swiper-slide>
+				<FullpageSlider
+					step="01"
+					title="T NZUKO"
+					--fp-bg-color="#FFB436"
+					--fp-top-heading="#504DE6"
+				>
+					<span slot="heading"> Consultation & onboarding </span>
+					<div class="step1-content" slot="content">
+						Nobody knows your business better than you.<br /> Help us understand what you do and
+						what keeps you going.<br />Tell us all about your goals and target audience. Our team
+						will then create a roadmap to make your website dreams a reality!
+					</div>
+					<img slot="icon" class="step-icon" src="/technology/step1.png" alt="Step 1" />
+				</FullpageSlider>
+			</swiper-slide>
 
-	<FullpageSlider step="02" title="INYOCHA" --fp-bg-color="#6562F5" --fp-top-heading="#FFAA1C">
-		<span slot="heading"> Consultation & onboarding </span>
-		<div class="step2-content" slot="content">
-			We're strategic thinkers who love a challenge. With a deep market understanding,<br /> we’ll
-			identify specific growth opportunities to keep you up to speed.<br />
-			You will have complete visibility into the project scope, timeline, and budget at every step of
-			the way.
-		</div>
-		<img slot="icon" class="step-icon" src="/technology/step2.png" alt="Step 2" />
-	</FullpageSlider>
+			<swiper-slide>
+				<FullpageSlider
+					step="02"
+					title="INYOCHA"
+					--fp-bg-color="#6562F5"
+					--fp-top-heading="#FFAA1C"
+				>
+					<span slot="heading"> Consultation & onboarding </span>
+					<div class="step2-content" slot="content">
+						We're strategic thinkers who love a challenge. With a deep market understanding,<br />
+						we’ll identify specific growth opportunities to keep you up to speed.<br />
+						You will have complete visibility into the project scope, timeline, and budget at every step
+						of the way.
+					</div>
+					<img slot="icon" class="step-icon" src="/technology/step2.png" alt="Step 2" />
+				</FullpageSlider>
+			</swiper-slide>
 
-	<FullpageSlider step="03" title="AZUKA" --fp-bg-color="#36E0BA" --fp-top-heading="#EE6338">
-		<span slot="heading"> Meet your pod </span>
-		<div class="step3-content" slot="content">
-			We are brand builders. Our creative team will meet with you for an initial free consultation
-			around branding, positioning, content & communication style.<br />
-			We’ll work closely with you to highlight your business USP, strengths and values. With custom,
-			carefully crafted design, we’re sure we can help you stand out!
-		</div>
-		<img slot="icon" class="step-icon" src="/technology/step3.png" alt="Step 3" />
-	</FullpageSlider>
+			<swiper-slide>
+				<FullpageSlider step="03" title="AZUKA" --fp-bg-color="#36E0BA" --fp-top-heading="#EE6338">
+					<span slot="heading"> Meet your pod </span>
+					<div class="step3-content" slot="content">
+						We are brand builders. Our creative team will meet with you for an initial free
+						consultation around branding, positioning, content & communication style.<br />
+						We’ll work closely with you to highlight your business USP, strengths and values. With custom,
+						carefully crafted design, we’re sure we can help you stand out!
+					</div>
+					<img slot="icon" class="step-icon" src="/technology/step3.png" alt="Step 3" />
+				</FullpageSlider>
+			</swiper-slide>
 
-	<FullpageSlider step="04" title="ANARA" --fp-bg-color="#EE6338" --fp-top-heading="#36E0BA">
-		<span slot="heading"> Project kick off </span>
-		<div class="step4-content" slot="content">
-			We're ready to bring your website to life! Every little development milestone, information
-			flow and project deliverable will be shared with you.<br />
-			Our team will rigorously test the website to ensure it's bug-free and optimised, and launch it
-			with the confidence of a winner!
-		</div>
-		<img slot="icon" class="step-icon" src="/technology/step4.png" alt="Step 4" />
-	</FullpageSlider>
-	<RollingText />
+			<swiper-slide>
+				<FullpageSlider step="04" title="ANARA" --fp-bg-color="#EE6338" --fp-top-heading="#36E0BA">
+					<span slot="heading"> Project kick off </span>
+					<div class="step4-content" slot="content">
+						We're ready to bring your website to life! Every little development milestone,
+						information flow and project deliverable will be shared with you.<br />
+						Our team will rigorously test the website to ensure it's bug-free and optimised, and launch
+						it with the confidence of a winner!
+					</div>
+					<img slot="icon" class="step-icon" src="/technology/step4.png" alt="Step 4" />
+				</FullpageSlider>
+			</swiper-slide>
+		</swiper-container>
+		<RollingText />
+	</section>
 
 	<section class="testimonials">
 		<div class="container">
@@ -328,14 +376,19 @@
 					<CaseStudy {...csFeature} class={'cs-feat'} />
 				</div>
 			</div>
-			<div class="image" style="background-image: url('/technology/cs-feat.png')" />
+			<div class="image">
+				<video autoplay muted loop playsinline style="height:100%">
+					<source src="https://landing.sqmflooring.co.uk/smflaptop-v3.mp4" type="video/mp4" />
+			</div>
 		</div>
 	</section>
 
-	<section class="cs-list">
-		{#each caseStudy as data, i}
-			<CaseStudy {...data} class={'case-study-' + (i + 1)} />
-		{/each}
+	<section class="cs-list-container">
+		<div class="cs-list">
+			{#each caseStudy as data, i}
+				<CaseStudy {...data} class={'case-study-' + (i + 1)} />
+			{/each}
+		</div>
 	</section>
 
 	<section class="footer">
@@ -345,12 +398,12 @@
 
 <style lang="scss">
 	.main {
-		scroll-snap-type: y proximity;
-		overflow-y: scroll;
+		// scroll-snap-type: y proximity;
+		// overflow-y: scroll;
 		height: 100vh;
 		.snap {
 			scroll-snap-align: center;
-			height: 100%;
+			// height: 100%;
 			width: 100%;
 		}
 	}
@@ -388,6 +441,9 @@
 		position: relative;
 		overflow: hidden;
 		padding: 100px 15px;
+		display: grid;
+		justify-content: center;
+		align-content: center;
 		.container {
 			width: 530px;
 			margin: 0 auto;
@@ -497,7 +553,10 @@
 
 	// Benefit
 	.benefits {
-		padding: 100px 30px;
+		padding: 13vh 30px;
+		// min-height: 100vh;
+		display: grid;
+		align-items: center;
 		h2 {
 			font-family: 'Bebas Neue', sans-serif;
 			font-size: 130px;
@@ -506,8 +565,8 @@
 		}
 		.container {
 			display: flex;
-			justify-content: space-between;
-			max-width: 1600px;
+			gap: 4rem;
+			max-width: 1113px;
 			margin: 0 auto;
 		}
 
@@ -519,6 +578,9 @@
 		}
 		&.second {
 			background-color: var(--app-color-lunarblue);
+			.image {
+				order: -1;
+			}
 			h2,
 			p {
 				color: #2b2996;
@@ -533,13 +595,40 @@
 		}
 	}
 
+	@media (max-width: 1023px) {
+		.benefits {
+			display: flex;
+			flex-direction: column;
+
+			.container {
+				flex-direction: column;
+				gap: 0;
+
+				.text {
+					padding: 35px;
+				}
+
+				h2 {
+					font-size: clamp(60px,14vw,100px);
+				}
+			}
+		}
+		.benefits.first {
+			padding: 50px 0 0;
+		}
+		.benefits.second {
+			padding: 0 0 50px;
+		}
+	}
+
 	// Strengths
 	.strengths {
 		background-color: white;
 		padding: 30px 0;
 		display: grid;
+		grid-template-columns: 1fr;
 		gap: 30px;
-		@media (min-width: 768px) {
+		@media (min-width: 1023px) {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
@@ -575,11 +664,12 @@
 		.container {
 			display: flex;
 			flex-wrap: wrap;
-			max-width: 1600px;
+			max-width: 1380px;
 			margin: 0 auto;
 			gap: 60px;
 			justify-content: center;
 			@media (min-width: 768px) {
+				padding-inline: 30px;
 				justify-content: space-between;
 			}
 		}
@@ -611,10 +701,12 @@
 	}
 
 	// Case Study
+
 	.cs-feature {
 		background-color: white;
 		padding-top: 30px;
 		overflow: hidden;
+
 		@media (min-width: 1024px) {
 			padding-bottom: 150px;
 		}
@@ -624,7 +716,7 @@
 			padding: 1px 0;
 		}
 		.container {
-			max-width: 1600px;
+			max-width: 1380px;
 			margin: 0 auto;
 			@media (min-width: 1024px) {
 				display: flex;
@@ -637,7 +729,7 @@
 		}
 		.image {
 			width: 100%;
-			height: 300px;
+			// height: 300px;
 			top: 0;
 			right: 0;
 			background-size: cover;
@@ -647,6 +739,7 @@
 				position: absolute;
 				width: 60vw;
 				height: 100%;
+
 			}
 		}
 	}
@@ -682,10 +775,35 @@
 			padding-bottom: 0;
 		}
 	}
+	.cs-list-container {
+		position: relative;
+	}
+	.cs-list-container::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 50%;
+		z-index: -1;
+		background: url('/technology/tn-cs1.webp') no-repeat center center / cover;
+	}
+	.cs-list-container::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 50%;
+		z-index: -1;
+		background: url('/technology/tn-cs3.webp') no-repeat center center / cover;
+	}
 	.cs-list {
 		display: grid;
 		@media (min-width: 768px) {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
+			max-width: 1570px;
+			margin-inline: auto;
 		}
 	}
 	.cs-list :global(.case-study-1) {
@@ -697,6 +815,7 @@
 	.cs-list :global(.case-study-3) {
 		--cs-color: var(--app-color-red);
 	}
+
 
 	// Footer
 	.footer {

@@ -4,7 +4,7 @@
 
 	export let logoScale = 1.8;
 	export let navigationBarColor = '';
-	export let navItemsStyle = 'align-items: center;';
+	export let navItemsStyle = 'align-items: flex-start;';
 </script>
 
 <div class="nav-container" style="--color: {navigationBarColor || $navColor}">
@@ -73,6 +73,7 @@
 			padding-right: 2rem;
 			justify-content: space-between;
 			width: 100%;
+			flex-wrap: wrap-reverse;
 		}
 	}
 
@@ -89,6 +90,10 @@
 		transition: color 0.2s ease-in;
 		font-size: 13px;
 		width: max-content;
+	}
+
+	.nav-container > a {
+		height: fit-content;
 	}
 
 	@media (min-width: 1024px) {
@@ -115,6 +120,9 @@
 	@media (max-width: 1024px) {
 		.hidden-xs {
 			display: none;
+		}
+		nav {
+			align-items: center !important;
 		}
 	}
 	@media (max-width: 768px) {

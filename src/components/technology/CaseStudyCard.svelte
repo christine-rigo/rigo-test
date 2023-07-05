@@ -6,20 +6,22 @@
 	export let metrics: Array<any>;
 </script>
 
-<article style="background-image: url({image})" class={$$props.class}>
-	<div>
-		<div class="tag">CASE STUDY / {project_name}</div>
-		<h3 class="title">{title}</h3>
-		<div class="desc">{description}</div>
-	</div>
-
-	<div class="metrics">
-		{#each metrics as metric}
-			<div class="block">
-				<h4>{metric.pre} {metric.value}{metric.append}</h4>
-				<p>{metric.text}</p>
-			</div>
-		{/each}
+<article style="background-image: url({image})" >
+	<div class={$$props.class + ' study-container'}>
+		<div>
+			<div class="tag">CASE STUDY / {project_name}</div>
+			<h3 class="title">{title}</h3>
+			<div class="desc">{description}</div>
+		</div>
+	
+		<div class="metrics">
+			{#each metrics as metric}
+				<div class="block">
+					<h4>{metric.pre} {metric.value}{metric.append}</h4>
+					<p>{metric.text}</p>
+				</div>
+			{/each}
+		</div>
 	</div>
 </article>
 
@@ -55,15 +57,15 @@
 		padding-left: 30px;
 		padding-right: 30px;
 		@media (min-width: 768px) {
-			padding-left: 60px;
-			padding-right: 60px;
+			padding-left: clamp(20px,4vw,60px);
+			padding-right: clamp(20px,4vw,60px);
 		}
 	}
 	.title {
 		font-size: 60px;
 		margin-bottom: 20px;
 		@media (min-width: 768px) {
-			font-size: 80px;
+			font-size: clamp(40px,5.5vw,80px);
 		}
 	}
 	.desc {
@@ -74,6 +76,11 @@
 			font-size: 30px;
 		}
 	}
+	.study-container {
+		display: grid;
+		height: 100%;
+	}
+
 	.metrics {
 		padding: 50px 30px;
 		display: flex;
@@ -93,6 +100,10 @@
 			line-height: 1.3;
 			font-weight: 500;
 			padding: 30px 22px;
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			h4 {
 				font-family: 'Bebas Neue', sans-serif;
 				font-size: 32px;
