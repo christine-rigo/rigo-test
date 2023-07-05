@@ -30,7 +30,7 @@
 			title: 'and a versatile support structure',
 			image: '/technology/strength2.png',
 			description:
-				'Our services include regular updates, security checks and backups to to keep your website up-to-date. Our team is also skilled in cloud hosting support. Your website will run smoothly at all times.',
+				'Our services include regular updates, security checks and backups to keep your website up-to-date. Our team is also skilled in cloud hosting support. Your website will run smoothly at all times.',
 		},
 		{
 			title: 'with creative experience',
