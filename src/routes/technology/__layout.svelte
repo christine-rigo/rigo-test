@@ -60,6 +60,7 @@
 		left: 0;
 		z-index: 9999;
 
+
 		display: flex;
 		justify-content: center;
 
@@ -78,6 +79,7 @@
 			width: 20vw;
 			height: 100%;
 			padding: 3rem 0;
+			height: fit-content;
 		}
 	}
 	// aside nav {

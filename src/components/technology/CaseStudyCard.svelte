@@ -3,10 +3,12 @@
 	export let project_name: String;
 	export let title: String;
 	export let description: String;
+	export let link: String;
 	export let metrics: Array<any>;
 </script>
 
 <article style="background-image: url({image})" >
+	<a href={link}>
 	<div class={$$props.class + ' study-container'}>
 		<div>
 			<div class="tag">CASE STUDY / {project_name}</div>
@@ -23,6 +25,7 @@
 			{/each}
 		</div>
 	</div>
+	</a>
 </article>
 
 <style lang="scss">
@@ -43,7 +46,7 @@
 		background-color: var(--cs-color);
 		margin: 0 auto 80px;
 		padding: 10px;
-		color: var(--app-color-navy);
+		color: var(--app-color-navy) !important;
 	}
 	.title,
 	.desc,
@@ -51,6 +54,7 @@
 		font-weight: 400;
 		line-height: 0.9;
 		font-family: 'Bebas Neue', sans-serif;
+		color: white !important;
 	}
 	.title,
 	.desc {
@@ -91,7 +95,7 @@
 		margin: 0 auto;
 		.block {
 			background-color: var(--cs-color);
-			color: var(--app-color-navy);
+			color: var(--app-color-navy) !important;
 			width: 147px;
 			min-height: 147px;
 			border-radius: 25px;

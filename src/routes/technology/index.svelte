@@ -42,6 +42,7 @@
 	const caseStudy = [
 		{
 			image: '',
+			link: '/casestudy/volta',
 			project_name: 'VOLTA',
 			title: 'VOLTA',
 			description:
@@ -76,6 +77,7 @@
 		{
 			image: '/technology/tn-cs2.webp',
 			project_name: 'GALLAGHER',
+			link: '/casestudy/volta',
 			title: 'GALLAGHER',
 			description: 'Global insurance broker, risk management expert & business consultancy',
 			metrics: [
@@ -107,6 +109,7 @@
 		},
 		{
 			image: '',
+			link: '#',
 			project_name: 'Axe block',
 			title: 'Axe block',
 			description:
