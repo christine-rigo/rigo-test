@@ -186,9 +186,12 @@
 			vidBannerInview = detail.inView;
 		}}
 	>
-		<button class:animate={vidBannerInview}
+		<video autoplay loop muted playsinline>
+			<source src="https://landing.sqmflooring.co.uk/rigo_v4.mp4" type="video/mp4" />
+		</video>
+		<!-- <button class:animate={vidBannerInview}
 			><img src="/technology/play-button.png" alt="play button" /></button
-		>
+		> -->
 	</section>
 
 	<section
@@ -411,8 +414,8 @@
 	// Video banner
 	.video-banner {
 		position: relative;
-		height: 100vh;
-		max-height: 1000px;
+		height: fit-content;
+		// max-height: 1000px;
 		background-color: var(--app-color-lunarblue);
 		background-image: url('/technology/rigo-logo-big.png');
 		background-repeat: no-repeat;
@@ -433,6 +436,9 @@
 				opacity: 1;
 			}
 		}
+		video {
+			width: 100%;
+		}
 	}
 
 	// Intro
@@ -448,12 +454,15 @@
 			width: 530px;
 			margin: 0 auto;
 			text-align: center;
+			@media (max-width: 768px) {
+				width: 100%;
+			}
 		}
 		h2 {
 			color: var(--app-color-lunarblue);
 			font-family: 'Bebas Neue', sans-serif;
 			font-weight: 400;
-			font-size: 80px;
+			font-size: clamp(55px, 10vw, 80px);
 			line-height: 0.9;
 			+ h2 {
 				margin-top: 12px;
@@ -491,6 +500,9 @@
 				position: absolute;
 				left: 0;
 				padding: 15px;
+			}
+			@media (max-width: 768px) {
+				display: none;
 			}
 		}
 		.round-text.animate {
@@ -566,7 +578,7 @@
 		.container {
 			display: flex;
 			gap: 4rem;
-			max-width: 1113px;
+			max-width: 100%;
 			margin: 0 auto;
 		}
 
