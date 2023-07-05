@@ -3,18 +3,30 @@
 	import Footer from '$/components/Footer.svelte';
 	import { style } from 'svelte-body';
 	import { onMount } from 'svelte';
-	import Carousel from '$/components/casestudy/Carousel.svelte';
-	import Button from '$/components/casestudy/Button.svelte';
-	import TriadCard from '$/components/casestudy/TriadCard.svelte';
-	import AscensionCard from '$/components/casestudy/AscensionCard.svelte';
-	import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
 	import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
-	import ChallengeCard from '$/components/casestudy/ChallengeCard.svelte';
+	import StatsCard from '$/components/casestudy/StatsCard.svelte';
+	import FullWidthImage from '$/components/casestudy/FullWidthImage.svelte';
 
-	const carouselList = [
-		{ 'index': '01', 'img': '/casestudy/gallagher-carousel-1.png', 'text': 'To ensure comparable data sets rigo only analysed articles with 2%+ website traffic, this helped us identify the articles driving the conversation in the sector'},
-        { 'index': '02', 'img': '/casestudy/gallagher-carousel-2.png', 'text': 'When producing new articles, rigo addressed Gallagher’s value proposition, capabilities and thought leader status to create content with a purpose'},
-	]
+	let headingRef;
+	let gap = 0;
+
+	function handleGap(event) {
+		gap = event.detail;
+
+		// Set dynamic padding top
+		const element = document.getElementById('main-content');
+		if (window.innerWidth > 768 && element && headingRef) {
+			element.style.top = (headingRef.offsetHeight + gap + (document.documentElement.scrollWidth * 0.06) - 60) + 'px'; // Set the padding as required
+			console.log(headingRef.offsetHeight)	
+		} else {
+			element.style.top = '-8vh';
+		}
+	}
+
+    const statistics = [{'stats': 3, 'statsTitle': 'month<br>campaign', 'presign': '+', 'postsign': ''},
+                        {'stats': 5, 'statsTitle': 'competitors<br>scored', 'presign': '+', 'postsign': ''},
+                        {'stats': 30, 'statsTitle': 'key content<br>pieces created', 'presign': '+', 'postsign': ''},
+                        {'stats': 29, 'statsTitle': 'words written', 'presign': '+', 'postsign': 'K'}]
 
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
@@ -25,150 +37,288 @@
 	<title>Case Study / Gallagher</title>
 </svelte:head>
 
-<svelte:body use:style={{ background: 'var(--app-color-red)' }} />
+<svelte:body use:style={{ background: 'white' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy navigationBarColor="var(--app-color-red)" 
-		title="Gallagher" 
-		description="Global insurance broker, risk management expert and business consultancy"
-		coverPhoto="/casestudy/gallagher-cover.gif" 
-		columnSeparator="/casestudy/Line 3.svg"
-		hdrSvgPath1="/casestudy/gallagher-cs-1.png"
-		hdrSvgPath2="/casestudy/gallagher-cs-2.png"
-		hdrSvgPath3="/casestudy/gallagher-cs-3.png"
-		hdrSvgPath4="/casestudy/gallagher-cs-4.png"
-		hdrInfo1="month campaign"
-		hdrInfo2="competitors scored"
-		hdrInfo3="key content pieces created"
-		hdrInfo4="words written"
+	<CaseStudy on:message={handleGap} bind:headingRef={headingRef} 
+		title="Gallagher: Global Insurance Broker" 
+		description="Global insurance broker, risk management<br>expert and business consultancy"
+		backgroundColor="#36E0BA"
+		color="var(--app-color-lunarblue)"
+		btnColor="btn-lunarblue"
 		/>
 
-	<div class="section2">
-		<div class="challenge-container">
-			<ChallengeCard
-				challengeImg="/casestudy/gallagher-challenge.png"
-				challenge="Gallagher sought to understand the trends and output of content marketing in the insurance
-				industry. Doing so would help them develop a best practice for content in order to capture a
-				larger market share."
-				solutionImg="/casestudy/gallagher-solution.png"
-				solution="rigo conducted a review of content across the insurance industry delivering a competitive
-				analysis and marketing intelligence report based on insurance providers. In this review rigo
-				analysed and evaluated the content marketing output and SEO performance of five of
-				Gallagher’s key competitors."
-				resultImg="/casestudy/gallagher-result.png"
-				result="rigo levelled up Gallagher’s understanding of the norms of content marketing in theinsurance
-				sector, identifying strengths and weaknesses across the industry. This allowed us to
-				identify a number of flagship content pieces that Gallagher would benefit from adding to
-				their website."
-				/>
-				<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
-		</div>
-		<div class="ascension-container">
-			<AscensionCard arrowUrl="/creative/volta" title="Creative" imgsource="/casestudy/gallagher-ascension-1.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
-			<AscensionCard arrowUrl="/digital-advertising/volta-ad-creative" title="Digital Advertising" imgsource="/casestudy/gallagher-ascension-2.png" arrowImg="/casestudy/gallagher-ascension-arrow.svg" />
-		</div>
-		<Carousel carouselList={carouselList} />
-		<ExtremeCard heading="Research" imgUrl="/casestudy/gallagher-research.png">
-			Research included exploration of search engine traffic and competitor funnels. This gave Gallagher a snapshot of what’s happening in the industry and oversight of why certain pieces of content were performing well. 
-            <br><br>
-            A custom ranking system ensured analysis remained subjective in terms of style and
-            formatting, but objective in terms of commercial impact.
-		</ExtremeCard>
-	</div>
+	<div id="main-content" class="main-content">
 
-	<div class="section3">
-		<div>
-			<TriadCard name="Alex Turner" title="Senior Copywriter" triadNameColor="var(--app-color-red)">
-				“Working on the Gallagher account has been a reminder of why we place so much importance on research and data intelligence.
-				<br><br>
-				As a team we took the initial learnings and put them to work to create thought-provoking content that reaffirms Gallagher’s position as a heavyweight in the insurance sector to newcomers and existing customers alike.” 
-			</TriadCard>
-		</div>
-		<Button btnColor="btn-red" borderColor="var(--app-color-red)" />
-	</div>
+		<StatsCard statistics={statistics} backgroundColor="#6562F5" color="white" />
 
-	<div style="display: flex; padding: 5vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
-		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/volta">Volta</Footer>
+		<div class="hero-section">
+			<FullWidthImage backgroundImg="/casestudy/gallagher-content.png" />
+		</div>
+	
+		<div class="content-section">
+			<div class="content-card-row">
+				<div class="content-card-row-field" style="background: #EE6338">
+					<div class="card-content-preheader">Cornerstone Content</div>
+					<div class="card-content-title" style="color: #FFB436">
+						+ 30 articles delivered<br>
+						+ 29,000 words written
+					</div>
+					<div class="card-content-desc" style="color: white;">Long and short-form thought leadership content designed to educate and engage readers and reinforce Gallagher’s brand proposition. Topics, keyword selection and approach designed to target content gaps identified in a prior audit.</div>
+				</div>
+				<div class="content-card-row-field" style="background: #FFB436">
+					<div class="card-content-title" style="color: #EE6338;">Identifying<br>Opportunity</div>
+					<div class="card-content-desc">A thorough audit of competitors’ digital profiles showed Gallagher where they had content gaps and provided insight to inform an effective framework for the creation of cornerstone content.</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="challenge-section">
+			<div>
+				<div class="challenge-card-title">Challenge</div>
+				<div class="challenge-card-desc">Gallagher sought to understand the trends and output of content marketing in the insurance industry. Doing so would help them develop a best practice for content in order to capture a larger market share.</div>
+			</div>
+			<div>
+				<div class="challenge-card-title">Solution</div>
+				<div class="challenge-card-desc">rigo conducted a review of content across the insurance industry. We delivered a competitive analysis and marketing intelligence report based on industry trends. In this review, we analysed and evaluated the content marketing output and SEO performance of five of Gallagher’s key competitors.</div>
+			</div>
+			<div>
+				<div class="challenge-card-title">Research</div>
+				<div class="challenge-card-desc">rigo levelled up Gallagher’s understanding of content marketing norms in the insurance sector, identifying strengths and weaknesses across the industry. This allowed us to identify a number of flagship content pieces that Gallagher would benefit from adding to their website.</div>
+			</div>
+			<div>
+				<div class="challenge-card-title">Result</div>
+				<div class="challenge-card-desc">
+					Research included exploration of search engine traffic and competitor funnels. This provided Gallagher with a snapshot of the latest industry trends and oversight of why certain content pieces performed well. A custom ranking system ensured analysis remained subjective in terms of style and formatting, but objective in terms of commercial impact.
+				</div>
+			</div>
+		</div>
+	
+		<div class="hero-section">
+			<div class="alex-turner-container">
+				<div>
+					<div class="alex-turner-title">Alex Turner<br>Senior Copywriter,<br>Rigo</div>
+					<div class="alex-turner-desc">“Working on the Gallagher account has been a reminder of why we place so much importance on research and data intelligence.<br>
+						As a team we took the initial learnings and put them to work to create thought-provoking content that reaffirms Gallagher’s position as a heavyweight in the insurance sector to newcomers and existing customers alike.” </div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="footer-container">
+			<Footer marginleft={'0vw'} marginright={'0vw'} href="/casestudy/volta">Volta</Footer>
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
 	* {
-		--color: var(--app-color-red);
+		--color: var(--app-color-navy);
 		--color-contrast: var(--app-color-lunarblue-contrast);
 
 		color: var(--color);
 	}
 
 	:global(::selection) {
-		background: var(--color);
+		background: white;
 		color: var(--color-contrast);
 	}
 
 	.workslugcontainer {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
-
-	.section2 {
+	.main-content {
+		position: absolute;
+		top: 27vh;
+        max-width: 1440px;
+        margin: auto;
+	}
+    @media(max-width: 1440px) {
+        .main-content {
+            margin: 0rem;
+        }
+    }
+	@media(max-width: 1024px) {
+        .main-content {
+			top: 35vh;
+            right: 0;
+			left: 0;
+        }
+    }
+	.hero-section {
+		display: flex;
+		padding: 0rem 36px 0rem 36px;
+	}
+	.content-section {
+		display: flex;
+		flex-direction: column;
+		padding: 0rem 36px 0rem 36px;
+	}
+	.content-card-row {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+	}
+	.content-card-row-field {
+		padding: 6rem 4rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 8vw;
-		background-color: var(--app-color-navy-contrast);
-		padding: 4rem 2rem 4rem 2rem;
+		gap: 1rem;
+		justify-content: center;
+	}
+	.card-content-preheader {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 110%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	.card-content-title {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 44px;
+		line-height: 90%;
+		text-align: center;
+	}
+	.card-content-desc {
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 160%;
+		text-align: center;
+		width: 70%;
+	}
+	.alex-turner-container {
+		padding: 35vh 4rem 4rem 0;
+		display: flex;
+		background-image: url('/casestudy/alex-turner.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		justify-content: flex-end;
 	}
 
-	.ascension-container {
+	.alex-turner-container > div {
+		width: 23%;
+	}
+
+	.alex-turner-title {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 100%;
+		color: white;
+	}
+
+	.alex-turner-desc {
+		padding-top: 2rem;
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: white;
+	}
+
+	.challenge-section {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 2vw;
-		padding: 0vw 15vw;
-        width: 100vw;
+		padding: 4rem 8rem 4rem 8rem;
+		gap: 2rem;
+
+		div {
+			flex: 1;
+		}
 	}
 
-	.challenge-container {
+	.challenge-card-title {
+		color: #181818;
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-size: 35px;
+		line-height: 100%;
+	}
+
+	.challenge-card-desc {
+		padding-top: 20px;
+		color: #181818;
+		font-family: 'Satoshi';
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 160%;
+	}
+	.footer-container {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4vw;
+		padding: 5vw 36px;
+		background-color: white;
+		justify-content: space-evenly;
 	}
 
-	.section3 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 4rem 15vw 4rem 15vw;
-		background-color: var(--app-color-navy);
-		width: 100vw;
-		gap: 4vw;
+	@media(max-width: 1024px) {
+		.card-content-desc {
+			width: 100%;
+		}
+		.alex-turner-container > div {
+			width: 34%;
+		}
 	}
-
 	@media(max-width: 768px) {
-		.challenge-container {
-			gap: 8vw;
+		.main-content {
+			position: relative;
+			top: -8vh;
+		}
+		.hero-section {
+			padding: 0rem 36px;
+		}
+		.content-section {
+			padding: 0rem;
+		}
+		.card-content-desc {
+			width: 55%;
+		}
+		.content-card-row {
+			flex-direction: column;
+		}
+		.challenge-section {
+			flex-direction: column;
+			gap: 2rem;
+			padding: 2rem;
+		}
+		.alex-turner-container > div {
+			width: 44%;
+		}
+
+		.alex-turner-container {
+			padding: 35vh auto;
+		}
+		.footer-container {
+			padding: 5vw 2rem;
 		}
 	}
 
 	@media(max-width: 425px) {
-		.section2 {
-			gap: 20vw;
+		.alex-turner-container {
+			display: flex;
+			justify-content: center;
+			padding: 16rem 0.5rem 4rem 0.5rem;
 		}
-		.challenge-container {
-			gap: 12vw;
+		.alex-turner-container > div {
+			width: 80%;
 		}
-		.ascension-container {
-			flex-direction: column;
-			gap: 12vw;
+		.card-content-title {
+			font-size: 31px;
 		}
-        .casecardtitle {
-            font-size: 20px;
-		    line-height: 24px;
-            margin-bottom: 3vw;
-        }
-        .casecarddescription {
-		    line-height: 140%;
-        }
+		.card-content-desc {
+			width: 100%;
+		}
 	}
 </style>

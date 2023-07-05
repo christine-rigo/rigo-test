@@ -3,19 +3,31 @@
 	import Footer from '$/components/Footer.svelte';
 	import { style } from 'svelte-body';
 	import { onMount } from 'svelte';
-	import Carousel from '$/components/casestudy/Carousel.svelte';
-	import Button from '$/components/casestudy/Button.svelte';
-	import TriadCard from '$/components/casestudy/TriadCard.svelte';
-	import AscensionCard from '$/components/casestudy/AscensionCard.svelte';
-	import ExtremeCard from '$/components/casestudy/ExtremeCard.svelte';
 	import CaseStudy from '$/components/casestudy/CaseStudy.svelte';
-	import ChallengeCard from '$/components/casestudy/ChallengeCard.svelte';
+	import StatsCard from '$/components/casestudy/StatsCard.svelte';
+	import FullWidthImage from '$/components/casestudy/FullWidthImage.svelte';
 
-	const carouselList = [
-		{ 'index': '01', 'img': '/casestudy/volta-carousel-1.png', 'text': '‘Future-positive’ tone and content – inspiring followers with the innovation and progress'},
-        { 'index': '02', 'img': '/casestudy/volta-carousel-2.png', 'text': 'Committed to quality and quantity reasures readers that Volta is a trusted information source'},
-        { 'index': '03', 'img': '/casestudy/volta-carousel-3.png', 'text': 'Tailored to an intelligent audience at a level that drives new conversations in technology, science and the environment'}
-	]
+    const statistics = [{'stats': 112, 'statsTitle': 'page views in<br>first 3 months', 'presign': '+', 'postsign': '%'},
+                        {'stats': 403, 'statsTitle': 'increase in<br>monthly users in<br>first 12 months', 'presign': '+', 'postsign': '%'},
+                        {'stats': 120, 'statsTitle': 'impressions in<br>1 month campaign', 'presign': '+', 'postsign': 'K'},
+                        {'stats': 1, 'statsTitle': 'Listed in Google<br>News on first<br>application', 'presign': '+', 'postsign': ''}]
+
+	let headingRef;
+	let gap = 0;
+
+	function handleGap(event) {
+		gap = event.detail;
+
+		// Set dynamic padding top
+		const element = document.getElementById('main-content');
+		if (window.innerWidth > 768 && element && headingRef) {
+			element.style.top = (headingRef.offsetHeight + gap + (document.documentElement.scrollWidth * 0.06) - 60) + 'px'; // Set the padding as required
+			console.log(headingRef.offsetHeight)	
+		} else {
+			element.style.top = '-8vh';
+		}
+	}
+
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 	});
@@ -25,172 +37,358 @@
 	<title>Case Study / Volta</title>
 </svelte:head>
 
-<svelte:body use:style={{ background: 'var(--app-color-lunarblue)' }} />
+<svelte:body use:style={{ background: 'white' }} />
 
 <div class="workslugcontainer">
-	<CaseStudy navigationBarColor="var(--app-color-lunarblue)" 
-		title="Volta" 
-		description="An online platform focusing on sustainable living. Volta's mission is to encourage as many people as possible to transition to a more sustainable lifestyle."
-		coverPhoto="/casestudy/volta-cover.gif" 
-		columnSeparator="/casestudy/volta-line-separator.svg"
-		hdrSvgPath1="/casestudy/volta-cs-1.svg"
-		hdrSvgPath2="/casestudy/volta-cs-2.svg"
-		hdrSvgPath3="/casestudy/volta-cs-3.svg"
-		hdrSvgPath4="/casestudy/volta-cs-4.svg"
-		hdrInfo1="page views in first 3 months"
-		hdrInfo2="impressions in 1 month campaign"
-		hdrInfo3="increase in monthly users in first 12 months"
-		hdrInfo4="Listed in Google News on first application"
+	<CaseStudy on:message={handleGap} bind:headingRef={headingRef} 
+		title="Volta: Future Positive" 
+		description="An online platform focusing on sustainable living.<br>Volta’s mission is to encourage as many people as<br>possible to transition to a more sustainable lifestyle."
+		backgroundColor="#EE6338"
+		color="#FFB436"
+		btnColor="btn-white"
+		borderColor="white"
+		subheadingColor="white"
 		/>
 
-	<div class="section2">
-		<div class="challenge-container">
-			<ChallengeCard 
-				resultImg="/casestudy/volta-challenge.svg"
-				result="Volta is a rapidly expanding source of inspirational news. rigo has helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content."
-				solutionImg="/casestudy/volta-solution.svg"
-				solution="rigo creates regular news articles, interviews and campaigns to drive engagment. From pitching to production, the team integrates with Volta to deliver a seamless service."
-				challengeImg="/casestudy/volta-result.svg"
-				challenge="With regular features, a successful Google News application and carefully targeted campaigns, the site has seen substantial growth in traffic and an influx of big name partners."
-			/>
-			<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
-		</div>
-		<div class="ascension-container">
-			<AscensionCard arrowUrl="/creative/volta" title="Creative" imgsource="/casestudy/volta-ascension-1.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
-			<AscensionCard arrowUrl="/digital-advertising/volta-site-traffic" title="Digital Advertising" imgsource="/casestudy/volta-ascension-2.png" arrowImg="/casestudy/volta-ascension-arrow.svg" />
-		</div>
-		<Carousel headerColor="var(--app-color-lunarblue)" carouselList={carouselList} />
-		<ExtremeCard heading="Extreme E" imgUrl="/casestudy/volta-extreme.png">
-			Volta was given the nod as a trusted outlet to report on Extreme E’s 2021 inaugural season, focusing on the organisation’s legacy projects.
-			<br><br>
-			rigo attended the Ocean X Prix in Lac Rose, Senegal over the course of a week, creating live event coverage, conducting interviews with big names - including Nico Rosberg - and supporting the Volta team as a key coverage provider for the championship.
-		</ExtremeCard>
-	</div>
+	<div id="main-content" class="main-content">
 
-	<div class="section3">
-		<div class="section3-flex" style="display: flex;">
-			<div style="flex: 1">
-				<TriadCard textAlign="left" flexMargin="0vw 10%" flexDirection="row" name="Clare Farah" title="Co-Founder, Volta" triadNameColor="var(--app-color-lunarblue)">
-					“Prior to working with rigo, we were outsourcing much of our articles to a whole plethora of journalists and content writers.
-					<br><br>
-					Rigo has changed this for us entirely now within no time, they were generating and delivering excellent SEO-optimised content and engaging on
-					our socials whilst simultaneously generating new marketing plans to support
-					our directives.
-					<br><br>
-					To us, they’re not just a company we outsource to, they’re integral to our business now and part of the team.”
-				</TriadCard>
+		<StatsCard statistics={statistics} backgroundColor="#FFB436" />
+
+		<div class="hero-section">
+			<div class="volta-container"></div>
+		</div>
+	
+		<div class="content-section">
+			<div class="content-card-row">
+				<div class="content-card-row-field" style="background: #EE6338">
+					<div class="card-content-preheader">Increase in page</div>
+					<div class="card-content-title" style="color: #FFB436">
+						+112%
+					</div>
+					<div class="card-content-desc" style="color: white;">
+						With a concerted focus on engaging, original and consistent content from rigo, Volta quickly saw their readership numbers grow with a 112% increase in page views in just the first 3 months of engagement.
+					</div>
+				</div>
+				<div class="content-card-row-field" style="background: #FFB436">
+					<div class="card-content-preheader">Total words written &lt; </div>
+					<div class="card-content-title" style="color: #EE6338;">100,000</div>
+					<div class="card-content-desc">With a concerted focus on engaging, original and consistent content from rigo, Volta quickly saw their readership numbers grow with a 112% increase in page views in just the first 3 months of engagement.</div>
+				</div>
 			</div>
-			<div style="flex: 1">
-				<TriadCard textAlign="left" flexMargin="0vw 10%" flexDirection="row-reverse" name="Pete Adams" title="Copywriter, Rigo" triadNameColor="var(--app-color-lunarblue)">
-					“Work on the account has evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.
-					<br><br>
-					“Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.
-					<br><br>
-					Senegal [to cover Extreme E] was undoubtedly a highlight, as it let me firmly put my journalist hat on and become that roving reporter I’ve always dreamt of being.”
-				</TriadCard>
+			<div class="content-card-row">
+				<div class="content-card-row-field" style="background: #36E0BA">
+					<div class="card-content-preheader">Total Impressions &gt;</div>
+					<div class="card-content-title" style="color: #6562F5">
+						120,000
+					</div>
+					<div class="card-content-desc" style="color: black;">Highly targeted LinkedIn campaigns were run to increase touch points with select advertising partners to secure high profile meetings.</div>
+				</div>
+				<div class="content-card-row-field" style="background: #6562F5">
+					<div class="card-content-preheader">User increase +268%<br>Session increase +227%</div>
+					<div class="card-content-title" style="color: #36E0BA; position: display;">
+						<img src="/casestudy/user-increase.svg" alt="rigo">
+					</div>
+					<div class="card-content-desc" style="color: white">During the duration of the campaign, the number of website users from social platform redirects increased by 268% (+947 users in total). As compared to the previous period, website sessions also increased by 226.95% or +1,092 sessions!</div>
+				</div>
 			</div>
 		</div>
-		<Button btnColor="btn-lunarblue" borderColor="var(--app-color-lunarblue)" />
-	</div>
+	
+		<div class="hero-section">
+			<div class="extreme-container">
+				<div class="extreme-card-container">
+					<div class="extreme-card">
+						<div class="extreme-title">Challenge</div>
+						<div class="extreme-desc">Volta is a rapidly expanding source of inspirational news. rigo helped them to make the leap and attract an even larger audience, while maintaining the scale and quality of their content.</div>
+					</div>
+					<div class="extreme-card">
+						<div class="extreme-title">Solution</div>
+						<div class="extreme-desc">rigo created regular news articles, interviews and campaigns to drive engagement. From pitching to production, the team integrated with Volta to deliver a seamless service.</div>
+					</div>
+					<div class="extreme-card">
+						<div class="extreme-title">Extreme E</div>
+						<div class="extreme-desc">
+							Volta was given the nod as a trusted outlet to report on Extreme E’s 2021 inaugural season, focusing on the organisation’s legacy projects.
+							rigo attended the Ocean X Prix in Lac Rose, Senegal over the course of a week, creating live event coverage, conducting interviews with big names - including Nico Rosberg - and supporting the Volta team as a key coverage provider for the championship.
+						</div>
+					</div>
+				</div>
+				<div style="flex: 0 0 70%; width: 100%"><img style="width: 100%" src="/casestudy/beach.png" alt="rigo"></div>
+			</div>
+		</div>
 
-	<div style="display: flex; padding: 5vw 15vw; background-color: var(--app-color-navy-contrast); justify-content: space-evenly;">
-		<Footer marginleft={'2vw'} marginright={'2vw'} href="/casestudy/gallagher">Gallagher</Footer>
+		<div class="hero-section">
+			<FullWidthImage backgroundImg="/casestudy/desert-car.png" />
+		</div>
+
+		<div class="hero-section">
+			<div class="alex-turner-container">
+				<div>
+					<div class="alex-turner-title">Clare Farah<br>Co-founder, Volta</div>
+					<div class="alex-turner-desc">
+						“Prior to working with rigo, we were outsourcing much of our articles to a whole plethora of journalists and content writers.<br>
+						rigo has changed this for us entirely now within no time. They were generating and delivering excellent SEO-optimised content and engaging on our socials whilst simultaneously generating new marketing plans to support our directives.<br>
+						To us, they’re not just a company we outsource to, they’re integral to our business now and part of the team!”
+					</div>
+				</div>
+				<div>
+					<div class="alex-turner-title">Pete Adams<br>Copywriter, Rigo</div>
+					<div class="alex-turner-desc">
+						“Work on the account evolved over time, from a more passive news-watching approach to actively going out to generate original stories of our own.<br>
+						Using best practice journalistic techniques, stories needed to be backed up with sources, fitting in with the future-positive narrative of the client.<br>
+						Senegal [to cover Extreme E] was undoubtedly a highlight, as it let me firmly put my journalist hat on and become that roving reporter I’ve always dreamt of being.”
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="display: flex; padding: 5vw 36px; background-color: white; justify-content: space-evenly;">
+			<Footer marginleft={'0'} marginright={'0'} href="/casestudy/smf">SMF</Footer>
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
 	* {
-		--color: var(--app-color-lunarblue);
+		--color: var(--app-color-navy);
 		--color-contrast: var(--app-color-lunarblue-contrast);
 
 		color: var(--color);
 	}
 
 	:global(::selection) {
-		background: var(--color);
+		background: white;
 		color: var(--color-contrast);
 	}
 
 	.workslugcontainer {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
-
-	.section2 {
+	.main-content {
+		position: absolute;
+		top: 16vh;
+        max-width: 1440px;
+        margin: auto;
+	}
+    @media(max-width: 1440px) {
+        .main-content {
+            margin: 0rem;
+        }
+    }
+	@media(max-width: 1024px) {
+        .main-content {
+			top: 35vh;
+            right: 0;
+			left: 0;
+        }
+    }
+	.statistics-section {
 		display: flex;
 		flex-direction: column;
+		padding: 4rem 4rem 0rem 4rem;
+	}
+	.hero-section {
+		display: flex;
+		padding: 2rem 36px 0rem 36px;
+	}
+	.extreme-container {
+		display: flex;
+	}
+	.extreme-card-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 4rem;
+	}
+	.extreme-title {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 100%;
+		color: #181818;
+	}
+	.extreme-desc {
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #12182E;
+	}
+	.volta-container {
+		background-image: url('/casestudy/volta-content.png');
+		background-size: cover; 
+		background-position: center; 
+		background-repeat: no-repeat;
+		height: 813px; // 237px;
+		width: 100%;
+	}
+	.content-section {
+		display: flex;
+		flex-direction: column;
+		padding: 0rem 36px 0rem 36px;
+	}
+	.content-card-row {
+		display: flex;
+		flex-direction: wrap;
+	}
+	.content-card-row-field {
+		padding: 6rem 0rem;
+		display: flex;
+		flex-basis: 50%;
+		flex-direction: column;
 		align-items: center;
-		gap: 8vw;
-		background-color: var(--app-color-navy-contrast);
-		padding: 4rem 2rem 4rem 2rem;
+		gap: 1rem;
+		justify-content: center;
+	}
+	.card-content-preheader {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-size: 35px;
+		line-height: 110%;
+		color: #FFFFFF;
+		text-align: center;
+		font-weight: bold;
+	}
+	.card-content-title {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-size: 90px;
+		line-height: 90%;
+		text-align: center;
+	}
+	.card-content-desc {
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 160%;
+		text-align: center;
+		width: 56%;
 	}
 
-	.ascension-container {
+	.alex-turner-section {
+		display: flex;
+		padding: 4rem 4rem 0rem 4rem;
+	}
+
+	.alex-turner-container {
+		padding: 4rem 4rem 4rem 0;
+		display: flex;
+		flex-direction: column;
+		background-image: url('/casestudy/space.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+		align-items: flex-end;
+		gap: 4rem;
+	}
+
+	.alex-turner-container > div {
+		width: 30%;
+	}
+
+	.alex-turner-title {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 100%;
+		color: white;
+	}
+
+	.alex-turner-desc {
+		padding-top: 2rem;
+		font-family: 'Satoshi';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: white;
+	}
+
+	.challenge-section {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 2vw;
-		padding: 0vw 15vw;
-        width: 100vw;
+		padding: 4rem 4rem 0rem 4rem;
+		gap: 6rem;
 	}
 
-	.challenge-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4vw;
+	.challenge-card-title {
+		color: #181818;
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-size: 35px;
+		line-height: 100%;
 	}
 
-	.section3 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 4rem 15vw 4rem 15vw;
-		background-color: var(--app-color-navy);
-		width: 100vw;
-		gap: 4vw;
+	.challenge-card-desc {
+		padding-top: 20px;
+		color: #181818;
+		font-family: 'Satoshi';
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 160%;
+	}
+
+	@media(max-width: 1024px) {
+		.extreme-container {
+			flex-direction: column;
+		}
+		.extreme-card-container {
+			gap: 2rem;
+		}
+		.alex-turner-container > div {
+			width: 48%;
+		}
 	}
 
 	@media(max-width: 768px) {
-		.challenge-container {
-			gap: 8vw;
+		.main-content {
+			position: relative;
+			top: -8vh;
+		}
+		.hero-section {
+			padding: 2rem 2rem 0rem 2rem;
+		}
+		.volta-container {
+			height: 237px;
+		}
+		.content-section {
+			padding: 0rem;
+		}
+		.content-card-row {
+			flex-direction: column;
+		}
+		.challenge-section {
+			flex-direction: column;
+			gap: 4rem;
+			padding: 2rem;
+		}
+		.alex-turner-section {
+			display: flex;
+			padding: 0rem 2rem 2rem 2rem;
+		}
+		.alex-turner-container > div {
+			width: 50vw;
 		}
 	}
 
 	@media(max-width: 425px) {
-		.section2 {
-			gap: 20vw;
+		.card-content-title {
+			font-size: 31px;
 		}
-		.challenge-container {
-			gap: 12vw;
+		.extreme-card-container {
+			padding: 2rem;
 		}
-		.ascension-container {
-			flex-direction: column;
-			gap: 12vw;
-		}
-        .casecardtitle {
-            font-size: 20px;
-		    line-height: 24px;
-            margin-bottom: 3vw;
-        }
-        .casecarddescription {
-		    line-height: 140%;
-        }
-
-		.section3 {
-			gap: 16vw;
-		}
-		.section3-flex {
-			flex-direction: column;
-			gap: 12vw;
-		}
-	}
-
-	@media(min-width: 1024px) {
-		.section3-flex {
-			div:first-child {
-				border-right: 1px solid #fff;
-			}
+		.alex-turner-container > div {
+			width: 80%;
 		}
 	}
 </style>
