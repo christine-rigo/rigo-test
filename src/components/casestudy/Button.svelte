@@ -9,6 +9,7 @@
 
 <style lang="scss">
     button {
+		z-index: 999;
 		font-family: 'Bebas Neue';
 		font-style: normal;
 		font-weight: normal;
@@ -34,6 +35,14 @@
 		&:hover {
 			background-color: var(--app-color-lunarblue);
             color: white;
+		}
+	}
+
+	.btn-white {
+		transition: background-color 150ms ease-in;
+		&:hover {
+			background-color: white;
+            color: black;
 		}
 	}
 </style>
