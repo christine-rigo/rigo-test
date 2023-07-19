@@ -3,7 +3,6 @@
 	import Footer from '$/components/Footer.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
-	import StepsSlideshow from '$/components/technology/StepsSlideshow.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
 
@@ -375,7 +374,7 @@
 		</div>
 	</section>
 
-	<section class="cs-feature">
+	<a href="/casestudy/smf"><section class="cs-feature">
 		<div class="cs-inner">
 			<div class="container">
 				<div class="text">
@@ -388,7 +387,7 @@
 				</video>
 			</div>
 		</div>
-	</section>
+	</section></a>
 
 	<section class="cs-list-container">
 		<div class="cs-list">

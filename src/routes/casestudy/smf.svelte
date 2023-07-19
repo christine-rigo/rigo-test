@@ -41,7 +41,7 @@
 <div class="workslugcontainer">
 	<CaseStudy on:message={handleGap} bind:headingRef={headingRef}
 		title="SMF: Woodwork Specialists" 
-		description="rigo transformed SMF’s dull e-commerce site into a beautiful gallery portfolio; from selling a product, to selling a dream home!"
+		description="rigo transformed SMF’s dull e-commerce site into a beautiful gallery portfolio;<br>from selling a product, to selling a dream home!"
 		backgroundColor="#7270FF"
 		color="#3BF0C8"
 		btnColor="btn-white"
