@@ -374,20 +374,22 @@
 		</div>
 	</section>
 
-	<a href="/casestudy/smf"><section class="cs-feature">
-		<div class="cs-inner">
-			<div class="container">
-				<div class="text">
-					<CaseStudy {...csFeature} class={'cs-feat'} />
+	<a href="/casestudy/smf">
+		<section class="cs-feature">
+			<div class="cs-inner">
+				<div class="container">
+					<div class="text">
+						<CaseStudy {...csFeature} class={'cs-feat'} />
+					</div>
+				</div>
+				<div class="image">
+					<video autoplay muted loop playsinline>
+						<source src="https://landing.sqmflooring.co.uk/smflaptop-v3.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
-			<div class="image">
-				<video autoplay muted loop playsinline>
-					<source src="https://landing.sqmflooring.co.uk/smflaptop-v3.mp4" type="video/mp4" />
-				</video>
-			</div>
-		</div>
-	</section></a>
+		</section>
+	</a>
 
 	<section class="cs-list-container">
 		<div class="cs-list">
