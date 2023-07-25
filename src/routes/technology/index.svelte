@@ -76,7 +76,7 @@
 		{
 			image: '/technology/tn-cs2.webp',
 			project_name: 'GALLAGHER',
-			link: '/casestudy/volta',
+			link: '/casestudy/gallagher',
 			title: 'GALLAGHER',
 			description: 'Global insurance broker, risk management expert & business consultancy',
 			metrics: [
