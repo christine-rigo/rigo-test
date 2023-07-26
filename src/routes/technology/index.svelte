@@ -3,7 +3,6 @@
 	import Footer from '$/components/Footer.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
-	import StepsSlideshow from '$/components/technology/StepsSlideshow.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
 
@@ -77,7 +76,7 @@
 		{
 			image: '/technology/tn-cs2.webp',
 			project_name: 'GALLAGHER',
-			link: '/casestudy/volta',
+			link: '/casestudy/gallagher',
 			title: 'GALLAGHER',
 			description: 'Global insurance broker, risk management expert & business consultancy',
 			metrics: [
@@ -375,20 +374,22 @@
 		</div>
 	</section>
 
-	<section class="cs-feature">
-		<div class="cs-inner">
-			<div class="container">
-				<div class="text">
-					<CaseStudy {...csFeature} class={'cs-feat'} />
+	<a href="/casestudy/smf">
+		<section class="cs-feature">
+			<div class="cs-inner">
+				<div class="container">
+					<div class="text">
+						<CaseStudy {...csFeature} class={'cs-feat'} />
+					</div>
+				</div>
+				<div class="image">
+					<video autoplay muted loop playsinline>
+						<source src="https://landing.sqmflooring.co.uk/smflaptop-v3.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
-			<div class="image">
-				<video autoplay muted loop playsinline>
-					<source src="https://landing.sqmflooring.co.uk/smflaptop-v3.mp4" type="video/mp4" />
-				</video>
-			</div>
-		</div>
-	</section>
+		</section>
+	</a>
 
 	<section class="cs-list-container">
 		<div class="cs-list">

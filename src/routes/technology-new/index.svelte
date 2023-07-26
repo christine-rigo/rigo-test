@@ -3,7 +3,6 @@
 	import Footer from '$/components/Footer.svelte';
 	import Card from '$/components/technology/ImageTextCard.svelte';
 	import RollingText from '$/components/technology/RollingText.svelte';
-	import StepsSlideshow from '$/components/technology/StepsSlideshow.svelte';
 	import FullpageSlider from '$/components/technology/FullpageSlider.svelte';
 	import CaseStudy from '$/components/technology/CaseStudyCard.svelte';
 
