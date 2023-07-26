@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="s2">
-			20-22 Wenlock Road, London, N1 7GU<br />Ascent Marketing Group Ltd, trading as rigo is a
+			Suite 125, 9 Jerdan Place, Fulham, London, SW6 1BE<br />Ascent Marketing Group Ltd, trading as rigo is a
 			company registered in England and Wales with company number 13040428, VAT Registered:
 			766352117.
 		</div>
