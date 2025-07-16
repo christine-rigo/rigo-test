@@ -11,6 +11,7 @@
 	onMount(() => {
 		window.location.replace('/technology');
 	});
+    
 	onMount(() => {
 		$navColor = 'var(--app-color-lunarblue)';
 
